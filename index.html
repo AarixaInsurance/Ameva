@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ameva — Growth Beyond Measure | Premier Wealth Management & Mutual Funds</title>
+  <title>Ameva — Growth Beyond Measure | Mutual Fund Distributor</title>
   <meta name="description"
-    content="Ameva — AMFI Registered Mutual Fund Distributor (ARN-145058, EUIN-E028717). High-growth investment strategies, curated mutual funds, and personalized wealth engineering.">
+    content="Ameva — AMFI Registered Mutual Fund Distributor (ARN-145058, EUIN-E028717). Investing means investing for growth with complete protection. Manage your financial assets smartly.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -79,24 +79,23 @@
     <div class="central-glow"></div>
   </div>
 
-  <!-- NAVBAR -->
+  <!-- NAVBAR: ONLY Home, About, Services, Contact and Client Login / Admin Login -->
   <nav id="navbar">
     <a href="#hero" class="nav-logo">
-      <img src="./assets/logo.jpg" alt="Ameva Wealth Management" class="brand-logo">
+      <img src="./assets/logo.jpg" alt="Ameva - Growth Beyond Measure" class="brand-logo">
     </a>
     <div class="nav-links">
-      <a href="#hero">Home</a>
-      <a href="#difference">About Ameva</a>
-      <a href="#solutions">Services</a>
-      <a href="#journey">Framework</a>
-      <a href="#calculator">SIP Calculator</a>
-      <a href="#partners">AMC Partners</a>
+      <a href="#hero" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="calculator.html">SIP Calculator</a>
+      <a href="risk-profiling.html">Risk Profiling</a>
       <a href="#contact">Contact</a>
     </div>
 
     <div class="nav-actions">
-      <a href="#contact" class="btn-secondary-head">Book Consultation</a>
-      <a href="https://dataaccurate.in/" target="_blank" rel="noopener noreferrer" class="btn-elite">Portfolio Login</a>
+      <a href="https://dataaccurate.in/" target="_blank" rel="noopener noreferrer" class="btn-client-nav">Client Login</a>
+      <a href="https://dataaccurate.in/" target="_blank" rel="noopener noreferrer" class="btn-admin-nav">Admin Login</a>
     </div>
 
     <div class="menu-toggle" id="menuToggle">
@@ -106,7 +105,7 @@
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <section id="hero">
     <div class="hero-grid"></div>
 
@@ -124,119 +123,162 @@
       <div class="shape-inner">🦁</div>
     </div>
 
-    <div class="hero-badge">
-      <span class="badge-dot"></span>
-      AMFI Registered Mutual Fund Distributor • ARN-145058
+    <!-- Small AMFI registered text -->
+    <div style="font-size:13px; font-weight:700; color:var(--green-deep); margin-bottom:12px; letter-spacing:0.5px;">
+      (AMFI Registered Mutual Fund Distributor)
     </div>
 
-    <h1 class="hero-headline">
-      Engineered for Growth.<br>
-      <em>Built for</em> <span class="gold-word">Generations.</span>
+    <!-- Main Headline as requested -->
+    <h1 style="font-family:'DM Serif Display',serif; font-size:clamp(46px, 5.8vw, 76px); font-weight:400; line-height:1.08; color:#25475E; margin-bottom:18px; letter-spacing:-1.5px;">
+      Welcome To<br>
+      <span style="color:#25475E;">Ameva</span>
     </h1>
 
-    <p class="hero-sub">
-      Access curated mutual funds, strategy-driven portfolios, and real-time tracking—all within a unified, high-fidelity digital platform.
-    </p>
+    <!-- Subheadline in Red as in user screenshot -->
+    <h2 style="font-family:'Sora',sans-serif; font-size:clamp(20px, 2.2vw, 26px); font-weight:600; line-height:1.45; color:var(--green-deep); max-width:760px; margin:0 auto 28px;">
+      With so many different options, investing with us is simpler and more straightforward than ever before.
+    </h2>
+
+    <!-- 3 Key Bullet Points from Screenshot -->
+    <div style="text-align:left; display:inline-block; margin:0 auto 36px;">
+      <ul style="list-style:none; display:flex; flex-direction:column; gap:12px; font-size:17px; font-weight:600; color:#25475E;">
+        <li style="display:flex; align-items:center; gap:10px;">
+          <span style="width:7px; height:7px; border-radius:50%; background:#25475E; display:inline-block;"></span>
+          Manage Your Financial Assets Smartly With Us.
+        </li>
+        <li style="display:flex; align-items:center; gap:10px;">
+          <span style="width:7px; height:7px; border-radius:50%; background:#25475E; display:inline-block;"></span>
+          Take Small Steps To Achieve Big.
+        </li>
+        <li style="display:flex; align-items:center; gap:10px;">
+          <span style="width:7px; height:7px; border-radius:50%; background:#25475E; display:inline-block;"></span>
+          Ensure Your Financial Well-being Always.
+        </li>
+      </ul>
+    </div>
 
     <div class="hero-cta">
-      <a href="#contact" class="btn-primary-hero">Start Investing</a>
-      <a href="#calculator" class="btn-ghost-hero">SIP Calculator</a>
+      <a href="#contact" class="btn-primary-hero">Open Account / Contact</a>
+      <a href="calculator.html" class="btn-ghost-hero">SIP Calculator</a>
     </div>
 
     <div class="hero-trust">
-      <div class="trust-item"><span class="trust-check">✓</span>AMFI Registered (ARN-145058 | EUIN-E028717)</div>
+      <div class="trust-item"><span class="trust-check">✓</span>ARN-145058 | EUIN-E028717</div>
       <div class="trust-sep"></div>
       <div class="trust-item"><span class="trust-check">✓</span>14+ Years Experience</div>
       <div class="trust-sep"></div>
-      <div class="trust-item"><span class="trust-check">✓</span>800+ Happy Families</div>
+      <div class="trust-item"><span class="trust-check">✓</span>800+ Happy Clients Across India</div>
     </div>
   </section>
 
   <!-- TICKER BAR -->
   <div class="ticker-bar">
     <div class="ticker-track">
-      <div class="ticker-item">Mutual Funds</div>
+      <div class="ticker-item">Mutual Fund</div>
       <div class="ticker-item">Fixed Income Products</div>
       <div class="ticker-item">Equity Investment</div>
-      <div class="ticker-item">Insurance Planning</div>
-      <div class="ticker-item">NRI Wealth Desk</div>
-      <div class="ticker-item">National Pension System</div>
-      <div class="ticker-item">Systematic Investment Plans</div>
-      <div class="ticker-item">Tax Alpha (ELSS)</div>
+      <div class="ticker-item">Insurance</div>
+      <div class="ticker-item">NRI Investment</div>
+      <div class="ticker-item">National Pension System (NPS)</div>
+      <div class="ticker-item">SIP Wealth Planning</div>
       <!-- Duplicate for seamless scroll -->
-      <div class="ticker-item">Mutual Funds</div>
+      <div class="ticker-item">Mutual Fund</div>
       <div class="ticker-item">Fixed Income Products</div>
       <div class="ticker-item">Equity Investment</div>
-      <div class="ticker-item">Insurance Planning</div>
-      <div class="ticker-item">NRI Wealth Desk</div>
-      <div class="ticker-item">National Pension System</div>
+      <div class="ticker-item">Insurance</div>
+      <div class="ticker-item">NRI Investment</div>
+      <div class="ticker-item">National Pension System (NPS)</div>
     </div>
   </div>
 
-  <!-- WHY CHOOSE US / DIFFERENCE -->
-  <section id="difference">
+  <!-- ABOUT US SECTION -->
+  <section id="about">
     <div class="max-w">
       <div class="diff-header">
         <div>
-          <div class="section-eyebrow">Why Choose Us</div>
-          <h2 class="section-title">The Architecture of <em>Trust</em></h2>
+          <div class="section-eyebrow">About Us</div>
+          <h2 class="section-title">Investing means - <em>investing for growth with complete protection.</em></h2>
         </div>
         <div>
-          <p style="color:var(--text-2); font-size:15.5px; line-height:1.75;">
-            We execute with precision. Our platform replaces guesswork with structured asset allocation, algorithmic monitoring, and goal-oriented continuity.
+          <p style="color:var(--text-2); font-size:15px; line-height:1.8;">
+            We at <strong>Ameva</strong>, believe that protection of your fund is a prime job and it needs to be addressed with lots of knowledge and proper planning. At <strong>Ameva</strong>, our financial service is based on our understanding of your present and future cash flows, financial objectives, the present distribution of your wealth and your financial risk acceptance level.
           </p>
         </div>
       </div>
 
-      <div class="diff-grid">
+      <div class="diff-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom:40px;">
         <div class="diff-card">
           <div class="diff-icon">🎯</div>
-          <div class="diff-title">Strategic Capital Allocation</div>
-          <div class="diff-desc">Portfolios mathematically aligned to your timeline, risk tolerance, and ultimate wealth objectives.</div>
+          <div class="diff-title">One-Stop Financial Shop</div>
+          <div class="diff-desc">We are a one-stop shop for all your financial services needs. Our objective is to put focus on you by maximizing your after-tax investment return while developing investment avenues appropriate to your risk tolerance.</div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon">🤝</div>
+          <div class="diff-title">Client Centric Service Model</div>
+          <div class="diff-desc">We have a unique Client Centric Service Model so as to help Clients select the combination of various services required by them, rendering personalized services and adding value by cutting-edge technology.</div>
         </div>
         <div class="diff-card">
           <div class="diff-icon">📈</div>
-          <div class="diff-title">Structured Execution</div>
-          <div class="diff-desc">Eliminate market noise with systematic, non-emotional investment strategies built for long-term consistency.</div>
-        </div>
-        <div class="diff-card">
-          <div class="diff-icon">📱</div>
-          <div class="diff-title">Absolute Transparency</div>
-          <div class="diff-desc">A complete, unified view of your portfolio trajectory, scheme performance, and regular plan disclosures.</div>
+          <div class="diff-title">Mutual Funds Expertise</div>
+          <div class="diff-desc">We strongly recommend and use Mutual Funds in every client's portfolio creation due to its advantages: diversification, professional approach and steady growth. MF is our prime concern and we deal across India.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PLATFORM SOLUTIONS / SERVICES -->
-  <section id="solutions">
+  <!-- STATS SECTION -->
+  <section id="stats" style="padding-top:0;">
+    <div class="max-w">
+      <div class="stats-grid">
+        <div class="stat-box">
+          <div class="stat-num">14<span class="stat-plus"></span></div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">800<span class="stat-plus">+</span></div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">50<span class="stat-plus">+</span></div>
+          <div class="stat-label">Award Winning</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">5000<span class="stat-plus">+</span></div>
+          <div class="stat-label">Goal</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services">
     <div class="max-w">
       <div class="sol-layout">
         <div class="sol-info">
-          <div class="section-eyebrow">Our Financial Services</div>
-          <h2 class="section-title">Comprehensive<br><em>Wealth Suite</em></h2>
-          <p style="font-size:15.5px; line-height:1.75; color:var(--text-2); max-width:380px; margin-top:14px;">
-            A complete ecosystem for wealth creation. Execute, track, and scale your investments with institutional efficiency.
+          <div class="section-eyebrow">Services</div>
+          <h2 class="section-title">We Provide<br><em>Many More Services</em></h2>
+          <p style="font-size:15px; line-height:1.75; color:var(--text-2); max-width:380px; margin-top:14px;">
+            MF is our prime concern and We deal in all of mutual funds which are across in India. Please feel free to contact us.
           </p>
           <a href="#contact" style="display:inline-flex; align-items:center; gap:8px; margin-top:28px; font-size:14px; font-weight:700; color:var(--green-deep); text-decoration:none;">
-            Schedule a Consultation →
+            Contact Our Team →
           </a>
         </div>
         <div class="sol-cards">
-          <!-- 1. Mutual Funds -->
+          <!-- 1. Mutual Fund -->
           <div class="sol-card">
             <div class="sol-card-icon">📈</div>
             <div>
-              <div class="sol-card-title">Mutual Funds</div>
-              <div class="sol-card-desc">Professional fund management across Equity, Hybrid, Debt, Index, and ELSS Tax-Saver funds for steady compounding growth.</div>
+              <div class="sol-card-title">Mutual Fund</div>
+              <div class="sol-card-desc">A mutual fund is a pool of money managed by a professional Fund Manager. Suggested products of Mutual Funds of Different Companies.</div>
             </div>
           </div>
-          <!-- 2. Fixed Income -->
+          <!-- 2. Fixed Income Products -->
           <div class="sol-card">
             <div class="sol-card-icon">🏦</div>
             <div>
               <div class="sol-card-title">Fixed Income Products</div>
-              <div class="sol-card-desc">Capital preservation approach focused on stability, AAA Corporate FDs, Sovereign Gold Bonds, and regular cash flows.</div>
+              <div class="sol-card-desc">Fixed income is an investment approach focused on preservation of capital and income.</div>
             </div>
           </div>
           <!-- 3. Equity Investment -->
@@ -244,31 +286,31 @@
             <div class="sol-card-icon">📊</div>
             <div>
               <div class="sol-card-title">Equity Investment</div>
-              <div class="sol-card-desc">High-conviction equity participation in fundamentally sound corporate leaders for long-term multi-generational wealth.</div>
+              <div class="sol-card-desc">An equity investment is money that is invested in a company by purchasing shares of that company in the stock market.</div>
             </div>
           </div>
           <!-- 4. Insurance -->
           <div class="sol-card">
             <div class="sol-card-icon">🛡️</div>
             <div>
-              <div class="sol-card-title">Comprehensive Insurance</div>
-              <div class="sol-card-desc">Protection from financial loss with customized term life, family health, and critical illness safeguards.</div>
+              <div class="sol-card-title">Insurance</div>
+              <div class="sol-card-desc">Insurance is a means of protection from financial loss in which, in exchange for a fee, a party agrees to compensate another party in the event of a certain loss, damage, or injury.</div>
             </div>
           </div>
           <!-- 5. NRI Investment -->
           <div class="sol-card">
             <div class="sol-card-icon">🌐</div>
             <div>
-              <div class="sol-card-title">NRI Investment Desk</div>
-              <div class="sol-card-desc">Dedicated advisory for Non-Resident Indians to invest through NRE/NRO accounts with digital KYC and repatriation support.</div>
+              <div class="sol-card-title">NRI Investment</div>
+              <div class="sol-card-desc">Non-Resident Indian, or NRI for short, is a term that refers to an Indian citizen who resides outside India 182 days in a financial year, but still maintains strong ties to their homeland.</div>
             </div>
           </div>
           <!-- 6. NPS -->
           <div class="sol-card">
             <div class="sol-card-icon">👴</div>
             <div>
-              <div class="sol-card-title">National Pension System (NPS)</div>
-              <div class="sol-card-desc">Voluntary retirement savings scheme enabling systematic wealth creation with additional tax deductions under 80CCD.</div>
+              <div class="sol-card-title">NPS</div>
+              <div class="sol-card-desc">National Pension System (NPS) is a voluntary, defined contribution retirement savings scheme designed to enable the subscribers to make optimum decisions regarding their future through systematic savings during their working life.</div>
             </div>
           </div>
         </div>
@@ -276,147 +318,11 @@
     </div>
   </section>
 
-  <!-- INVESTMENT FRAMEWORK / JOURNEY -->
-  <section id="journey">
-    <div class="max-w">
-      <div class="section-eyebrow" style="text-align:center">The Investment Framework</div>
-      <h2 class="section-title" style="text-align:center">The Investment <em>Framework</em></h2>
-      <div class="journey-grid">
-        <div class="journey-card">
-          <div class="journey-num">01</div>
-          <div class="journey-title">Requirements Analysis</div>
-          <div class="journey-desc">In-depth evaluation of your financial landscape, existing assets, cash flows, and risk appetite profiles.</div>
-        </div>
-        <div class="journey-card">
-          <div class="journey-num">02</div>
-          <div class="journey-title">Goal Planning</div>
-          <div class="journey-desc">Precise mapping of major life milestones—from children's higher education to strategic retirement corpus creation.</div>
-        </div>
-        <div class="journey-card">
-          <div class="journey-num">03</div>
-          <div class="journey-title">Investment Preparation</div>
-          <div class="journey-desc">Aligning cash flows, tax structures, and sophisticated asset allocation frameworks before market deployment.</div>
-        </div>
-        <div class="journey-card">
-          <div class="journey-num">04</div>
-          <div class="journey-title">Execution & Monitoring</div>
-          <div class="journey-desc">Seamless digital execution followed by continuous performance auditing and tactical rebalancing for long-term alpha.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <section id="stats">
-    <div class="max-w">
-      <div class="stats-grid">
-        <div class="stat-box">
-          <div class="stat-num">14<span class="stat-plus">+</span></div>
-          <div class="stat-label">Years of Experience</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">800<span class="stat-plus">+</span></div>
-          <div class="stat-label">Happy Client Families</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">50<span class="stat-plus">+</span></div>
-          <div class="stat-label">Industry Awards</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-num">5,000<span class="stat-plus">+</span></div>
-          <div class="stat-label">Financial Goals Planned</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CALCULATOR -->
-  <section id="calculator">
-    <div class="max-w">
-      <div class="calc-header">
-        <div class="section-eyebrow">Financial Telemetry</div>
-        <h2 class="section-title">SIP Compounding <em>Calculator</em></h2>
-        <p style="font-size:15.5px; line-height:1.75; color:var(--text-2); max-width:480px; margin:14px auto 0;">
-          Quantify your financial future. Use our analytical models to forecast compounding trajectories and capital growth.
-        </p>
-      </div>
-
-      <div class="calc-main-card">
-        <div class="calc-left">
-          <div class="calc-row">
-            <div class="calc-label-row">
-              <span class="calc-label-text">Monthly Investment</span>
-              <span class="calc-val" id="cAmt">₹25,000</span>
-            </div>
-            <input type="range" id="slAmt" min="500" max="200000" step="500" value="25000">
-            <div class="calc-range-labels">
-              <span>₹500</span>
-              <span>₹2,00,000</span>
-            </div>
-          </div>
-          <div class="calc-row">
-            <div class="calc-label-row">
-              <span class="calc-label-text">Expected Return (CAGR)</span>
-              <span class="calc-val" id="cRate">14%</span>
-            </div>
-            <input type="range" id="slRate" min="5" max="30" step="0.5" value="14">
-            <div class="calc-range-labels">
-              <span>5%</span>
-              <span>30%</span>
-            </div>
-          </div>
-          <div class="calc-row" style="margin-bottom:0">
-            <div class="calc-label-row">
-              <span class="calc-label-text">Time Horizon</span>
-              <span class="calc-val" id="cYrs" style="color:var(--green-deep)">15 Years</span>
-            </div>
-            <input type="range" id="slYrs" min="1" max="35" step="1" value="15">
-            <div class="calc-range-labels">
-              <span>1 Yr</span>
-              <span>35 Yrs</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="calc-right">
-          <div class="donut-wrap">
-            <svg class="donut-svg" viewBox="0 0 180 180" width="220" height="220">
-              <circle class="d-track" cx="90" cy="90" r="70" fill="none" stroke="rgba(195,20,27,0.1)" stroke-width="18" />
-              <circle class="d-invested" id="dInv" cx="90" cy="90" r="70" fill="none" stroke="#64748B" stroke-width="18" stroke-dasharray="140 440" transform="rotate(-90 90 90)" />
-              <circle class="d-gains" id="dGain" cx="90" cy="90" r="70" fill="none" stroke="#FBAD15" stroke-width="18" stroke-dasharray="300 440" transform="rotate(-90 90 90)" />
-            </svg>
-            <div class="donut-center">
-              <div class="donut-total" id="dTotal">₹1.53Cr</div>
-              <div class="donut-lbl">Maturity Value</div>
-            </div>
-          </div>
-
-          <div class="result-rows">
-            <div class="result-row">
-              <span class="r-lbl">Invested Capital</span>
-              <span class="r-val" id="rInv">₹45,00,000</span>
-            </div>
-            <div class="result-row">
-              <span class="r-lbl">Estimated Gains</span>
-              <span class="r-val" id="rGain">₹1,07,89,815</span>
-            </div>
-            <div class="result-row" style="border-bottom:none">
-              <span class="r-lbl" style="font-weight:700; color:var(--text)">Total Maturity</span>
-              <span class="r-val gold" id="rTotal">₹1,52,89,815</span>
-            </div>
-          </div>
-
-          <a href="#contact" class="btn-sip-cta">Start Building Wealth →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- AMC PARTNERS -->
+  <!-- OUR PARTNERS -->
   <section id="partners">
     <div class="max-w">
-      <div class="section-eyebrow" style="text-align:center">AMC Partners</div>
-      <h2 class="section-title" style="text-align:center">30+ Leading <em>Fund Houses</em></h2>
+      <div class="section-eyebrow" style="text-align:center">Our Partners</div>
+      <h2 class="section-title" style="text-align:center">We have <em>30+ Partners</em></h2>
       <div class="partners-grid">
         <div class="amc-logo-box"><img src="./assets/amc_logos/sbi.png" alt="SBI Mutual Fund"><span>SBI MF</span></div>
         <div class="amc-logo-box"><img src="./assets/amc_logos/hdfc-logo.png" alt="HDFC Mutual Fund"><span>HDFC MF</span></div>
@@ -439,10 +345,10 @@
     <div class="max-w">
       <div class="contact-layout">
         <div class="contact-info-panel">
-          <div class="section-eyebrow">Get In Touch</div>
-          <h2 class="section-title">Connect with <em>Ameva</em></h2>
+          <div class="section-eyebrow">Contact</div>
+          <h2 class="section-title">Contact <em>Us</em></h2>
           <p style="color:var(--text-2); font-size:15px; line-height:1.7; margin-bottom:20px;">
-            We are here to help you navigate mutual funds, portfolio rebalancing, and long-term asset protection.
+            We will help you 24x7 and will help to increase your wealth by investing your capital in Mutual Funds, Insurance, Equity etc.
           </p>
 
           <div class="contact-card">
@@ -450,10 +356,8 @@
             <div>
               <div class="contact-card-title">Registered Office Address</div>
               <div class="contact-card-text">
-                <strong>Vipul Gupta / Ameva</strong><br>
-                # 258, Tower -B, 2nd Floor, SPAZEDGE,<br>
-                Sector-47, Sohna Road,<br>
-                Gurugram (Hr.) – 122018
+                <strong>Vipul Gupta</strong><br>
+                # 258, Tower -B, 2nd Floor, SPAZEDGE Sector-47, Sohna Road, Gurugram (Hr.) – 122018
               </div>
             </div>
           </div>
@@ -461,65 +365,55 @@
           <div class="contact-card">
             <div class="contact-card-icon"><i class="bi bi-telephone-fill"></i></div>
             <div>
-              <div class="contact-card-title">Call or WhatsApp</div>
+              <div class="contact-card-title">Call or Email Us</div>
               <div class="contact-card-text">
-                <a href="tel:+919891493932">+91 98914 93932</a>, <a href="tel:+917838043471">78380 43471</a>
+                <p><strong>Mobile:</strong> <a href="tel:+919891493932">+91 98914 93932</a>, <a href="tel:+917838043471">78380 43471</a></p>
+                <p><strong>Email:</strong> <a href="mailto:vipulportfolio@gmail.com">vipulportfolio@gmail.com</a></p>
               </div>
             </div>
           </div>
 
           <div class="contact-card">
-            <div class="contact-card-icon"><i class="bi bi-envelope-fill"></i></div>
+            <div class="contact-card-icon"><i class="bi bi-person-badge-fill"></i></div>
             <div>
-              <div class="contact-card-title">Official Email</div>
+              <div class="contact-card-title">Grievance Officer</div>
               <div class="contact-card-text">
-                <a href="mailto:vipulportfolio@gmail.com">vipulportfolio@gmail.com</a>
+                <strong>Vipul Gupta</strong><br>
+                +91 98914 93932
               </div>
             </div>
           </div>
         </div>
 
         <div class="contact-form-panel">
-          <h3 style="font-family:'DM Serif Display',serif; font-size:24px; color:var(--green-deep); margin-bottom:12px;">Request Wealth Consultation</h3>
-          <p style="font-size:14px; color:var(--text-3); margin-bottom:24px;">Fill in your contact information and our certified advisor will connect with you.</p>
+          <h3 style="font-family:'DM Serif Display',serif; font-size:24px; color:var(--green-deep); margin-bottom:12px;">Contact Form</h3>
+          <p style="font-size:14px; color:var(--text-3); margin-bottom:24px;">Please fill out the form below and we will contact you soon.</p>
 
           <form id="contactForm">
             <div class="form-group-grid">
               <div class="form-field-wrap">
-                <label for="cName">Full Name *</label>
+                <label for="cName">Your Name *</label>
                 <input type="text" id="cName" placeholder="Your Name" required>
               </div>
               <div class="form-field-wrap">
-                <label for="cEmail">Email Address *</label>
-                <input type="email" id="cEmail" placeholder="your@email.com" required>
+                <label for="cEmail">Your Email *</label>
+                <input type="email" id="cEmail" placeholder="Your Email" required>
               </div>
             </div>
 
             <div class="form-field-wrap">
-              <label for="cPhone">Mobile Number *</label>
-              <input type="tel" id="cPhone" placeholder="10-digit mobile number" maxlength="10" required>
-            </div>
-
-            <div class="form-field-wrap">
-              <label for="cService">Select Service</label>
-              <select id="cService">
-                <option value="Mutual Funds">Mutual Funds & SIP</option>
-                <option value="Fixed Income">Fixed Income Products</option>
-                <option value="Equity">Equity Investment</option>
-                <option value="Insurance">Insurance Protection</option>
-                <option value="NRI">NRI Investment Desk</option>
-                <option value="NPS">National Pension System (NPS)</option>
-              </select>
+              <label for="cPhone">Your Mobile Number *</label>
+              <input type="tel" id="cPhone" placeholder="Your Mobile Number" maxlength="10" required>
             </div>
 
             <div class="form-field-wrap">
               <label for="cMsg">Message</label>
-              <textarea id="cMsg" rows="3" placeholder="Tell us about your investment target or query..."></textarea>
+              <textarea id="cMsg" rows="4" placeholder="Message" required></textarea>
             </div>
 
-            <button type="submit" class="btn-form-submit" id="btnSubmit">Send Consultation Request</button>
+            <button type="submit" class="btn-form-submit" id="btnSubmit">Send Message</button>
             <div id="formMsg" style="display:none; margin-top:14px; padding:12px; border-radius:8px; font-size:13px; font-weight:700; background:#DCFCE7; color:#15803D; text-align:center;">
-              Thank you! We will get in touch with you shortly.
+              Mail Sent Successfully, We will contact you soon.
             </div>
           </form>
         </div>
@@ -527,42 +421,44 @@
     </div>
   </section>
 
-  <!-- REGULATORY DISCLOSURES & RISK FACTORS -->
+  <!-- RISK FACTORS & STATUTORY DISCLOSURES -->
   <section id="regulatory">
     <div class="max-w">
       <div class="reg-box">
         <div class="reg-title-wrap">
-          <i class="bi bi-shield-exclamation" style="font-size:26px; color:var(--green-deep);"></i>
+          <i class="bi bi-shield-exclamation" style="font-size:28px; color:var(--green-deep);"></i>
           <div>
-            <h3>Risk Factors & Statutory Disclosures</h3>
-            <p style="font-size:12px; color:var(--text-3); font-weight:600;">AMFI Registered Mutual Fund Distributor • ARN: <strong>145058</strong> | EUIN: <strong>E028717</strong></p>
+            <h3>Risk Factors</h3>
+            <p style="font-size:13px; color:var(--text-3); font-weight:600;">
+              <strong>ARN-145058</strong> | <strong>EUIN-E028717</strong> (AMFI Registered Mutual Fund Distributor)
+            </p>
           </div>
         </div>
 
         <div class="reg-text-content">
           <p>
-            <strong>Risk Factors:</strong> Investments in Mutual Funds are subject to Market Risks. Read all scheme related documents carefully before investing. Mutual Fund Schemes do not assure or guarantee any returns. Past performances of any Mutual Fund Scheme may or may not be sustained in future. There is no guarantee that the investment objective of any suggested scheme shall be achieved. All existing and prospective investors are advised to check and evaluate the Exit loads and other cost structure (TER) applicable at the time of making the investment before finalizing on any investment decision for Mutual Funds schemes.
+            <strong>Risk Factors</strong> – Investments in Mutual Funds are subject to Market Risks. Read all scheme related documents carefully before investing. Mutual Fund Schemes do not assure or guarantee any returns. Past performances of any Mutual Fund Scheme may or may not be sustained in future. There is no guarantee that the investment objective of any suggested scheme shall be achieved. All existing and prospective investors are advised to check and evaluate the Exit loads and other cost structure (TER) applicable at the time of making the investment before finalizing on any investment decision for Mutual Funds schemes. We deal in Regular Plans only for Mutual Fund Schemes and earn a Trailing Commission on client investments. Disclosure For Commission earnings is made to clients at the time of investments. Option of Direct Plan for every Mutual Fund Scheme is available to investors offering advantage of lower expense ratio. We are not entitled to earn any commission on Direct plans. Hence we do not deal in Direct Plans.
           </p>
-          <p style="margin-top:10px;">
-            <strong>Commission Disclosure:</strong> We deal in <em>Regular Plans only</em> for Mutual Fund Schemes and earn a Trailing Commission on client investments. Disclosure For Commission earnings is made to clients at the time of investments. Option of Direct Plan for every Mutual Fund Scheme is available to investors offering advantage of lower expense ratio. We are not entitled to earn any commission on Direct plans. Hence we do not deal in Direct Plans.
-          </p>
+          <div style="margin-top:14px; font-size:13px; color:var(--text-2);">
+            Grievance Officer: <strong>Vipul Gupta - +91 98914 93932</strong>
+          </div>
         </div>
 
-        <!-- THREE ACTIVE WORKING LINKS -->
+        <!-- THREE ACTIVE WORKING LINKS AS REQUESTED -->
         <div class="reg-links-bar">
           <span style="font-size:13px; font-weight:700; color:var(--text);">Mandatory Regulatory Links:</span>
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
             <!-- 1. SID / SAI / KIM (SEBI) -->
             <a href="https://www.sebi.gov.in/filings/mutual-funds.html" target="_blank" rel="noopener noreferrer" class="reg-btn-link">
-              <i class="bi bi-file-earmark-text"></i> SID / SAI / KIM (SEBI)
+              <i class="bi bi-file-earmark-text"></i> SID/SAI/KIM
             </a>
             <!-- 2. Code of Conduct -->
             <a href="https://fincorponline.com/Code_of_Conduct/AMFI_Code-of-Conduct.pdf" target="_blank" rel="noopener noreferrer" class="reg-btn-link">
               <i class="bi bi-journal-text"></i> Code of Conduct
             </a>
-            <!-- 3. SID Links -->
-            <a href="#sidModal" id="openSidModalBtn" class="reg-btn-link">
-              <i class="bi bi-folder2-open"></i> SID Links Directory
+            <!-- 3. SID Links (Separate Page like IPFS) -->
+            <a href="sid.html" class="reg-btn-link">
+              <i class="bi bi-folder2-open"></i> SID Links
             </a>
           </div>
         </div>
@@ -576,7 +472,7 @@
       <div class="modal-header">
         <div class="modal-title-wrap">
           <i class="bi bi-folder-check"></i>
-          <h3>AMC Scheme Information Documents (SID) Links</h3>
+          <h3>SID Links Directory</h3>
         </div>
         <button class="modal-close-btn" id="closeSidModalBtn"><i class="bi bi-x-lg"></i></button>
       </div>
@@ -596,9 +492,11 @@
   <footer>
     <div class="footer-grid">
       <div>
-        <img src="./assets/logo.jpg" alt="Ameva Logo" class="footer-brand-logo">
+        <div class="footer-brand-logo-wrap">
+          <img src="./assets/logo.jpg" alt="Ameva Logo" class="footer-brand-logo">
+        </div>
         <p class="footer-mission">
-          <strong>Ameva — Growth Beyond Measure.</strong> We welcome you to our website where you can get total solution of investments. Our experts will help you serve better in mutual fund and wealth queries.
+          We Welcome you to our website where you can get total solution of investments. Our experts will help you to serve you better in investment query. We will help you 24x7 and will help to increase your wealth by investing your capital in Mutual Funds, Insurance, Equity etc.
         </p>
         <div class="footer-reg-pill">
           ARN-145058 | EUIN-E028717 (AMFI Registered)
@@ -608,37 +506,35 @@
       <div class="footer-col">
         <h4>Navigation</h4>
         <a href="#hero">Home</a>
-        <a href="#difference">About Us</a>
-        <a href="#solutions">Services</a>
-        <a href="#journey">Framework</a>
-        <a href="#calculator">SIP Calculator</a>
+        <a href="#about">About us</a>
+        <a href="#services">Services</a>
         <a href="#contact">Contact</a>
+        <a href="#regulatory">Commission Disclosure</a>
+        <a href="https://www.cvlkra.com/" target="_blank" rel="noopener noreferrer">Check KYC</a>
       </div>
 
       <div class="footer-col">
-        <h4>Scheme Research</h4>
+        <h4>Scheme Comparison</h4>
         <a href="https://www.advisorkhoj.com/" target="_blank" rel="noopener noreferrer">advisorkhoj.com</a>
         <a href="https://www.etmoney.com/" target="_blank" rel="noopener noreferrer">etmoney.com</a>
         <a href="https://www.moneycontrol.com/" target="_blank" rel="noopener noreferrer">moneycontrol.com</a>
         <a href="https://www.valueresearchonline.com/" target="_blank" rel="noopener noreferrer">valueresearchonline.com</a>
-        <a href="https://www.cvlkra.com/" target="_blank" rel="noopener noreferrer">Check KYC Online</a>
       </div>
 
       <div class="footer-col">
-        <h4>Registered Office</h4>
+        <h4>Contact Us</h4>
         <p style="font-size:13.5px; color:var(--text-2); line-height:1.6; margin-bottom:12px;">
-          # 258, Tower -B, 2nd Floor, SPAZEDGE,<br>
-          Sector-47, Sohna Road,<br>
-          Gurugram (Hr.) – 122018
+          <strong>Registered Office Address</strong><br>
+          # 258, Tower -B, 2nd Floor, SPAZEDGE Sector-47, Sohna Road, Gurugram (Hr.) – 122018
         </p>
-        <p style="font-size:13.5px; color:var(--text-2);"><strong>Phone:</strong> +91 98914 93932</p>
+        <p style="font-size:13.5px; color:var(--text-2);"><strong>Mobile:</strong> +91 98914 93932, 78380 43471</p>
         <p style="font-size:13.5px; color:var(--text-2);"><strong>Email:</strong> vipulportfolio@gmail.com</p>
       </div>
     </div>
 
     <div class="footer-bottom">
       <div class="footer-copy">
-        &copy; <span id="yr">2026</span> <strong>Ameva</strong>. All Rights Reserved. (AMFI Registered Mutual Fund Distributor)
+        &copy; Copyright <strong>Ameva</strong>. All Rights Reserved.
       </div>
       <div>
         Mutual Fund investments are subject to market risks. Read all scheme related documents carefully.
@@ -648,6 +544,11 @@
 
   <!-- SCROLL TO TOP -->
   <button class="scroll-top" id="stBtn" aria-label="Scroll to top"><i class="bi bi-chevron-up"></i></button>
+
+  <!-- WhatsApp Float -->
+  <a href="https://api.whatsapp.com/send?phone=919891493932&text=" class="whatsapp-float-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
 
   <script type="module" src="./main.js"></script>
 </body>

@@ -148,6 +148,7 @@ function calcSIP() {
   if (dInv && dGain) {
     dInv.setAttribute('stroke-dasharray', `${iA} ${C - iA}`);
     dGain.setAttribute('stroke-dasharray', `${gA} ${C - gA}`);
+    dGain.setAttribute('stroke-dashoffset', `-${iA}`);
   }
 }
 
@@ -236,3 +237,176 @@ function setupContactForm() {
     }, 800);
   });
 }
+
+// ── RISK PROFILING LOGIC (EXCEL SCORING MATRIX) ──
+function setupRiskProfiler() {
+  const form = document.getElementById('riskProfileForm');
+  const resultBox = document.getElementById('riskResultBox');
+  const btnPrev = document.getElementById('btnRiskPrev');
+  const btnNext = document.getElementById('btnRiskNext');
+  const btnSubmit = document.getElementById('btnRiskSubmit');
+  const btnRetake = document.getElementById('btnRetakeRisk');
+  const steps = document.querySelectorAll('.risk-q-step');
+  const progressBar = document.getElementById('riskProgressBar');
+  const stepCounter = document.getElementById('riskStepCurrent');
+
+  if (!form || !resultBox || !btnNext || steps.length === 0) return;
+
+  let currentStep = 1;
+  const totalSteps = steps.length; // 7 steps (6 questions + 1 lead)
+
+  function showStep(stepIndex) {
+    steps.forEach((step, idx) => {
+      step.classList.toggle('active', idx + 1 === stepIndex);
+    });
+
+    // Update progress
+    const pct = ((stepIndex - 1) / (totalSteps - 1)) * 100 || 16.6;
+    if (progressBar) progressBar.style.width = `${pct}%`;
+    if (stepCounter) {
+      if (stepIndex <= 6) {
+        stepCounter.textContent = `Question ${stepIndex}`;
+      } else {
+        stepCounter.textContent = `Final Step`;
+      }
+    }
+
+    // Prev button
+    if (btnPrev) btnPrev.style.display = stepIndex > 1 ? 'block' : 'none';
+
+    // Next vs Submit
+    if (stepIndex === totalSteps) {
+      if (btnNext) btnNext.style.display = 'none';
+      if (btnSubmit) btnSubmit.style.display = 'block';
+    } else {
+      if (btnNext) btnNext.style.display = 'block';
+      if (btnSubmit) btnSubmit.style.display = 'none';
+    }
+  }
+
+  btnNext.addEventListener('click', () => {
+    // Validate current question
+    const activeStepEl = document.querySelector('.risk-q-step.active');
+    const checked = activeStepEl.querySelector('input[type="radio"]:checked');
+    if (!checked && currentStep <= 6) {
+      alert('Please select an option to proceed.');
+      return;
+    }
+
+    if (currentStep < totalSteps) {
+      currentStep++;
+      showStep(currentStep);
+    }
+  });
+
+  btnPrev?.addEventListener('click', () => {
+    if (currentStep > 1) {
+      currentStep--;
+      showStep(currentStep);
+    }
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Calculate score
+    const qAge = parseInt(form.querySelector('input[name="q_age"]:checked')?.value || '3', 10);
+    const qHorizon = parseInt(form.querySelector('input[name="q_horizon"]:checked')?.value || '3', 10);
+    const qGoal = parseInt(form.querySelector('input[name="q_goal"]:checked')?.value || '3', 10);
+    const qDrop = parseInt(form.querySelector('input[name="q_drop"]:checked')?.value || '3', 10);
+    const qExp = parseInt(form.querySelector('input[name="q_exp"]:checked')?.value || '3', 10);
+    const qStability = parseInt(form.querySelector('input[name="q_stability"]:checked')?.value || '3', 10);
+
+    const totalScore = qAge + qHorizon + qGoal + qDrop + qExp + qStability;
+
+    // Excel Matrix Categorization:
+    // 6 - 13: Conservative
+    // 14 - 21: Moderate
+    // 22 - 30: Aggressive
+    let tag = 'MODERATE INVESTOR';
+    let title = 'Balanced Growth Profile';
+    let desc = 'You seek a healthy blend of steady capital appreciation with controlled downside protection.';
+    let alloc = [
+      { name: 'Equity Funds (Large & Flexi Cap)', pct: 50, color: '#C3141B' },
+      { name: 'Debt & Fixed Income Instruments', pct: 35, color: '#25475E' },
+      { name: 'Hybrid & Dynamic Asset Allocation', pct: 15, color: '#FBAD15' }
+    ];
+    let funds = ['Flexi Cap Mutual Funds', 'Large & Mid Cap Funds', 'Balanced Advantage Funds', 'Short Duration Debt Funds', 'Sovereign Gold Bonds'];
+
+    if (totalScore <= 13) {
+      tag = 'CONSERVATIVE INVESTOR';
+      title = 'Capital Preservation Profile';
+      desc = 'Your primary priority is safety of capital with low volatility and regular, predictable yields.';
+      alloc = [
+        { name: 'Debt, Liquid & Arbitrage Funds', pct: 70, color: '#25475E' },
+        { name: 'Large Cap Equity / Hybrid Funds', pct: 20, color: '#C3141B' },
+        { name: 'Gold / Safe Liquid Buffer', pct: 10, color: '#FBAD15' }
+      ];
+      funds = ['Banking & PSU Debt Funds', 'Corporate Bond Funds', 'Arbitrage Funds', 'Conservative Hybrid Funds', 'Fixed Maturity Plans'];
+    } else if (totalScore >= 22) {
+      tag = 'AGGRESSIVE INVESTOR';
+      title = 'High Wealth Compounding Profile';
+      desc = 'You have a high risk appetite aiming for maximum inflation-beating alpha over long market cycles.';
+      alloc = [
+        { name: 'Mid Cap, Small Cap & Focused Equity', pct: 75, color: '#C3141B' },
+        { name: 'Thematic / International Equity', pct: 15, color: '#FBAD15' },
+        { name: 'Liquid Buffer & Multi-Asset', pct: 10, color: '#25475E' }
+      ];
+      funds = ['Small Cap Funds', 'Mid Cap Funds', 'Flexi & Multi Cap Funds', 'Sectoral/Thematic Funds', 'ELSS Tax Saver Funds'];
+    }
+
+    // Render results
+    document.getElementById('resTag').textContent = tag;
+    document.getElementById('resTitle').textContent = title;
+    document.getElementById('resDesc').textContent = desc;
+    document.getElementById('resScoreNum').textContent = totalScore;
+    
+    const meterPct = Math.min(100, Math.round(((totalScore - 6) / 24) * 100));
+    document.getElementById('resScoreMeter').style.width = `${meterPct}%`;
+
+    // Render Allocation Bars
+    const allocContainer = document.getElementById('resAllocationBars');
+    if (allocContainer) {
+      allocContainer.innerHTML = alloc.map(a => `
+        <div class="alloc-bar-item">
+          <div class="alloc-bar-header">
+            <span>${a.name}</span>
+            <span>${a.pct}%</span>
+          </div>
+          <div class="alloc-track">
+            <div class="alloc-fill" style="width:${a.pct}%; background:${a.color};"></div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Render Fund Tags
+    const fundContainer = document.getElementById('resFundTags');
+    if (fundContainer) {
+      fundContainer.innerHTML = funds.map(f => `<span class="fund-tag">${f}</span>`).join('');
+    }
+
+    form.style.display = 'none';
+    resultBox.style.display = 'block';
+    resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  btnRetake?.addEventListener('click', () => {
+    form.reset();
+    currentStep = 1;
+    showStep(1);
+    resultBox.style.display = 'none';
+    form.style.display = 'block';
+  });
+}
+
+// ── INIT ──
+document.addEventListener('DOMContentLoaded', () => {
+  initPreloader();
+  setupNav();
+  setupSliders();
+  setupSidModal();
+  setupContactForm();
+  setupRiskProfiler();
+});
+

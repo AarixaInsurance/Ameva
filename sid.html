@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SID Links (Scheme Information Document) — Ameva</title>
+  <meta name="description"
+    content="Access official Scheme Information Documents (SID), Statement of Additional Information (SAI), and Key Information Memorandum (KIM) from all 43 AMCs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/jpeg" href="./assets/logo.jpg">
+  <style>
+    .sid-page-hero {
+      background: linear-gradient(135deg, #1B3547 0%, #25475E 100%);
+      color: #FFFFFF;
+      padding: 140px 6% 60px;
+      text-align: center;
+      position: relative;
+    }
+    .sid-page-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(251, 173, 21, 0.15);
+      border: 1px solid rgba(251, 173, 21, 0.4);
+      color: #FBAD15;
+      padding: 6px 16px;
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .sid-page-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(32px, 4vw, 52px);
+      margin-bottom: 14px;
+      color: #FFFFFF;
+    }
+    .sid-page-sub {
+      font-size: 16px;
+      color: #CBD5E1;
+      max-width: 720px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+    .sid-search-box-wrap {
+      max-width: 580px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .sid-search-box-wrap input {
+      width: 100%;
+      padding: 16px 20px 16px 52px;
+      border-radius: 50px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      background: #FFFFFF;
+      color: #1E293B;
+      font-family: 'Sora', sans-serif;
+      font-size: 15px;
+      outline: none;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s;
+    }
+    .sid-search-box-wrap input:focus {
+      border-color: #FBAD15;
+      box-shadow: 0 12px 35px rgba(251, 173, 21, 0.25);
+    }
+    .sid-search-icon-hero {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      color: #64748B;
+      pointer-events: none;
+    }
+    .sid-main-section {
+      padding: 70px 6% 100px;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    .sebi-banner {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--green-deep);
+      border-radius: 18px;
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 50px;
+      box-shadow: 0 10px 30px rgba(37, 71, 94, 0.05);
+    }
+    .sebi-banner h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #25475E;
+      margin-bottom: 4px;
+    }
+    .sebi-banner p {
+      font-size: 13.5px;
+      color: var(--text-2);
+      line-height: 1.5;
+    }
+    .btn-sebi-direct {
+      background: var(--green-deep);
+      color: #FFFFFF;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 13.5px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      transition: all 0.25s;
+    }
+    .btn-sebi-direct:hover {
+      background: #A80F15;
+      transform: translateY(-2px);
+    }
+    .amc-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .amc-grid-card {
+      background: #FFFFFF;
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 18px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+      box-shadow: 0 4px 16px rgba(37, 71, 94, 0.03);
+    }
+    .amc-grid-card:hover {
+      border-color: #FBAD15;
+      transform: translateY(-5px);
+      box-shadow: 0 16px 36px rgba(251, 173, 21, 0.15);
+    }
+    .amc-card-logo-wrap {
+      height: 54px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+    .amc-card-logo-wrap img {
+      max-height: 48px;
+      max-width: 150px;
+      object-fit: contain;
+    }
+    .amc-card-name {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #25475E;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .amc-card-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--green-deep);
+      background: rgba(195, 20, 27, 0.06);
+      padding: 6px 14px;
+      border-radius: 99px;
+      width: 100%;
+      transition: all 0.2s;
+    }
+    .amc-grid-card:hover .amc-card-action {
+      background: var(--green-deep);
+      color: #FFFFFF;
+    }
+    @media(max-width:768px) {
+      .sebi-banner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .btn-sebi-direct {
+        width: 100%;
+        justify-content: center;
+      }
+      .amc-cards-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="index.html#hero" class="nav-logo">
+      <img src="./assets/logo.jpg" alt="Ameva - Growth Beyond Measure" class="brand-logo">
+    </a>
+    <div class="nav-links">
+      <a href="index.html#hero">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="calculator.html">SIP Calculator</a>
+      <a href="risk-profiling.html">Risk Profiling</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <a href="https://dataaccurate.in/" target="_blank" rel="noopener noreferrer" class="btn-client-nav">Client Login</a>
+      <a href="https://dataaccurate.in/" target="_blank" rel="noopener noreferrer" class="btn-admin-nav">Admin Login</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="sid-page-hero">
+    <div class="sid-page-badge">
+      <i class="bi bi-shield-check"></i> Statutory Regulatory Disclosures
+    </div>
+    <h1 class="sid-page-title">Scheme Information Documents (SID)</h1>
+    <p class="sid-page-sub">
+      Access official Scheme Information Documents (SID), Key Information Memorandums (KIM), and Statement of Additional Information (SAI) directly from all 43 Asset Management Companies in India.
+    </p>
+
+    <div class="sid-search-box-wrap">
+      <i class="bi bi-search sid-search-icon-hero"></i>
+      <input type="text" id="pageSidSearch" placeholder="Search AMC by name (e.g. HDFC, SBI, Axis, Nippon, Mirae)...">
+    </div>
+  </section>
+
+  <!-- MAIN DIRECTORY -->
+  <section class="sid-main-section">
+    <!-- SEBI Regulatory Repository -->
+    <div class="sebi-banner">
+      <div>
+        <div style="font-size:11px; font-weight:800; text-transform:uppercase; color:var(--green-deep); letter-spacing:1px; margin-bottom:4px;">
+          SEBI Official Repository
+        </div>
+        <h3>SEBI Mutual Funds Filings & Offer Documents</h3>
+        <p>
+          View official draft offer documents, scheme filings, and statutory regulatory updates directly on the Securities and Exchange Board of India (SEBI) portal.
+        </p>
+      </div>
+      <a href="https://www.sebi.gov.in/filings/mutual-funds.html" target="_blank" rel="noopener noreferrer" class="btn-sebi-direct">
+        Open SEBI Filings <i class="bi bi-box-arrow-up-right"></i>
+      </a>
+    </div>
+
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px;">
+      <h2 style="font-family:'DM Serif Display',serif; font-size:26px; color:#25475E;">
+        All Asset Management Companies (<span id="amcCount">43</span>)
+      </h2>
+      <span style="font-size:13px; color:var(--text-3);">Click any card to open official SID / KIM portal</span>
+    </div>
+
+    <!-- 43 AMC Grid -->
+    <div class="amc-cards-grid" id="amcCardsGrid">
+      <!-- Populated dynamically -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo-wrap">
+          <img src="./assets/logo.jpg" alt="Ameva Logo" class="footer-brand-logo">
+        </div>
+        <p class="footer-mission">
+          We Welcome you to our website where you can get total solution of investments. Our experts will help you to serve you better in investment query. We will help you 24x7.
+        </p>
+        <div class="footer-reg-pill">
+          ARN-145058 | EUIN-E028717 (AMFI Registered)
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="index.html#hero">Home</a>
+        <a href="index.html#about">About us</a>
+        <a href="index.html#services">Services</a>
+        <a href="risk-profiling.html">Risk Profiling</a>
+        <a href="sid.html">SID Links</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Scheme Comparison</h4>
+        <a href="https://www.advisorkhoj.com/" target="_blank" rel="noopener noreferrer">advisorkhoj.com</a>
+        <a href="https://www.etmoney.com/" target="_blank" rel="noopener noreferrer">etmoney.com</a>
+        <a href="https://www.moneycontrol.com/" target="_blank" rel="noopener noreferrer">moneycontrol.com</a>
+        <a href="https://www.valueresearchonline.com/" target="_blank" rel="noopener noreferrer">valueresearchonline.com</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <p style="font-size:13.5px; color:var(--text-2); line-height:1.6; margin-bottom:12px;">
+          <strong>Registered Office Address</strong><br>
+          # 258, Tower -B, 2nd Floor, SPAZEDGE Sector-47, Sohna Road, Gurugram (Hr.) – 122018
+        </p>
+        <p style="font-size:13.5px; color:var(--text-2);"><strong>Mobile:</strong> +91 98914 93932, 78380 43471</p>
+        <p style="font-size:13.5px; color:var(--text-2);"><strong>Email:</strong> vipulportfolio@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        &copy; Copyright <strong>Ameva</strong>. All Rights Reserved.
+      </div>
+      <div>
+        Mutual Fund investments are subject to market risks. Read all scheme related documents carefully.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const AMC_DATA = [
+      { name: '360 ONE Mutual Fund', file: '360one.jpg', url: 'https://www.360.one/asset-management/mutualfund/downloads/' },
+      { name: 'Aditya Birla Sun Life MF', file: 'aditya.png', url: 'https://mutualfund.adityabirlacapital.com/forms-and-downloads/forms' },
+      { name: 'Axis Mutual Fund', file: 'axis.png', url: 'https://www.axismf.com/statutory-disclosures/scheme-information-documents' },
+      { name: 'Bajaj Finserv MF', file: 'bajaj.png', url: 'https://www.bajajamc.com/downloads?sid-kim-products-forms' },
+      { name: 'Bandhan Mutual Fund', file: 'bandhan.jpg', url: 'https://bandhanmutual.com/downloads/sid' },
+      { name: 'Bank of India MF', file: 'bank-of-india.jpg', url: 'https://www.boimf.in/investor-corner#t3' },
+      { name: 'Baroda BNP Paribas MF', file: 'bnp-paribas.jpg', url: 'https://www.barodabnpparibasmf.in/downloads/scheme-information-documents' },
+      { name: 'Canara Robeco MF', file: 'canara-robeco-mf.png', url: 'https://www.canararobeco.com/forms-downloads/forms-and-information-documents/information-document/sid' },
+      { name: 'DSP Mutual Fund', file: 'dsp.png', url: 'https://www.dspim.com/downloads?category=Information%20Documents&sub_category=SID/SAI' },
+      { name: 'Edelweiss Mutual Fund', file: 'edelweiss-mf.png', url: 'https://www.edelweissmf.com/downloads/scheme-information-document-funds' },
+      { name: 'Franklin Templeton MF', file: 'FranklinTempleton.png', url: 'https://www.franklintempletonindia.com/downloads/fund-documents' },
+      { name: 'Groww Mutual Fund', file: 'groww.png', url: 'https://www.growwmf.in/downloads/sid' },
+      { name: 'HDFC Mutual Fund', file: 'hdfc-logo.png', url: 'https://www.hdfcfund.com/investor-services/fund-documents/sid' },
+      { name: 'Helios Mutual Fund', file: 'helios.png', url: 'https://www.heliosmf.in/downloads/' },
+      { name: 'HSBC Mutual Fund', file: 'hsbc.png', url: 'https://www.assetmanagement.hsbc.co.in/en/mutual-funds/investor-resources?Date=&Cap=&Doc=sid#&module-17=1' },
+      { name: 'ICICI Prudential MF', file: 'icici.png', url: 'https://www.icicipruamc.com/news-and-media/downloads' },
+      { name: 'Invesco Mutual Fund', file: 'invesco-mf.png', url: 'https://www.invescomutualfund.com/literature-and-form?tab=Scheme' },
+      { name: 'ITI Mutual Fund', file: 'iti-mf.png', url: 'https://www.itiamc.com/downloads' },
+      { name: 'JM Financial MF', file: 'jm-mf.png', url: 'https://www.jmfinancialmf.com/downloads/Scheme-related-documents/Scheme-Information-Document-(SID)' },
+      { name: 'Kotak Mutual Fund', file: 'kotak.png', url: 'https://www.kotakmf.com/Information/forms-and-downloads' },
+      { name: 'LIC Mutual Fund', file: 'lic-mf.png', url: 'https://www.licmf.com/sid-kim-sai' },
+      { name: 'Mahindra Manulife MF', file: 'mahindra.png', url: 'https://www.mahindramanulife.com/downloads#mandatory-disclosures' },
+      { name: 'Mirae Asset MF', file: 'mirae.png', url: 'https://www.miraeassetmf.co.in/downloads/forms' },
+      { name: 'Motilal Oswal MF', file: 'motilal.png', url: 'https://www.motilaloswalmf.com/download/sid' },
+      { name: 'Navi Mutual Fund', file: 'Navi-Mutual-Fund.png', url: 'https://navi.com/mutual-fund/downloads/scheme-documents' },
+      { name: 'Nippon India MF', file: 'nipponindia.png', url: 'https://mf.nipponindiaim.com/investor-service/downloads/scheme-information-document' },
+      { name: 'NJ Mutual Fund', file: 'nj-mutual-fund.png', url: 'https://www.njmutualfund.com/scheme-information-document-sid.php' },
+      { name: 'Old Bridge MF', file: 'old-bridge.gif', url: 'https://www.oldbridgemf.com/statutory-disclosures.html#' },
+      { name: 'PGIM India MF', file: 'pgim-mf.png', url: 'https://www.pgimindiamf.com/forms-and-updates/sid-and-sai' },
+      { name: 'PPFAS (Parag Parikh)', file: 'PPFAS-MF.png', url: 'https://amc.ppfas.com/downloads/kim-sid-and-sai/' },
+      { name: 'Quant Mutual Fund', file: 'quant-mf.png', url: 'https://quantmutual.com/downloads/kim' },
+      { name: 'Quantum Mutual Fund', file: 'quantum-mf.png', url: 'https://www.quantumamc.com/regulatory-document' },
+      { name: 'Samco Mutual Fund', file: 'samco-mutual-fund.png', url: 'https://www.samcomf.com/downloads' },
+      { name: 'SBI Mutual Fund', file: 'sbi.png', url: 'https://www.sbimf.com/offer-document-sid-kim' },
+      { name: 'Shriram Mutual Fund', file: 'shriram.png', url: 'https://www.shriramamc.in/investor-statutory-disclosures' },
+      { name: 'Sundaram Mutual Fund', file: 'sundaram.jpg', url: 'https://www.sundarammutual.com/Downloads' },
+      { name: 'Tata Mutual Fund', file: 'tata.png', url: 'https://www.tatamutualfund.com/information-documents/sai' },
+      { name: 'Taurus Mutual Fund', file: 'Taurus-Mutual-Fund.png', url: 'https://www.taurusmutualfund.com/sid' },
+      { name: 'Trust Mutual Fund', file: 'trust.png', url: 'https://www.trustmf.com/downloads?activeTab=sai-sid' },
+      { name: 'Union Mutual Fund', file: 'union-mf.png', url: 'https://www.unionmf.com/about-us/downloads' },
+      { name: 'UTI Mutual Fund', file: 'uti.png', url: 'https://www.utimf.com/downloads/sid' },
+      { name: 'WhiteOak Capital MF', file: 'whiteoak.png', url: 'https://mf.whiteoakamc.com/download' },
+      { name: 'Zerodha Fund House', file: 'zerodha.png', url: 'https://www.zerodhafundhouse.com/resources/fund-documents/' },
+    ];
+
+    const grid = document.getElementById('amcCardsGrid');
+    const search = document.getElementById('pageSidSearch');
+    const countEl = document.getElementById('amcCount');
+
+    function renderCards(q = '') {
+      grid.innerHTML = '';
+      const filtered = AMC_DATA.filter(a => a.name.toLowerCase().includes(q.toLowerCase()));
+      countEl.textContent = filtered.length;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; color: var(--text-3); padding: 40px;">No AMC found matching "${q}".</div>`;
+        return;
+      }
+
+      filtered.forEach(amc => {
+        const card = document.createElement('a');
+        card.href = amc.url;
+        card.target = '_blank';
+        card.rel = 'noopener noreferrer';
+        card.className = 'amc-grid-card';
+        card.innerHTML = `
+          <div class="amc-card-logo-wrap">
+            <img src="./assets/amc_logos/${amc.file}" alt="${amc.name}" loading="lazy" />
+          </div>
+          <div class="amc-card-name">${amc.name}</div>
+          <span class="amc-card-action">
+            View SID / KIM <i class="bi bi-box-arrow-up-right"></i>
+          </span>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    renderCards();
+    search.addEventListener('input', (e) => renderCards(e.target.value));
+  </script>
+</body>
+
+</html>
