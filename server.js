@@ -37,9 +37,9 @@ app.post('/api/send-risk-profile', async (req, res) => {
     return res.status(400).json({ error: 'Name and email are required' });
   }
 
-  const gmailUser = process.env.GMAIL_USER || 'vipulportfolio@gmail.com';
+  const gmailUser = process.env.GMAIL_USER || 'rajeshgupta@ameva.in';
   const gmailPass = process.env.GMAIL_APP_PASSWORD || '';
-  const adminEmail = process.env.ADMIN_EMAIL || 'vipulportfolio@gmail.com';
+  const adminEmail = process.env.ADMIN_EMAIL || 'rajeshgupta@ameva.in';
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -130,16 +130,16 @@ app.post('/api/send-risk-profile', async (req, res) => {
 
           <!-- COMPLIANCE ACKNOWLEDGEMENT (PART D & E) -->
           <div style="background:#EFF6FF; border:1px solid #BFDBFE; border-radius:10px; padding:14px; font-size:11.5px; color:#1E3A8A; line-height:1.5;">
-            <strong>Statutory Declaration (Part E):</strong> The investor has completed the assessment accurately. Mutual fund investments are subject to market risks. Ameva earns permissible trailing distributor remuneration on Regular plans.
+            <strong>Statutory Declaration (Part E):</strong> The investor has completed the assessment accurately. Mutual fund investments are subject to market risks. Ameva Mutual Fund Distributors earns permissible trailing distributor remuneration on Regular plans.
           </div>
         </div>
 
         <!-- FOOTER -->
         <div style="background:#F1F5F9; padding:20px 30px; text-align:center; font-size:11.5px; color:#64748B; border-top:1px solid #E2E8F0; line-height:1.6;">
-          <strong>AMEVA — AMFI Registered Mutual Fund Distributor</strong><br>
+          <strong>AMEVA Mutual Fund Distributors — AMFI Registered Mutual Fund Distributor</strong><br>
           ARN: 145058 | EUIN: E028717<br>
-          Grievance Officer: Vipul Gupta (+91 98914 93932) | Email: vipulportfolio@gmail.com<br>
-          Registered Office: # 258, Tower -B, 2nd Floor, SPAZEDGE Sector-47, Sohna Road, Gurugram (Hr.) – 122018
+          Grievance Officer: Rajesh Kumar Gupta (+91 98100 47256) | Email: rajeshgupta@ameva.in<br>
+          Registered Office: Aspen greens 99, Nirvana Country, Sector 50, Gurgaon
         </div>
       </div>
     </div>
