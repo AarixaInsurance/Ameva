@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
 export default defineConfig({
   server: {
@@ -7,6 +8,14 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    sourcemap: false
+    sourcemap: false,
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        calculator: resolve(__dirname, 'calculator.html'),
+        riskProfiling: resolve(__dirname, 'risk-profiling.html'),
+        sid: resolve(__dirname, 'sid.html')
+      }
+    }
   }
 });
