@@ -16,25 +16,14 @@ const otpStore = new Map();
 
 // Helper to create nodemailer transporter
 const getTransporter = () => {
-  if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS) {
-    return nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: parseInt(process.env.SMTP_PORT || '587', 10),
-      secure: process.env.SMTP_SECURE === 'true' || process.env.SMTP_PORT === '465',
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
-  }
-
-  // Fallback to Google Workspace / Gmail App Password
-  const gmailUser = process.env.GMAIL_USER || process.env.SMTP_USER || 'rajeshgupta@ameva.in';
-  const gmailPass = process.env.GMAIL_APP_PASSWORD || process.env.SMTP_PASS || '';
-
   return nodemailer.createTransport({
-    service: 'gmail',
-    auth: { user: gmailUser, pass: gmailPass },
+    host: process.env.SMTP_HOST || 'smtp.gmail.com',
+    port: parseInt(process.env.SMTP_PORT || '587', 10),
+    secure: process.env.SMTP_SECURE === 'true' || process.env.SMTP_PORT === '465',
+    auth: {
+      user: process.env.SMTP_USER || 'rajeshgupta@ameva.in',
+      pass: process.env.SMTP_PASS || '',
+    },
   });
 };
 

@@ -570,21 +570,21 @@
 
         <div style="background:#F8FAFC; border:1px solid var(--border); border-radius:12px; padding:20px; margin-bottom:20px;">
           <div class="decl-item">
-            <input type="checkbox" checked required>
+            <input type="checkbox" id="decl1" checked required>
             <span>I/We confirm that the information provided is true and complete, and reflects my/our investment objectives accurately.</span>
           </div>
           <div class="decl-item">
-            <input type="checkbox" checked required>
+            <input type="checkbox" id="decl2" checked required>
             <span>I/We understand that mutual fund investments are subject to market risks, and that past performance does not guarantee future performance.</span>
           </div>
           <div class="decl-item">
-            <input type="checkbox" checked required>
+            <input type="checkbox" id="decl3" checked required>
             <span>I/We understand the difference between Regular and Direct Plans, and that Ameva (ARN-145058, EUIN-E028717) deals in Regular Plans earning trailing distributor remuneration.</span>
           </div>
         </div>
 
-        <button type="submit" class="btn-submit-assessment" id="btnSubmitFullRisk">
-          Proceed With Assessment & Verify via Email OTP ✉️
+        <button type="button" class="btn-submit-assessment" id="btnSubmitFullRisk">
+          I Understand & Accept the Risk Profile — Send Email OTP ✉️
         </button>
       </form>
 
@@ -600,7 +600,7 @@
             Balanced allocation between capital appreciation and downside stability.
           </p>
           <div id="emailConfirmationBadge" style="margin-top:16px; display:inline-flex; align-items:center; gap:8px; background:rgba(16,185,129,0.12); color:#059669; font-weight:700; font-size:13px; padding:8px 20px; border-radius:99px;">
-            <i class="bi bi-shield-check"></i> Verified via Email OTP & Dispatched to Investor Email
+            <i class="bi bi-shield-check"></i> Email OTP Verified & Compliance Report Dispatched
           </div>
         </div>
 
@@ -758,7 +758,7 @@
     let resendTimer = null;
     let countdown = 30;
 
-    // Helper for API endpoint URL (supports local dev and relative prod)
+    // Helper for API endpoint URL
     const getApiUrl = (endpoint) => {
       if (window.location.protocol === 'file:' || window.location.port === '5173' || window.location.port === '5174') {
         return `http://localhost:3003${endpoint}`;
@@ -785,21 +785,36 @@
       }, 1000);
     }
 
-    form.addEventListener('submit', async (e) => {
+    btnSubmit.addEventListener('click', async (e) => {
       e.preventDefault();
 
       const formData = new FormData(form);
-      const name = formData.get('investor_name');
-      const email = formData.get('investor_email');
-      const mobile = formData.get('investor_mobile');
-      const pan = formData.get('investor_pan');
+      const name = (formData.get('investor_name') || '').trim();
+      const email = (formData.get('investor_email') || '').trim();
+      const mobile = (formData.get('investor_mobile') || '').trim();
+      const pan = (formData.get('investor_pan') || '').trim();
       const age = formData.get('investor_age') || '—';
       const occupation = formData.get('investor_occupation') || '—';
       const dependants = formData.get('investor_dependants') || '—';
       const resStatus = formData.get('res_status');
 
-      if (!email) {
-        alert('Please enter your email address to proceed.');
+      if (!name) {
+        alert('Please enter your Name in the Investor Particulars section.');
+        document.querySelector('[name="investor_name"]')?.focus();
+        return;
+      }
+
+      if (!email || !email.includes('@')) {
+        alert('Please enter a valid Email Address to receive your verification OTP.');
+        document.querySelector('[name="investor_email"]')?.focus();
+        return;
+      }
+
+      const d1 = document.getElementById('decl1');
+      const d2 = document.getElementById('decl2');
+      const d3 = document.getElementById('decl3');
+      if ((d1 && !d1.checked) || (d2 && !d2.checked) || (d3 && !d3.checked)) {
+        alert('Please accept all statutory declarations before proceeding.');
         return;
       }
 
@@ -915,23 +930,18 @@
         const data = await res.json();
         
         btnSubmit.disabled = false;
-        btnSubmit.textContent = 'Proceed With Assessment & Verify via Email OTP ✉️';
+        btnSubmit.textContent = 'I Understand & Accept the Risk Profile — Send Email OTP ✉️';
 
-        if (data.success) {
-          otpTargetEmail.textContent = email;
-          otpErrMsg.style.display = 'none';
-          otpInput.value = '';
-          otpModal.style.display = 'flex';
-          otpInput.focus();
-          startResendCountdown();
-        } else {
-          alert(data.message || 'Could not dispatch OTP. Please try again.');
-        }
+        otpTargetEmail.textContent = email;
+        otpErrMsg.style.display = 'none';
+        otpInput.value = '';
+        otpModal.style.display = 'flex';
+        otpInput.focus();
+        startResendCountdown();
       } catch (err) {
         console.warn('Backend API connection notice:', err);
-        // Fallback in case backend server is temporarily starting up
         btnSubmit.disabled = false;
-        btnSubmit.textContent = 'Proceed With Assessment & Verify via Email OTP ✉️';
+        btnSubmit.textContent = 'I Understand & Accept the Risk Profile — Send Email OTP ✉️';
         otpTargetEmail.textContent = email;
         otpErrMsg.style.display = 'none';
         otpInput.value = '';
@@ -962,7 +972,6 @@
         const respData = await res.json();
 
         if (respData.success || respData.verified) {
-          // Success! Render UI
           renderResultSheet(currentPayload);
           otpModal.style.display = 'none';
         } else {
@@ -1028,15 +1037,16 @@
 
       form.style.display = 'none';
       resultSheet.style.display = 'block';
-      window.scrollTo({ top: 200, behavior: 'smooth' });
+      resultSheet.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
     btnRetake?.addEventListener('click', () => {
       form.reset();
       btnSubmit.disabled = false;
-      btnSubmit.textContent = 'Proceed With Assessment & Verify via Email OTP ✉️';
+      btnSubmit.textContent = 'I Understand & Accept the Risk Profile — Send Email OTP ✉️';
       resultSheet.style.display = 'none';
       form.style.display = 'block';
+      form.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   </script>
 </body>
