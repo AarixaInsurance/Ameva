@@ -760,8 +760,14 @@
 
     // Helper for API endpoint URL
     const getApiUrl = (endpoint) => {
-      if (window.location.protocol === 'file:' || window.location.port === '5173' || window.location.port === '5174') {
-        return `http://localhost:3003${endpoint}`;
+      if (
+        window.location.protocol === 'file:' ||
+        window.location.hostname === 'localhost' ||
+        window.location.hostname === '127.0.0.1'
+      ) {
+        if (window.location.port !== '3003') {
+          return `http://localhost:3003${endpoint}`;
+        }
       }
       return endpoint;
     };
@@ -900,6 +906,53 @@
         funds = ['Small Cap Funds', 'Sectoral / Thematic Funds', 'Mid Cap Funds', 'Flexi Cap Funds', 'International FoFs'];
       }
 
+      // Human-readable response extraction
+      const getRadioText = (name) => {
+        const el = form.querySelector(`input[name="${name}"]:checked`);
+        return el ? el.closest('label').textContent.trim() : '—';
+      };
+
+      const getCheckboxTexts = (name) => {
+        const els = Array.from(form.querySelectorAll(`input[name="${name}"]:checked`));
+        return els.length > 0 ? els.map(e => e.closest('label').textContent.trim()).join(', ') : 'None';
+      };
+
+      const detailedResponses = [
+        {
+          section: 'Financial Profile (Risk Capacity)',
+          items: [
+            { q: 'Annual Income (₹)', a: getRadioText('annual_income') },
+            { q: 'Net Worth (Excluding Primary Residence)', a: getRadioText('net_worth') },
+            { q: 'Financial Liabilities', a: getRadioText('liabilities') },
+            { q: 'Emergency Reserve (Monthly Expenses)', a: getRadioText('emergency_res') }
+          ]
+        },
+        {
+          section: 'Investment Experience & Knowledge',
+          items: [
+            { q: 'Products Previously Used', a: getCheckboxTexts('prod_used') },
+            { q: 'Level of Investment Knowledge', a: getRadioText('knowledge_level') }
+          ]
+        },
+        {
+          section: 'Risk Tolerance (Psychometric Model)',
+          items: [
+            { q: 'If ₹10 Lakh falls to ₹8 Lakh in a market dip', a: getRadioText('rt_q1') },
+            { q: 'Maximum temporary decline reasonably tolerable', a: getRadioText('rt_q2') },
+            { q: 'If equity markets remain volatile for 12–18 months', a: getRadioText('rt_q3') },
+            { q: 'Investment Mindset / Philosophy Statement', a: getRadioText('rt_q4') }
+          ]
+        },
+        {
+          section: 'Financial Capacity & Horizon',
+          items: [
+            { q: 'Importance of Preserving Capital', a: getRadioText('fc_preserve') },
+            { q: 'Proposed Investment as % of Total Financial Assets', a: getRadioText('fc_asset_pct') },
+            { q: 'When invested funds are required (Investment Horizon)', a: getRadioText('fc_horizon') }
+          ]
+        }
+      ];
+
       currentPayload = {
         userName: name,
         userEmail: email,
@@ -917,7 +970,8 @@
         title: `AMEVA Risk Profile — ${finalProfile}`,
         description: profileDesc,
         allocation: alloc,
-        suitableFunds: funds
+        suitableFunds: funds,
+        responses: detailedResponses
       };
 
       // Request OTP from server
@@ -932,6 +986,11 @@
         btnSubmit.disabled = false;
         btnSubmit.textContent = 'I Understand & Accept the Risk Profile — Send Email OTP ✉️';
 
+        if (!res.ok || !data.success) {
+          alert(data.message || 'Failed to deliver OTP to your email. Please verify your email and network connection.');
+          return;
+        }
+
         otpTargetEmail.textContent = email;
         otpErrMsg.style.display = 'none';
         otpInput.value = '';
@@ -939,15 +998,10 @@
         otpInput.focus();
         startResendCountdown();
       } catch (err) {
-        console.warn('Backend API connection notice:', err);
+        console.error('Backend API connection notice:', err);
         btnSubmit.disabled = false;
         btnSubmit.textContent = 'I Understand & Accept the Risk Profile — Send Email OTP ✉️';
-        otpTargetEmail.textContent = email;
-        otpErrMsg.style.display = 'none';
-        otpInput.value = '';
-        otpModal.style.display = 'flex';
-        otpInput.focus();
-        startResendCountdown();
+        alert('Could not connect to the Ameva Verification API server. Please ensure the backend server is running on port 3003.');
       }
     });
 
@@ -960,7 +1014,7 @@
       }
 
       btnVerifyOtp.disabled = true;
-      btnVerifyOtp.textContent = 'Verifying OTP & Submitting...';
+      btnVerifyOtp.textContent = 'Verifying & Generating PDF Report...';
       otpErrMsg.style.display = 'none';
 
       try {
@@ -981,9 +1035,11 @@
           otpErrMsg.style.display = 'block';
         }
       } catch (err) {
-        console.warn('Direct fallback verification:', err);
-        renderResultSheet(currentPayload);
-        otpModal.style.display = 'none';
+        console.error('Verification error:', err);
+        btnVerifyOtp.disabled = false;
+        btnVerifyOtp.textContent = 'Verify & Generate Risk Profile';
+        otpErrMsg.textContent = 'Failed to communicate with verification server. Please try again.';
+        otpErrMsg.style.display = 'block';
       }
     });
 
