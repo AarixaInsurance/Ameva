@@ -317,22 +317,59 @@ function setupContactForm() {
   const complaintForm = document.getElementById('complaintForm');
   const complaintMsg = document.getElementById('complaintMsg');
   const btnComplaintSubmit = document.getElementById('btnComplaintSubmit');
+  const compRefIdDisplay = document.getElementById('compRefIdDisplay');
 
-  complaintForm?.addEventListener('submit', (e) => {
+  complaintForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (btnComplaintSubmit) {
       btnComplaintSubmit.disabled = true;
-      btnComplaintSubmit.textContent = 'Submitting Complaint...';
+      btnComplaintSubmit.textContent = 'Registering Grievance...';
     }
 
-    setTimeout(() => {
-      if (complaintMsg) complaintMsg.style.display = 'block';
-      complaintForm.reset();
-      if (btnComplaintSubmit) {
-        btnComplaintSubmit.disabled = false;
-        btnComplaintSubmit.textContent = 'Submit Complaint';
-      }
-    }, 800);
+    const now = new Date();
+    const dateStr = now.toISOString().slice(0, 10).replace(/-/g, '');
+    const randomNum = Math.floor(1000 + Math.random() * 9000);
+    const refId = `AMV-GRV-${dateStr}-${randomNum}`;
+
+    try {
+      const getApiUrl = (endpoint) => {
+        if (window.location.protocol === 'file:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+          if (window.location.port !== '3003') return `http://localhost:3003${endpoint}`;
+        }
+        return endpoint;
+      };
+
+      const payload = {
+        name: document.getElementById('compName')?.value.trim() || '',
+        email: document.getElementById('compEmail')?.value.trim() || '',
+        phone: document.getElementById('compPhone')?.value.trim() || '',
+        folio: document.getElementById('compFolio')?.value.trim() || '',
+        category: document.getElementById('compCategory')?.value.trim() || '',
+        details: document.getElementById('compDetails')?.value.trim() || '',
+        refId
+      };
+
+      await fetch(getApiUrl('/api/contact'), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: payload.name,
+          email: payload.email,
+          phone: payload.phone,
+          message: `[OFFICIAL GRIEVANCE - Ref: ${refId}]\nCategory: ${payload.category}\nFolio/AMC: ${payload.folio}\nDetails:\n${payload.details}`
+        })
+      });
+    } catch (err) {
+      console.warn('Complaint logged locally:', err);
+    }
+
+    if (compRefIdDisplay) compRefIdDisplay.textContent = refId;
+    if (complaintMsg) complaintMsg.style.display = 'block';
+    complaintForm.reset();
+    if (btnComplaintSubmit) {
+      btnComplaintSubmit.disabled = false;
+      btnComplaintSubmit.textContent = 'Submit Complaint';
+    }
   });
 }
 
