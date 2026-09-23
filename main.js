@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupPreloader();
   setupSliders();
   setupSidModal();
+  setupBrokerageModal();
   setupContactForm();
   setupParallax();
   setupScrollTop();
@@ -211,6 +212,43 @@ function setupSidModal() {
 
   search?.addEventListener('input', (e) => {
     render(e.target.value);
+  });
+}
+
+// ── BROKERAGE STRUCTURE MODAL ──
+function setupBrokerageModal() {
+  const modal = document.getElementById('brokerageModal');
+  const openBtn = document.getElementById('openBrokerageModalBtn');
+  const footerLink = document.getElementById('footerBrokerageLink');
+  const closeBtn = document.getElementById('closeBrokerageModalBtn');
+
+  if (!modal) return;
+
+  function openModal(e) {
+    if (e) e.preventDefault();
+    modal.style.display = 'flex';
+    setTimeout(() => modal.classList.add('active'), 10);
+  }
+
+  function closeModal() {
+    modal.classList.remove('active');
+    setTimeout(() => {
+      modal.style.display = 'none';
+    }, 250);
+  }
+
+  openBtn?.addEventListener('click', openModal);
+  footerLink?.addEventListener('click', openModal);
+  closeBtn?.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
   });
 }
 
