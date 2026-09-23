@@ -58,7 +58,7 @@ const generateRiskProfilePDF = (data) => {
       doc.rect(0, 0, pageWidth, 80).fill(primaryColor);
       doc.fillColor(accentGold).fontSize(20).font('Helvetica-Bold').text('AMEVA', 36, 16, { lineBreak: false });
       doc.fillColor('#FFFFFF').fontSize(8.5).font('Helvetica-Bold').text('AMFI REGISTERED MUTUAL FUND DISTRIBUTOR (ARN-145058 | EUIN-E028717)', 36, 40, { lineBreak: false });
-      doc.fillColor('#CBD5E1').fontSize(8).font('Helvetica').text('Official Investor Risk Profiling & Appropriateness Record (SEBI Compliant Record)', 36, 54, { lineBreak: false });
+      doc.fillColor('#CBD5E1').fontSize(8).font('Helvetica').text('Investor Risk Profile Record (ARN-145058 | EUIN-E028717)', 36, 54, { lineBreak: false });
 
       let y = 90;
 
@@ -154,7 +154,7 @@ const generateRiskProfilePDF = (data) => {
       const footerY1 = pageHeight - 34;
       doc.rect(0, footerY1, pageWidth, 34).fill('#F1F5F9');
       doc.fillColor(textMuted).fontSize(7).font('Helvetica').text(
-        'AMEVA (ARN-145058, EUIN-E028717) | Grievance: Rajesh Kumar Gupta (+91 98100 47256, rajeshgupta@ameva.in) | Page 1 of 2',
+        'AMEVA (ARN-145058, EUIN-E028717) | Grievance: Rajesh Kumar Gupta (+91 98100 47256, rajeshgupta@ameva.in, amevamfd@gmail.com) | Page 1 of 2',
         36, footerY1 + 10, { align: 'center', width: contentWidth, lineBreak: false }
       );
 
@@ -266,7 +266,7 @@ app.post('/api/send-otp', async (req, res) => {
 
           <div style="background:#F1F5F9; padding:16px 20px; text-align:center; font-size:11px; color:#94A3B8; border-top:1px solid #E2E8F0;">
             Ameva Mutual Fund Distributors · Aspen greens 99, Nirvana Country, Sector 50, Gurgaon<br>
-            Contact: +91 98100 47256 | rajeshgupta@ameva.in
+            Contact: +91 98100 47256 | rajeshgupta@ameva.in, amevamfd@gmail.com
           </div>
         </div>
       </div>
@@ -367,7 +367,7 @@ app.post('/api/verify-risk-profile', async (req, res) => {
             <h1 style="margin:0; font-size:24px; font-weight:700; color:#FBAD15; letter-spacing:0.5px;">AMEVA</h1>
             <p style="margin:4px 0 0; font-size:12px; color:#CBD5E1; text-transform:uppercase; letter-spacing:1.5px;">AMFI Registered Mutual Fund Distributor (ARN-145058)</p>
             <div style="margin-top:16px; display:inline-block; background:rgba(251,173,21,0.15); border:1px solid #FBAD15; color:#FBAD15; font-size:11px; font-weight:700; padding:4px 14px; border-radius:99px; text-transform:uppercase;">
-              ${isSelfCopy ? '[COMPLIANCE ARCHIVE] Verified Investor Risk Profiling Record' : 'Official Investor Risk Profiling & Appropriateness Record'}
+              ${isSelfCopy ? '[COMPLIANCE ARCHIVE] Verified Investor Risk Profile Record' : 'Investor Risk Profile Record'}
             </div>
           </div>
 
@@ -438,7 +438,7 @@ app.post('/api/verify-risk-profile', async (req, res) => {
           <div style="background:#F1F5F9; padding:20px 30px; text-align:center; font-size:11.5px; color:#64748B; border-top:1px solid #E2E8F0; line-height:1.6;">
             <strong>AMEVA — AMFI Registered Mutual Fund Distributor</strong><br>
             ARN: 145058 | EUIN: E028717<br>
-            Grievance Officer: Rajesh Kumar Gupta (+91 98100 47256) | Email: rajeshgupta@ameva.in<br>
+            Grievance Officer: Rajesh Kumar Gupta (+91 98100 47256) | Email: rajeshgupta@ameva.in, amevamfd@gmail.com<br>
             Registered Office: Aspen greens 99, Nirvana Country, Sector 50, Gurgaon
           </div>
         </div>

@@ -214,8 +214,46 @@ function setupSidModal() {
   });
 }
 
-// ── CONTACT FORM ──
+// ── CONTACT & COMPLAINT FORMS ──
 function setupContactForm() {
+  const toggleContactBtn = document.getElementById('toggleContactBtn');
+  const toggleComplaintBtn = document.getElementById('toggleComplaintBtn');
+  const contactFormContainer = document.getElementById('contactFormContainer');
+  const complaintFormContainer = document.getElementById('complaintFormContainer');
+
+  if (toggleContactBtn && toggleComplaintBtn && contactFormContainer && complaintFormContainer) {
+    toggleContactBtn.addEventListener('click', () => {
+      toggleContactBtn.classList.add('active');
+      toggleContactBtn.style.background = '#FFFFFF';
+      toggleContactBtn.style.color = 'var(--green-deep)';
+      toggleContactBtn.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
+
+      toggleComplaintBtn.classList.remove('active');
+      toggleComplaintBtn.style.background = 'transparent';
+      toggleComplaintBtn.style.color = 'var(--text-2)';
+      toggleComplaintBtn.style.boxShadow = 'none';
+
+      contactFormContainer.style.display = 'block';
+      complaintFormContainer.style.display = 'none';
+    });
+
+    toggleComplaintBtn.addEventListener('click', () => {
+      toggleComplaintBtn.classList.add('active');
+      toggleComplaintBtn.style.background = '#FFFFFF';
+      toggleComplaintBtn.style.color = 'var(--green-deep)';
+      toggleComplaintBtn.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
+
+      toggleContactBtn.classList.remove('active');
+      toggleContactBtn.style.background = 'transparent';
+      toggleContactBtn.style.color = 'var(--text-2)';
+      toggleContactBtn.style.boxShadow = 'none';
+
+      complaintFormContainer.style.display = 'block';
+      contactFormContainer.style.display = 'none';
+    });
+  }
+
+  // Contact Form Submission
   const form = document.getElementById('contactForm');
   const msg = document.getElementById('formMsg');
   const btn = document.getElementById('btnSubmit');
@@ -232,7 +270,29 @@ function setupContactForm() {
       form.reset();
       if (btn) {
         btn.disabled = false;
-        btn.textContent = 'Send Consultation Request';
+        btn.textContent = 'Send Message';
+      }
+    }, 800);
+  });
+
+  // Complaint Form Submission
+  const complaintForm = document.getElementById('complaintForm');
+  const complaintMsg = document.getElementById('complaintMsg');
+  const btnComplaintSubmit = document.getElementById('btnComplaintSubmit');
+
+  complaintForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (btnComplaintSubmit) {
+      btnComplaintSubmit.disabled = true;
+      btnComplaintSubmit.textContent = 'Submitting Complaint...';
+    }
+
+    setTimeout(() => {
+      if (complaintMsg) complaintMsg.style.display = 'block';
+      complaintForm.reset();
+      if (btnComplaintSubmit) {
+        btnComplaintSubmit.disabled = false;
+        btnComplaintSubmit.textContent = 'Submit Complaint';
       }
     }, 800);
   });
@@ -325,7 +385,7 @@ function setupRiskProfiler() {
     // 22 - 30: Aggressive
     let tag = 'MODERATE INVESTOR';
     let title = 'Balanced Growth Profile';
-    let desc = 'You seek a healthy blend of steady capital appreciation with controlled downside protection.';
+    let desc = 'You seek a healthy blend of steady capital appreciation with balanced risk management.';
     let alloc = [
       { name: 'Equity Funds (Large & Flexi Cap)', pct: 50, color: '#C3141B' },
       { name: 'Debt & Fixed Income Instruments', pct: 35, color: '#25475E' },
