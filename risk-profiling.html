@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Investor Risk Profile — Ameva</title>
+  <title>Investor Risk Profile — Ameva Mutual Fund Distributors</title>
   <meta name="description"
-    content="Ameva Investor Risk Profile Questionnaire. AMFI Registered Mutual Fund Distributor ARN-145058, EUIN-E028717.">
+    content="Investor Risk Profile Questionnaire and Due Diligence Form. Ameva Mutual Fund Distributors (ARN-145058, EUIN-E028717).">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -40,19 +40,39 @@
     }
     .risk-hero-title {
       font-family: 'DM Serif Display', serif;
-      font-size: clamp(30px, 3.8vw, 48px);
+      font-size: clamp(28px, 3.6vw, 46px);
       margin-bottom: 12px;
       color: #FFFFFF;
+      line-height: 1.2;
     }
     .risk-hero-sub {
       font-size: 15px;
       color: #CBD5E1;
-      max-width: 760px;
-      margin: 0 auto;
+      max-width: 780px;
+      margin: 0 auto 24px;
       line-height: 1.6;
     }
+    .btn-pdf-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FBAD15;
+      color: #1B3547;
+      font-weight: 800;
+      font-size: 13.5px;
+      padding: 10px 22px;
+      border-radius: 99px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(251, 173, 21, 0.3);
+      transition: all 0.25s ease;
+    }
+    .btn-pdf-download:hover {
+      background: #F59E0B;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(251, 173, 21, 0.4);
+    }
     .doc-container {
-      max-width: 1040px;
+      max-width: 1060px;
       margin: 40px auto 100px;
       padding: 0 4%;
     }
@@ -61,7 +81,19 @@
       border: 1px solid var(--border);
       border-radius: 24px;
       box-shadow: 0 20px 60px rgba(37, 71, 94, 0.08);
-      padding: 48px;
+      padding: 44px;
+    }
+    .doc-header-banner {
+      background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%);
+      border: 1.5px solid #CBD5E1;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
     }
     .section-header-box {
       background: #F8FAFC;
@@ -78,11 +110,39 @@
     }
     .section-header-box h2 {
       font-family: 'DM Serif Display', serif;
-      font-size: 20px;
+      font-size: 19px;
       color: #25475E;
       margin: 0;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+    }
+    .agreement-box {
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .agreement-clause {
+      margin-bottom: 18px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(203, 213, 225, 0.6);
+    }
+    .agreement-clause:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .clause-num {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #25475E;
+      margin-bottom: 6px;
+    }
+    .clause-body {
+      font-size: 13px;
+      color: #475569;
+      line-height: 1.65;
     }
     .field-grid-2 {
       display: grid;
@@ -176,10 +236,10 @@
       display: flex;
       align-items: flex-start;
       gap: 10px;
-      font-size: 13px;
+      font-size: 12.5px;
       color: #334155;
-      line-height: 1.5;
-      margin-bottom: 10px;
+      line-height: 1.55;
+      margin-bottom: 8px;
     }
     .decl-item input {
       margin-top: 3px;
@@ -317,12 +377,8 @@
 
   <!-- NAVBAR -->
   <nav id="navbar">
-    <a href="index.html#hero" class="nav-logo" style="text-decoration:none; display:flex; align-items:center; gap:12px;">
-      <img src="./assets/logo.jpg" alt="Ameva - AMFI Registered Mutual Fund Distributor" class="brand-logo">
-      <div class="nav-logo-text" style="display:flex; flex-direction:column; text-align:left;">
-        <span style="font-size:17px; font-weight:800; color:#25475E; line-height:1.1; letter-spacing:0.5px;">AMEVA</span>
-        <span style="font-size:10px; font-weight:700; color:var(--green-deep); letter-spacing:0.4px;">AMFI REGD. MUTUAL FUND DISTRIBUTOR</span>
-      </div>
+    <a href="index.html#hero" class="nav-logo">
+      <img src="./assets/logo.jpg" alt="Ameva Logo" class="brand-logo">
     </a>
     <div class="nav-links">
       <a href="index.html#hero">Home</a>
@@ -341,34 +397,139 @@
   <!-- HERO -->
   <section class="risk-hero-wrap">
     <div class="badge-pill">
-      <i class="bi bi-file-earmark-ruled"></i> Risk Profile Form
+      <i class="bi bi-shield-check"></i> AMFI Registered MFD · ARN-145058 | EUIN-E028717
     </div>
     <h1 class="risk-hero-title">Investor Risk Profile</h1>
     <p class="risk-hero-sub">
-      Complete all sections to evaluate risk capacity, risk tolerance, and suitable product category (ARN-145058 | EUIN-E028717).
+      Official Due-Diligence, Product Appropriateness, and Risk Capacity Assessment Record for Ameva Mutual Fund Distributors.
     </p>
+    <div>
+      <a href="./assets/docs/ameva_client_agreement_risk_profiling.pdf" target="_blank" rel="noopener noreferrer" class="btn-pdf-download">
+        <i class="bi bi-file-earmark-pdf-fill"></i> Download Official Agreement & Form (PDF)
+      </a>
+    </div>
   </section>
 
-  <!-- QUESTIONNAIRE CONTAINER -->
+  <!-- QUESTIONNAIRE & AGREEMENT CONTAINER -->
   <div class="doc-container">
     <div class="doc-card">
       
+      <div class="doc-header-banner">
+        <div>
+          <h3 style="font-family:'DM Serif Display',serif; font-size:22px; color:#1B3547; margin:0 0 4px 0;">
+            Ameva Mutual Fund Distributors
+          </h3>
+          <div style="font-size:12.5px; color:#475569; font-weight:600;">
+            ARN: 145058 | EUIN: E028717 | GSTIN: 06AAHPG6195K1ZD
+          </div>
+        </div>
+        <div>
+          <a href="./assets/docs/ameva_client_agreement_risk_profiling.pdf" target="_blank" rel="noopener noreferrer" class="btn-pdf-download" style="font-size:12.5px; padding:8px 18px;">
+            <i class="bi bi-download"></i> Download PDF
+          </a>
+        </div>
+      </div>
+
       <form id="amevaFullRiskForm">
 
-        <!-- INVESTOR PARTICULARS -->
+        <!-- PART A: CUSTOMER–MFD AGREEMENT -->
         <div class="section-header-box">
-          <h2>Investor Particulars</h2>
+          <h2>Part A – Customer–MFD Distribution Agreement</h2>
+          <span style="font-size:12px; font-weight:700; color:var(--text-3);">TERMS & SCOPE</span>
+        </div>
+
+        <div class="agreement-box">
+          <p style="font-size:13px; color:#334155; line-height:1.7; margin-bottom:16px;">
+            This Agreement is entered into between <strong>AMEVA MUTUAL FUND DISTRIBUTORS</strong>, an AMFI-Registered Mutual Fund Distributor holding <strong>ARN 145058</strong> (hereinafter referred to as "AMEVA" / "Distributor"), and the Investor/Customer executing this form.
+          </p>
+
+          <div class="agreement-clause">
+            <div class="clause-num">1. Purpose and Scope</div>
+            <div class="clause-body">
+              1.1 The Investor engages AMEVA for distribution and servicing of mutual fund products and for facilitating transactions in mutual fund schemes.<br>
+              1.2 AMEVA shall act solely in the capacity of a Mutual Fund Distributor, subject to applicable SEBI regulations, AMFI guidelines, AMFI Code of Conduct, AMC requirements and applicable law.<br>
+              1.3 AMEVA shall not have discretionary authority over the Investor's investments.<br>
+              1.4 The Investor retains the final decision-making authority regarding all investments.<br>
+              1.5 AMEVA does not guarantee the performance of any mutual fund scheme or achievement of any investment objective.
+            </div>
+          </div>
+
+          <div class="agreement-clause">
+            <div class="clause-num">2. Investor Due Diligence & 3. Risk Profiling</div>
+            <div class="clause-body">
+              AMEVA shall obtain relevant customer information (KYC, PAN, bank details, financial position, income, net worth, objectives, horizon, liquidity, experience, risk tolerance, and risk capacity) to assess suitability and product appropriateness.
+            </div>
+          </div>
+
+          <div class="agreement-clause">
+            <div class="clause-num">4. Investment Objectives (Select all that apply) *</div>
+            <div class="checkbox-list" style="margin-top:10px;">
+              <label class="radio-card"><input type="checkbox" name="inv_obj" value="Capital Preservation"> Capital Preservation</label>
+              <label class="radio-card"><input type="checkbox" name="inv_obj" value="Regular Income"> Regular Income</label>
+              <label class="radio-card"><input type="checkbox" name="inv_obj" value="Wealth Creation" checked> Wealth Creation</label>
+              <label class="radio-card"><input type="checkbox" name="inv_obj" value="Retirement Planning" checked> Retirement Planning</label>
+              <label class="radio-card"><input type="checkbox" name="inv_obj" value="Children Education"> Children's Education</label>
+              <label class="radio-card"><input type="checkbox" name="inv_obj" value="Children Marriage"> Children's Marriage</label>
+              <label class="radio-card"><input type="checkbox" name="inv_obj" value="Tax Planning"> Tax Planning (ELSS)</label>
+              <label class="radio-card"><input type="checkbox" name="inv_obj" value="Capital Appreciation" checked> Long-Term Capital Appreciation</label>
+            </div>
+          </div>
+
+          <div class="agreement-clause">
+            <div class="clause-num">8. Regular Plan and Direct Plan Acknowledgement *</div>
+            <div class="clause-body" style="margin-bottom:10px;">
+              <strong>Regular Plan:</strong> Distributor remuneration may be payable by the AMC/Mutual Fund in accordance with applicable regulations.<br>
+              <strong>Direct Plan:</strong> Distributor commission is generally not payable where the investor invests directly.
+            </div>
+            <div class="checkbox-list">
+              <label class="radio-card"><input type="checkbox" id="chkRegExp" checked required> Regular Plan Explained</label>
+              <label class="radio-card"><input type="checkbox" id="chkDirExp" checked required> Direct Plan Explained</label>
+              <label class="radio-card"><input type="checkbox" id="chkDiffUnderstood" checked required> Difference Understood</label>
+            </div>
+          </div>
+
+          <div class="agreement-clause">
+            <div class="clause-num">9. Commission / Remuneration Disclosure *</div>
+            <div class="clause-body">
+              The Investor acknowledges that AMEVA may receive permissible trail commission and/or other remuneration from AMCs/Mutual Funds in relation to eligible Regular Plan investments.
+              <div style="margin-top:8px;">
+                <label class="radio-card" style="display:inline-flex;">
+                  <input type="checkbox" id="chkCommAck" checked required> Investor Acknowledgement: Yes, I acknowledge the commission disclosure.
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="agreement-clause">
+            <div class="clause-num">11. No Guarantee of Return & 12. Investor Responsibilities</div>
+            <div class="clause-body">
+              AMEVA does not assure or represent guaranteed returns, assured appreciation, guaranteed dividends/IDCW, or guaranteed capital protection. The Investor shall provide complete and accurate info, keep KYC updated, and make the final investment decision.
+            </div>
+          </div>
+
+          <div class="agreement-clause">
+            <div class="clause-num">16. Grievance Redressal Officer</div>
+            <div class="clause-body">
+              <strong>Name:</strong> Rajesh Kumar Gupta | <strong>Email:</strong> rajeshgupta@ameva.in, amevamfd@gmail.com | <strong>Mobile:</strong> +91 98100 47256<br>
+              Investors may also access SEBI SCORES portal for online grievance redressal.
+            </div>
+          </div>
+        </div>
+
+        <!-- PART B: INVESTOR PARTICULAR & QUESTIONNAIRE -->
+        <div class="section-header-box">
+          <h2>Part B – Investor Particulars (Clause 20)</h2>
           <span style="font-size:12px; font-weight:700; color:var(--text-3);">CLIENT DETAILS</span>
         </div>
 
         <div class="field-grid-2">
           <div class="form-group">
             <label>Full Name *</label>
-            <input type="text" name="investor_name" class="form-input" placeholder="e.g. Ramesh Chandra" required>
+            <input type="text" name="investor_name" class="form-input" placeholder="e.g. Rajesh Sharma" required>
           </div>
           <div class="form-group">
-            <label>Email Address (For Report Delivery) *</label>
-            <input type="email" name="investor_email" class="form-input" placeholder="ramesh@example.com" required>
+            <label>Email Address (For OTP Verification & PDF Delivery) *</label>
+            <input type="email" name="investor_email" class="form-input" placeholder="rajesh@example.com" required>
           </div>
         </div>
 
@@ -416,25 +577,25 @@
           </div>
         </div>
 
-        <!-- FINANCIAL PROFILE -->
+        <!-- 21. FINANCIAL PROFILE -->
         <div class="section-header-box">
-          <h2>Financial Profile</h2>
+          <h2>21. Financial Profile</h2>
           <span style="font-size:12px; font-weight:700; color:var(--text-3);">CAPACITY MATRIX</span>
         </div>
 
-        <div class="options-group-title">Annual Income (₹)</div>
+        <div class="options-group-title">Annual Income (₹):</div>
         <div class="radio-pill-grid">
           <label class="radio-card"><input type="radio" name="annual_income" value="1" required> Below ₹5 Lakh</label>
           <label class="radio-card"><input type="radio" name="annual_income" value="2"> ₹5–10 Lakh</label>
-          <label class="radio-card"><input type="radio" name="annual_income" value="3"> ₹10–25 Lakh</label>
+          <label class="radio-card"><input type="radio" name="annual_income" value="3" checked> ₹10–25 Lakh</label>
           <label class="radio-card"><input type="radio" name="annual_income" value="4"> ₹25–50 Lakh</label>
           <label class="radio-card"><input type="radio" name="annual_income" value="5"> Above ₹50 Lakh</label>
         </div>
 
-        <div class="options-group-title">Net Worth (Excluding Primary Residence)</div>
+        <div class="options-group-title">Net Worth (Excluding Primary Residence):</div>
         <div class="radio-pill-grid">
           <label class="radio-card"><input type="radio" name="net_worth" value="1" required> Below ₹25 Lakh</label>
-          <label class="radio-card"><input type="radio" name="net_worth" value="2"> ₹25 Lakh – ₹1 Crore</label>
+          <label class="radio-card"><input type="radio" name="net_worth" value="2" checked> ₹25 Lakh – ₹1 Crore</label>
           <label class="radio-card"><input type="radio" name="net_worth" value="3"> ₹1 – 3 Crore</label>
           <label class="radio-card"><input type="radio" name="net_worth" value="4"> ₹3 – 5 Crore</label>
           <label class="radio-card"><input type="radio" name="net_worth" value="5"> Above ₹5 Crore</label>
@@ -442,95 +603,95 @@
 
         <div class="field-grid-2">
           <div>
-            <div class="options-group-title">Financial Liabilities</div>
+            <div class="options-group-title">Financial Liabilities:</div>
             <div class="radio-pill-grid" style="grid-template-columns:1fr 1fr;">
               <label class="radio-card"><input type="radio" name="liabilities" value="1" required> High</label>
               <label class="radio-card"><input type="radio" name="liabilities" value="2"> Moderate</label>
-              <label class="radio-card"><input type="radio" name="liabilities" value="4"> Low</label>
+              <label class="radio-card"><input type="radio" name="liabilities" value="4" checked> Low</label>
               <label class="radio-card"><input type="radio" name="liabilities" value="5"> Nil / Insignificant</label>
             </div>
           </div>
           <div>
-            <div class="options-group-title">Emergency Reserve (Monthly Expenses)</div>
+            <div class="options-group-title">Emergency Reserve (Monthly Expenses):</div>
             <div class="radio-pill-grid" style="grid-template-columns:1fr 1fr;">
               <label class="radio-card"><input type="radio" name="emergency_res" value="1" required> None / Inadequate</label>
               <label class="radio-card"><input type="radio" name="emergency_res" value="2"> &lt; 3 Months</label>
-              <label class="radio-card"><input type="radio" name="emergency_res" value="3"> 3–6 Months</label>
+              <label class="radio-card"><input type="radio" name="emergency_res" value="3" checked> 3–6 Months</label>
               <label class="radio-card"><input type="radio" name="emergency_res" value="4"> 6–12 Months</label>
               <label class="radio-card"><input type="radio" name="emergency_res" value="5"> &gt; 12 Months</label>
             </div>
           </div>
         </div>
 
-        <!-- INVESTMENT EXPERIENCE -->
+        <!-- 22. INVESTMENT EXPERIENCE -->
         <div class="section-header-box">
-          <h2>Investment Experience</h2>
+          <h2>22. Investment Experience</h2>
           <span style="font-size:12px; font-weight:700; color:var(--text-3);">TRACK RECORD</span>
         </div>
 
         <div class="options-group-title">Products Previously Used (Select all that apply):</div>
         <div class="checkbox-list">
-          <label class="radio-card"><input type="checkbox" name="prod_used" value="FD"> Bank Deposits / FDs</label>
+          <label class="radio-card"><input type="checkbox" name="prod_used" value="FD" checked> Bank Deposits / FDs</label>
           <label class="radio-card"><input type="checkbox" name="prod_used" value="Bonds"> Bonds / Debt Securities</label>
           <label class="radio-card"><input type="checkbox" name="prod_used" value="DebtMF"> Debt Mutual Funds</label>
-          <label class="radio-card"><input type="checkbox" name="prod_used" value="HybridMF"> Hybrid Mutual Funds</label>
-          <label class="radio-card"><input type="checkbox" name="prod_used" value="EquityMF"> Equity Mutual Funds</label>
-          <label class="radio-card"><input type="checkbox" name="prod_used" value="DirectEquity"> Direct Equity / ETFs / PMS / AIF</label>
+          <label class="radio-card"><input type="checkbox" name="prod_used" value="HybridMF" checked> Hybrid Mutual Funds</label>
+          <label class="radio-card"><input type="checkbox" name="prod_used" value="EquityMF" checked> Equity Mutual Funds</label>
+          <label class="radio-card"><input type="checkbox" name="prod_used" value="DirectEquity"> Direct Equity / ETFs / Index Funds</label>
         </div>
 
         <div class="options-group-title">Level of Investment Knowledge:</div>
         <div class="radio-pill-grid">
           <label class="radio-card"><input type="radio" name="knowledge_level" value="1" required> Basic</label>
-          <label class="radio-card"><input type="radio" name="knowledge_level" value="2"> Moderate</label>
+          <label class="radio-card"><input type="radio" name="knowledge_level" value="2" checked> Moderate</label>
           <label class="radio-card"><input type="radio" name="knowledge_level" value="4"> Good</label>
           <label class="radio-card"><input type="radio" name="knowledge_level" value="5"> Extensive</label>
         </div>
 
-        <!-- RISK TOLERANCE -->
+        <!-- 23. RISK TOLERANCE -->
         <div class="section-header-box">
-          <h2>Risk Tolerance</h2>
+          <h2>23. Risk Tolerance</h2>
           <span style="font-size:12px; font-weight:700; color:var(--text-3);">PSYCHOMETRIC MODEL</span>
         </div>
 
-        <div class="options-group-title">If ₹10 Lakh invested falls temporarily to ₹8 Lakh in a market dip:</div>
+        <div class="options-group-title">Q1. If ₹10 Lakh invested falls temporarily to ₹8 Lakh in a market dip:</div>
         <div class="radio-pill-grid">
           <label class="radio-card"><input type="radio" name="rt_q1" value="1" required> Sell immediately</label>
           <label class="radio-card"><input type="radio" name="rt_q1" value="2"> Sell substantial portion</label>
           <label class="radio-card"><input type="radio" name="rt_q1" value="3"> Wait and monitor</label>
-          <label class="radio-card"><input type="radio" name="rt_q1" value="4"> Remain invested</label>
+          <label class="radio-card"><input type="radio" name="rt_q1" value="4" checked> Remain invested</label>
           <label class="radio-card"><input type="radio" name="rt_q1" value="5"> Consider investing more</label>
         </div>
 
-        <div class="options-group-title">Maximum temporary decline reasonably tolerable in your portfolio:</div>
+        <div class="options-group-title">Q2. Maximum temporary decline reasonably tolerable in your portfolio:</div>
         <div class="radio-pill-grid">
           <label class="radio-card"><input type="radio" name="rt_q2" value="1" required> &lt; 5%</label>
           <label class="radio-card"><input type="radio" name="rt_q2" value="2"> 5–10%</label>
-          <label class="radio-card"><input type="radio" name="rt_q2" value="3"> 10–20%</label>
+          <label class="radio-card"><input type="radio" name="rt_q2" value="3" checked> 10–20%</label>
           <label class="radio-card"><input type="radio" name="rt_q2" value="4"> 20–30%</label>
           <label class="radio-card"><input type="radio" name="rt_q2" value="5"> &gt; 30%</label>
         </div>
 
-        <div class="options-group-title">If equity markets remain volatile for 12–18 months:</div>
+        <div class="options-group-title">Q3. If equity markets remain volatile for 12–18 months:</div>
         <div class="radio-pill-grid">
-          <label class="radio-card"><input type="radio" name="rt_q3" value="1" required> Exit completely</label>
+          <label class="radio-card"><input type="radio" name="rt_q3" value="1" required> Exit</label>
           <label class="radio-card"><input type="radio" name="rt_q3" value="2"> Reduce substantially</label>
-          <label class="radio-card"><input type="radio" name="rt_q3" value="3"> Wait & hold</label>
-          <label class="radio-card"><input type="radio" name="rt_q3" value="4"> Continue investment plan</label>
+          <label class="radio-card"><input type="radio" name="rt_q3" value="3"> Wait</label>
+          <label class="radio-card"><input type="radio" name="rt_q3" value="4" checked> Continue investment plan</label>
           <label class="radio-card"><input type="radio" name="rt_q3" value="5"> Consider increasing investment</label>
         </div>
 
-        <div class="options-group-title">Which statement best describes your investment mindset?</div>
+        <div class="options-group-title">Q4. Which statement best describes your investment philosophy?</div>
         <div class="radio-pill-grid" style="grid-template-columns:1fr;">
           <label class="radio-card"><input type="radio" name="rt_q4" value="1" required> Capital preservation is paramount</label>
-          <label class="radio-card"><input type="radio" name="rt_q4" value="2"> I prefer low volatility with modest returns</label>
-          <label class="radio-card"><input type="radio" name="rt_q4" value="3"> I accept moderate volatility for balanced growth</label>
-          <label class="radio-card"><input type="radio" name="rt_q4" value="4"> I accept significant volatility for high long-term growth</label>
-          <label class="radio-card"><input type="radio" name="rt_q4" value="5"> I accept high volatility for maximum long-term potential compounding</label>
+          <label class="radio-card"><input type="radio" name="rt_q4" value="2"> I prefer low volatility</label>
+          <label class="radio-card"><input type="radio" name="rt_q4" value="3" checked> I accept moderate volatility</label>
+          <label class="radio-card"><input type="radio" name="rt_q4" value="4"> I accept significant volatility for long-term growth</label>
+          <label class="radio-card"><input type="radio" name="rt_q4" value="5"> I accept high volatility for higher long-term potential returns</label>
         </div>
 
-        <!-- FINANCIAL CAPACITY -->
+        <!-- 24. FINANCIAL CAPACITY -->
         <div class="section-header-box">
-          <h2>Financial Capacity & Horizon</h2>
+          <h2>24. Financial Capacity & Horizon</h2>
           <span style="font-size:12px; font-weight:700; color:var(--text-3);">HORIZON MAPPING</span>
         </div>
 
@@ -538,52 +699,76 @@
         <div class="radio-pill-grid">
           <label class="radio-card"><input type="radio" name="fc_preserve" value="1" required> Extremely Important</label>
           <label class="radio-card"><input type="radio" name="fc_preserve" value="2"> Very Important</label>
-          <label class="radio-card"><input type="radio" name="fc_preserve" value="3"> Moderately Important</label>
+          <label class="radio-card"><input type="radio" name="fc_preserve" value="3" checked> Moderately Important</label>
           <label class="radio-card"><input type="radio" name="fc_preserve" value="4"> Less Important</label>
           <label class="radio-card"><input type="radio" name="fc_preserve" value="5"> Long-term growth more important</label>
         </div>
 
-        <div class="options-group-title">Proposed Investment as % of Total Financial Assets:</div>
+        <div class="options-group-title">Investment as % of Total Financial Assets:</div>
         <div class="radio-pill-grid">
           <label class="radio-card"><input type="radio" name="fc_asset_pct" value="1" required> &gt; 75%</label>
           <label class="radio-card"><input type="radio" name="fc_asset_pct" value="2"> 50–75%</label>
           <label class="radio-card"><input type="radio" name="fc_asset_pct" value="3"> 25–50%</label>
-          <label class="radio-card"><input type="radio" name="fc_asset_pct" value="4"> 10–25%</label>
+          <label class="radio-card"><input type="radio" name="fc_asset_pct" value="4" checked> 10–25%</label>
           <label class="radio-card"><input type="radio" name="fc_asset_pct" value="5"> &lt; 10%</label>
         </div>
 
-        <div class="options-group-title">When will these invested funds be required? (Investment Horizon):</div>
+        <div class="options-group-title">When will funds be required? (Investment Horizon):</div>
         <div class="radio-pill-grid">
-          <label class="radio-card"><input type="radio" name="fc_horizon" value="1" required> &lt; 1 Year (Short)</label>
-          <label class="radio-card"><input type="radio" name="fc_horizon" value="2"> 1–3 Years (Short-Med)</label>
-          <label class="radio-card"><input type="radio" name="fc_horizon" value="3"> 3–5 Years (Medium)</label>
-          <label class="radio-card"><input type="radio" name="fc_horizon" value="4"> 5–10 Years (Long)</label>
-          <label class="radio-card"><input type="radio" name="fc_horizon" value="5"> &gt; 10 Years / No specific req (Very Long)</label>
+          <label class="radio-card"><input type="radio" name="fc_horizon" value="1" required> &lt; 1 Year</label>
+          <label class="radio-card"><input type="radio" name="fc_horizon" value="2"> 1–3 Years</label>
+          <label class="radio-card"><input type="radio" name="fc_horizon" value="3"> 3–5 Years</label>
+          <label class="radio-card"><input type="radio" name="fc_horizon" value="4" checked> 5–10 Years</label>
+          <label class="radio-card"><input type="radio" name="fc_horizon" value="5"> &gt; 10 Years / No specific requirement</label>
         </div>
 
-        <!-- DECLARATION -->
+        <!-- PART D: RISK & COMMISSION ACKNOWLEDGEMENT -->
         <div class="section-header-box">
-          <h2>Investor Declaration</h2>
-          <span style="font-size:12px; font-weight:700; color:var(--text-3);">STATUTORY</span>
+          <h2>Part D – Risk & Commission Acknowledgement</h2>
+          <span style="font-size:12px; font-weight:700; color:var(--text-3);">DISCLOSURES</span>
+        </div>
+
+        <p style="font-size:13px; color:#475569; margin-bottom:12px;">
+          The Investor confirms that the following have been explained / made available where relevant:
+        </p>
+        <div class="checkbox-list">
+          <label class="radio-card"><input type="checkbox" checked required> Scheme Riskometer</label>
+          <label class="radio-card"><input type="checkbox" checked required> Market Risk</label>
+          <label class="radio-card"><input type="checkbox" checked required> Credit Risk</label>
+          <label class="radio-card"><input type="checkbox" checked required> Interest Rate Risk</label>
+          <label class="radio-card"><input type="checkbox" checked required> Liquidity Risk</label>
+          <label class="radio-card"><input type="checkbox" checked required> Concentration Risk</label>
+          <label class="radio-card"><input type="checkbox" checked required> Exit Load Structure</label>
+          <label class="radio-card"><input type="checkbox" checked required> Tax Implications</label>
+          <label class="radio-card"><input type="checkbox" checked required> Scheme-specific Risks</label>
+          <label class="radio-card"><input type="checkbox" checked required> Regular vs Direct Plan</label>
+          <label class="radio-card"><input type="checkbox" checked required> Distributor Remuneration / Commission</label>
+        </div>
+
+        <!-- PART E: INVESTOR DECLARATION -->
+        <div class="section-header-box">
+          <h2>Part E – Investor Declaration</h2>
+          <span style="font-size:12px; font-weight:700; color:var(--text-3);">STATUTORY (13 CLAUSES)</span>
         </div>
 
         <div style="background:#F8FAFC; border:1px solid var(--border); border-radius:12px; padding:20px; margin-bottom:20px;">
-          <div class="decl-item">
-            <input type="checkbox" id="decl1" checked required>
-            <span>I/We confirm that the information provided is true and complete, and reflects my/our investment objectives accurately.</span>
-          </div>
-          <div class="decl-item">
-            <input type="checkbox" id="decl2" checked required>
-            <span>I/We understand that mutual fund investments are subject to market risks, and that past performance does not guarantee future performance.</span>
-          </div>
-          <div class="decl-item">
-            <input type="checkbox" id="decl3" checked required>
-            <span>I/We understand the difference between Regular and Direct Plans, and that Ameva (ARN-145058, EUIN-E028717) deals in Regular Plans earning trailing distributor remuneration.</span>
-          </div>
+          <div class="decl-item"><input type="checkbox" id="decl1" checked required><span>1. The information provided by me/us is true and complete.</span></div>
+          <div class="decl-item"><input type="checkbox" id="decl2" checked required><span>2. I/We have disclosed my/our financial circumstances and investment objectives accurately.</span></div>
+          <div class="decl-item"><input type="checkbox" id="decl3" checked required><span>3. I/We understand that the risk profile is based on information provided by me/us.</span></div>
+          <div class="decl-item"><input type="checkbox" id="decl4" checked required><span>4. I/We understand that mutual fund investments are subject to market risks.</span></div>
+          <div class="decl-item"><input type="checkbox" id="decl5" checked required><span>5. I/We understand that investment value can fluctuate and capital loss is possible.</span></div>
+          <div class="decl-item"><input type="checkbox" id="decl6" checked required><span>6. I/We understand that past performance does not guarantee future performance.</span></div>
+          <div class="decl-item"><input type="checkbox" id="decl7" checked required><span>7. I/We have been informed of the material risks relevant to my/our investment.</span></div>
+          <div class="decl-item"><input type="checkbox" id="decl8" checked required><span>8. I/We understand the difference between Regular and Direct Plans.</span></div>
+          <div class="decl-item"><input type="checkbox" id="decl9" checked required><span>9. I/We understand that AMEVA may receive permissible distributor remuneration.</span></div>
+          <div class="decl-item"><input type="checkbox" id="decl10" checked required><span>10. I/We understand that AMEVA does not guarantee investment returns.</span></div>
+          <div class="decl-item"><input type="checkbox" id="decl11" checked required><span>11. I/We have been given an opportunity to ask questions and seek clarification.</span></div>
+          <div class="decl-item"><input type="checkbox" id="decl12" checked required><span>12. I/We agree to inform AMEVA of material changes in my/our financial circumstances or risk tolerance.</span></div>
+          <div class="decl-item"><input type="checkbox" id="decl13" checked required><span>13. I/We understand that the final investment decision remains with me/us.</span></div>
         </div>
 
         <button type="button" class="btn-submit-assessment" id="btnSubmitFullRisk">
-          I Understand & Accept the Risk Profile — Send Email OTP ✉️
+          I Understand & Accept Agreement & Risk Profile — Send Email OTP ✉️
         </button>
       </form>
 
@@ -592,7 +777,7 @@
         
         <div class="result-banner">
           <div style="font-size:12px; font-weight:800; color:var(--green-deep); text-transform:uppercase; letter-spacing:1.5px; margin-bottom:6px;">
-            OFFICIAL RISK ASSESSMENT RESULT
+            OFFICIAL RISK ASSESSMENT RESULT (PART B.25)
           </div>
           <h2 style="font-family:'DM Serif Display',serif; font-size:36px; color:#25475E; margin:6px 0;" id="resProfileName">MODERATE</h2>
           <p style="font-size:14.5px; color:#64748B; max-width:650px; margin:8px auto 0;" id="resProfileDesc">
@@ -638,11 +823,12 @@
           </div>
           <div><strong>Registered Distributor:</strong> Ameva Mutual Fund Distributors (ARN-145058 | EUIN-E028717)</div>
           <div><strong>Grievance Officer:</strong> Rajesh Kumar Gupta (+91 98100 47256)</div>
-          <div><strong>Compliance Status:</strong> Verified via One-Time Password (OTP). Statutory disclaimers recorded.</div>
+          <div><strong>Compliance Status:</strong> Verified via One-Time Password (OTP). Statutory Customer-MFD Agreement recorded.</div>
         </div>
 
         <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
           <a href="index.html#contact" class="btn-primary-hero">Connect with Ameva Distribution Desk →</a>
+          <a href="./assets/docs/ameva_client_agreement_risk_profiling.pdf" target="_blank" rel="noopener noreferrer" class="btn-ghost-hero">📄 View Official PDF</a>
           <button type="button" class="btn-ghost-hero" id="btnRetakeFullRisk">🔄 Retake Questionnaire</button>
         </div>
       </div>
@@ -689,7 +875,7 @@
           <img src="./assets/logo.jpg" alt="Ameva Logo" class="footer-brand-logo">
         </div>
         <p class="footer-mission">
-          Ameva is an AMFI Registered Mutual Fund Distributor (ARN-145058) distributing Regular Plans of Mutual Funds across leading AMCs in India, assisting investors with disciplined wealth creation and dedicated service support.
+          Ameva Mutual Fund Distributors (ARN-145058 | EUIN-E028717) deals in Regular Plans of Mutual Funds across leading AMCs in India, assisting investors with disciplined investing and dedicated service support.
         </p>
         <div class="footer-reg-pill">
           ARN-145058 | EUIN-E028717 (AMFI Registered)
@@ -698,57 +884,58 @@
 
       <div class="footer-col">
         <h4>Navigation</h4>
-        <a href="index.html#hero">Home</a>
-        <a href="index.html#about">About us</a>
-        <a href="index.html#services">Services</a>
-        <a href="calculator.html">SIP Calculator</a>
-        <a href="risk-profiling.html">Risk Profiling</a>
-        <a href="sid.html">SID Links Directory</a>
-        <a href="index.html#regulatory">SEBI Disclosures</a>
-        <a href="index.html#contact">Contact</a>
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="calculator.html">SIP Calculator</a></li>
+          <li><a href="risk-profiling.html">Risk Profiling</a></li>
+          <li><a href="index.html#contact">Contact & Grievance</a></li>
+        </ul>
       </div>
 
       <div class="footer-col">
-        <h4>Regulatory & Tools</h4>
-        <a href="https://www.sebi.gov.in/filings/mutual-funds.html" target="_blank" rel="noopener noreferrer">SEBI SID/SAI/KIM</a>
-        <a href="https://scores.sebi.gov.in/" target="_blank" rel="noopener noreferrer">SEBI SCORES</a>
-        <a href="https://smartodr.in/" target="_blank" rel="noopener noreferrer">SMART ODR Portal</a>
-        <a href="https://www.cvlkra.com/" target="_blank" rel="noopener noreferrer">CVL KRA (Check KYC)</a>
-        <a href="https://www.amfiindia.com/" target="_blank" rel="noopener noreferrer">AMFI India</a>
-        <a href="index.html#regulatory">Commission Disclosures</a>
+        <h4>Compliance & Disclosures</h4>
+        <ul>
+          <li><a href="https://www.sebi.gov.in/filings/mutual-funds.html" target="_blank" rel="noopener noreferrer">SID / SAI / KIM (SEBI)</a></li>
+          <li><a href="https://fincorponline.com/Code_of_Conduct/AMFI_Code-of-Conduct.pdf" target="_blank" rel="noopener noreferrer">AMFI Code of Conduct</a></li>
+          <li><a href="sid.html">SID Links Directory</a></li>
+          <li><a href="./assets/docs/gst_registration_certificate.pdf" target="_blank" rel="noopener noreferrer">GST Registration (06AAHPG6195K1ZD)</a></li>
+          <li><a href="./assets/docs/ameva_client_agreement_risk_profiling.pdf" target="_blank" rel="noopener noreferrer">Client Agreement & Risk Form (PDF)</a></li>
+        </ul>
       </div>
 
       <div class="footer-col">
-        <h4>Contact Us</h4>
-        <p style="font-size:13.5px; color:var(--text-2); line-height:1.6; margin-bottom:12px;">
-          <strong>Registered Office Address</strong><br>
-          Aspen greens 99, Nirvana Country, Sector 50, Gurgaon
+        <h4>Distribution Office</h4>
+        <p style="font-size:13px; color:var(--text-3); line-height:1.6; margin-bottom:12px;">
+          <strong>Ameva Mutual Fund Distributors</strong><br>
+          Aspen greens 99, Nirvana Country, Sector 50, Gurgaon<br>
+          GSTIN: 06AAHPG6195K1ZD
         </p>
-        <p style="font-size:13.5px; color:var(--text-2);"><strong>Mobile:</strong> +91 98100 47256</p>
-        <p style="font-size:13.5px; color:var(--text-2);"><strong>Email:</strong> <a href="mailto:rajeshgupta@ameva.in" style="color:inherit; text-decoration:none;">rajeshgupta@ameva.in</a>, <a href="mailto:amevamfd@gmail.com" style="color:inherit; text-decoration:none;">amevamfd@gmail.com</a></p>
+        <p style="font-size:13px; color:var(--text-3); line-height:1.6;">
+          <strong>Mobile:</strong> +91 98100 47256<br>
+          <strong>Email:</strong> rajeshgupta@ameva.in, amevamfd@gmail.com
+        </p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <div class="footer-copy">
-        &copy; Copyright <strong>Ameva Mutual Fund Distributors</strong>. All Rights Reserved.
-      </div>
-      <div>
-        Mutual Fund investments are subject to market risks. Read all scheme related documents carefully.
+      <div class="footer-bottom-copy">
+        © 2026 Ameva Mutual Fund Distributors. All rights reserved. ARN-145058 | EUIN-E028717.
       </div>
     </div>
   </footer>
 
   <script>
+    // FORM & INTERACTION LOGIC
     const form = document.getElementById('amevaFullRiskForm');
-    const resultSheet = document.getElementById('riskResultSheet');
     const btnSubmit = document.getElementById('btnSubmitFullRisk');
+    const resultSheet = document.getElementById('riskResultSheet');
     const btnRetake = document.getElementById('btnRetakeFullRisk');
 
-    // OTP Elements
     const otpModal = document.getElementById('otpModal');
-    const otpTargetEmail = document.getElementById('otpTargetEmail');
     const otpInput = document.getElementById('otpInput');
+    const otpTargetEmail = document.getElementById('otpTargetEmail');
     const btnVerifyOtp = document.getElementById('btnVerifyOtp');
     const btnResendOtp = document.getElementById('btnResendOtp');
     const btnCancelOtp = document.getElementById('btnCancelOtp');
@@ -802,7 +989,7 @@
       const age = formData.get('investor_age') || '—';
       const occupation = formData.get('investor_occupation') || '—';
       const dependants = formData.get('investor_dependants') || '—';
-      const resStatus = formData.get('res_status');
+      const resStatus = formData.get('res_status') || 'Resident Indian';
 
       if (!name) {
         alert('Please enter your Name in the Investor Particulars section.');
@@ -816,32 +1003,43 @@
         return;
       }
 
-      const d1 = document.getElementById('decl1');
-      const d2 = document.getElementById('decl2');
-      const d3 = document.getElementById('decl3');
-      if ((d1 && !d1.checked) || (d2 && !d2.checked) || (d3 && !d3.checked)) {
-        alert('Please accept all statutory declarations before proceeding.');
+      // Check mandatory agreement acknowledgements
+      const chkRegExp = document.getElementById('chkRegExp');
+      const chkDirExp = document.getElementById('chkDirExp');
+      const chkDiffUnderstood = document.getElementById('chkDiffUnderstood');
+      const chkCommAck = document.getElementById('chkCommAck');
+      if (!chkRegExp?.checked || !chkDirExp?.checked || !chkDiffUnderstood?.checked || !chkCommAck?.checked) {
+        alert('Please accept all mandatory agreement checkpoints in Part A.');
         return;
+      }
+
+      // Check all 13 declaration checkboxes
+      for (let i = 1; i <= 13; i++) {
+        const d = document.getElementById(`decl${i}`);
+        if (d && !d.checked) {
+          alert('Please accept all 13 statutory declaration clauses before proceeding.');
+          return;
+        }
       }
 
       btnSubmit.disabled = true;
       btnSubmit.textContent = 'Sending Verification OTP to your Email...';
 
       // Numerical scores
-      const scoreIncome = parseInt(formData.get('annual_income') || '2', 10);
+      const scoreIncome = parseInt(formData.get('annual_income') || '3', 10);
       const scoreNetWorth = parseInt(formData.get('net_worth') || '2', 10);
-      const scoreLiabilities = parseInt(formData.get('liabilities') || '3', 10);
+      const scoreLiabilities = parseInt(formData.get('liabilities') || '4', 10);
       const scoreEmergency = parseInt(formData.get('emergency_res') || '3', 10);
       const scoreKnowledge = parseInt(formData.get('knowledge_level') || '2', 10);
 
-      const scoreQ1 = parseInt(formData.get('rt_q1') || '3', 10);
+      const scoreQ1 = parseInt(formData.get('rt_q1') || '4', 10);
       const scoreQ2 = parseInt(formData.get('rt_q2') || '3', 10);
-      const scoreQ3 = parseInt(formData.get('rt_q3') || '3', 10);
+      const scoreQ3 = parseInt(formData.get('rt_q3') || '4', 10);
       const scoreQ4 = parseInt(formData.get('rt_q4') || '3', 10);
 
       const scorePreserve = parseInt(formData.get('fc_preserve') || '3', 10);
-      const scoreAssetPct = parseInt(formData.get('fc_asset_pct') || '3', 10);
-      const scoreHorizon = parseInt(formData.get('fc_horizon') || '3', 10);
+      const scoreAssetPct = parseInt(formData.get('fc_asset_pct') || '4', 10);
+      const scoreHorizon = parseInt(formData.get('fc_horizon') || '4', 10);
 
       const capacityRaw = (scoreIncome + scoreNetWorth + scoreLiabilities + scoreEmergency + scorePreserve + scoreAssetPct) / 6;
       let capacityGrade = 'MODERATE';
@@ -919,6 +1117,14 @@
 
       const detailedResponses = [
         {
+          section: 'Part A – Investment Objectives & Horizon',
+          items: [
+            { q: 'Investment Objectives Selected', a: getCheckboxTexts('inv_obj') },
+            { q: 'Regular & Direct Plan Acknowledged', a: 'Yes' },
+            { q: 'Commission / Remuneration Acknowledged', a: 'Yes' }
+          ]
+        },
+        {
           section: 'Financial Profile (Risk Capacity)',
           items: [
             { q: 'Annual Income (₹)', a: getRadioText('annual_income') },
@@ -984,7 +1190,7 @@
         const data = await res.json();
         
         btnSubmit.disabled = false;
-        btnSubmit.textContent = 'I Understand & Accept the Risk Profile — Send Email OTP ✉️';
+        btnSubmit.textContent = 'I Understand & Accept Agreement & Risk Profile — Send Email OTP ✉️';
 
         if (!res.ok || !data.success) {
           alert(data.message || 'Failed to deliver OTP to your email. Please verify your email and network connection.');
@@ -1000,7 +1206,7 @@
       } catch (err) {
         console.error('Backend API connection notice:', err);
         btnSubmit.disabled = false;
-        btnSubmit.textContent = 'I Understand & Accept the Risk Profile — Send Email OTP ✉️';
+        btnSubmit.textContent = 'I Understand & Accept Agreement & Risk Profile — Send Email OTP ✉️';
         alert('Could not connect to the Ameva Verification API server. Please ensure the backend server is running on port 3003.');
       }
     });
@@ -1089,7 +1295,7 @@
       `).join('');
 
       const fundContainer = document.getElementById('resFundsList');
-      fundContainer.innerHTML = p.suitableFunds.map(f => `<span class="fund-tag">${f}</span>`).join('');
+      fundContainer.innerHTML = p.suitableFunds.map(f => `<span class="fund-tag" style="background:#F1F5F9; border:1px solid #CBD5E1; color:#25475E; padding:6px 14px; border-radius:8px; font-size:13px; font-weight:600;">${f}</span>`).join('');
 
       form.style.display = 'none';
       resultSheet.style.display = 'block';
@@ -1099,7 +1305,7 @@
     btnRetake?.addEventListener('click', () => {
       form.reset();
       btnSubmit.disabled = false;
-      btnSubmit.textContent = 'I Understand & Accept the Risk Profile — Send Email OTP ✉️';
+      btnSubmit.textContent = 'I Understand & Accept Agreement & Risk Profile — Send Email OTP ✉️';
       resultSheet.style.display = 'none';
       form.style.display = 'block';
       form.scrollIntoView({ behavior: 'smooth', block: 'start' });

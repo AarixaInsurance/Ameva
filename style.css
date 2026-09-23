@@ -194,9 +194,9 @@ nav.scrolled {
 }
 
 .brand-logo {
-  height: 44px;
+  height: 52px;
   width: auto;
-  max-width: 130px;
+  max-width: 160px;
   object-fit: contain;
   mix-blend-mode: multiply;
   display: block;
@@ -311,41 +311,47 @@ nav.scrolled {
 }
 
 .shape-1 {
-  width: 80px;
-  height: 80px;
-  border-radius: 24px;
-  top: 18%;
-  left: 8%;
+  width: 65px;
+  height: 65px;
+  border-radius: 20px;
+  top: 14%;
+  left: 2%;
   transform: rotate(-15deg);
   animation: shapeFloat 8s ease-in-out infinite;
 }
 
 .shape-2 {
-  width: 55px;
-  height: 55px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  top: 30%;
-  right: 10%;
+  top: 14%;
+  right: 2%;
   animation: shapeFloat 10s ease-in-out infinite 1s;
 }
 
 .shape-3 {
-  width: 120px;
-  height: 42px;
+  width: 110px;
+  height: 38px;
   border-radius: 50px;
-  bottom: 28%;
-  left: 8%;
+  bottom: 20%;
+  left: 2%;
   animation: shapeFloat 9s ease-in-out infinite 2s;
 }
 
 .shape-4 {
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   border-radius: 14px;
-  top: 60%;
-  right: 8%;
+  top: 70%;
+  right: 2%;
   transform: rotate(20deg);
   animation: shapeFloat 11s ease-in-out infinite 0.5s;
+}
+
+@media (max-width: 1200px) {
+  .shape-1, .shape-2, .shape-3, .shape-4 {
+    display: none;
+  }
 }
 
 .shape-inner {
