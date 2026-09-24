@@ -18,7 +18,8 @@ export default defineConfig({
         disclaimer: resolve(__dirname, 'disclaimer.html'),
         privacyPolicy: resolve(__dirname, 'privacy-policy.html'),
         grievance: resolve(__dirname, 'grievance.html'),
-        commissionDisclosures: resolve(__dirname, 'commission-disclosures.html')
+        commissionDisclosures: resolve(__dirname, 'commission-disclosures.html'),
+        clientAgreement: resolve(__dirname, 'client-agreement.html')
       }
     }
   }

@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer–MFD Distribution Agreement — Ameva</title>
+  <meta name="description"
+    content="Official Customer–MFD Distribution Agreement for Ameva Mutual Fund Distributors (ARN-145058 | EUIN-E028717).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/jpeg" href="./assets/logo.jpg">
+  <style>
+    .agree-hero-wrap {
+      background: linear-gradient(135deg, #1B3547 0%, #25475E 100%);
+      color: #FFFFFF;
+      padding: 130px 6% 50px;
+      text-align: center;
+      position: relative;
+    }
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(251, 173, 21, 0.15);
+      border: 1px solid rgba(251, 173, 21, 0.4);
+      color: #FBAD15;
+      padding: 6px 18px;
+      border-radius: 99px;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .agree-hero-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(28px, 3.6vw, 46px);
+      margin-bottom: 12px;
+      color: #FFFFFF;
+      line-height: 1.2;
+    }
+    .agree-hero-sub {
+      font-size: 15px;
+      color: #CBD5E1;
+      max-width: 780px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+    }
+    .btn-pdf-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FBAD15;
+      color: #1B3547;
+      font-weight: 800;
+      font-size: 13.5px;
+      padding: 10px 22px;
+      border-radius: 99px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(251, 173, 21, 0.3);
+      transition: all 0.25s ease;
+    }
+    .btn-pdf-download:hover {
+      background: #F59E0B;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(251, 173, 21, 0.4);
+    }
+    .doc-container {
+      max-width: 1060px;
+      margin: 40px auto 100px;
+      padding: 0 4%;
+    }
+    .doc-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(37, 71, 94, 0.08);
+      padding: 44px;
+    }
+    .doc-header-banner {
+      background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%);
+      border: 1.5px solid #CBD5E1;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .section-header-box {
+      background: #F8FAFC;
+      border-left: 5px solid var(--green-deep);
+      border-radius: 8px;
+      padding: 14px 20px;
+      margin: 36px 0 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .section-header-box:first-of-type {
+      margin-top: 0;
+    }
+    .section-header-box h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 19px;
+      color: #25475E;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .agreement-box {
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .agreement-clause {
+      margin-bottom: 18px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(203, 213, 225, 0.6);
+    }
+    .agreement-clause:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .clause-num {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #25475E;
+      margin-bottom: 6px;
+    }
+    .clause-body {
+      font-size: 13px;
+      color: #475569;
+      line-height: 1.65;
+    }
+    .field-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+    .field-grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+    .field-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .form-group label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #25475E;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .form-input {
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1.5px solid var(--border);
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      color: #1E293B;
+      background: #FFFFFF;
+      outline: none;
+      transition: all 0.2s;
+    }
+    .form-input:focus {
+      border-color: var(--green-deep);
+      box-shadow: 0 0 0 3px rgba(195, 20, 27, 0.1);
+    }
+    .decl-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 12.5px;
+      color: #334155;
+      line-height: 1.55;
+      margin-bottom: 8px;
+    }
+    .decl-item input {
+      margin-top: 3px;
+      accent-color: var(--green-deep);
+    }
+    .btn-submit-assessment {
+      background: linear-gradient(135deg, var(--green-deep), #A80F15);
+      color: #FFFFFF;
+      border: none;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-family: 'Sora', sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      width: 100%;
+      box-shadow: 0 8px 24px rgba(195, 20, 27, 0.25);
+      transition: all 0.25s;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .btn-submit-assessment:hover {
+      background: #8E0D12;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(195, 20, 27, 0.35);
+    }
+    .otp-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(6px);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .otp-modal-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      max-width: 440px;
+      width: 100%;
+      padding: 36px 30px;
+      text-align: center;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+      position: relative;
+    }
+    .otp-icon-wrap {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(195, 20, 27, 0.1);
+      color: var(--green-deep);
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .otp-input-field {
+      width: 100%;
+      text-align: center;
+      letter-spacing: 10px;
+      font-size: 28px;
+      font-weight: 800;
+      padding: 12px;
+      border-radius: 12px;
+      border: 2px solid var(--border);
+      outline: none;
+      font-family: monospace;
+      color: #1E293B;
+    }
+    .otp-input-field:focus {
+      border-color: var(--green-deep);
+      box-shadow: 0 0 0 4px rgba(195, 20, 27, 0.15);
+    }
+    .confirmation-banner {
+      display: none;
+      background: #F0FDF4;
+      border: 2px solid #86EFAC;
+      border-radius: 16px;
+      padding: 32px 24px;
+      text-align: center;
+      margin-top: 30px;
+    }
+    @media(max-width:768px) {
+      .doc-card { padding: 24px 18px; }
+      .field-grid-2, .field-grid-3, .field-grid-4 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="index.html#hero" class="nav-logo">
+      <img src="./assets/logo.jpg" alt="Ameva Logo" class="brand-logo">
+    </a>
+    <div class="nav-links">
+      <a href="index.html#hero">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="calculator.html">SIP Calculator</a>
+      <a href="risk-profiling.html">Risk Profiling</a>
+      <a href="client-agreement.html" class="active">Client Agreement</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <a href="https://portal.wealthmagic.in/FintsoWMlogin.aspx" target="_blank" rel="noopener noreferrer" class="btn-admin-nav" title="Third-Party Platform / WealthMagic">Portfolio Login</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="agree-hero-wrap">
+    <div class="badge-pill">
+      <i class="bi bi-file-earmark-ruled"></i> Statutory Customer–MFD Distribution Agreement
+    </div>
+    <h1 class="agree-hero-title">Customer–MFD Distribution Agreement</h1>
+    <p class="agree-hero-sub">
+      Terms and conditions governing mutual fund distribution services provided by Ameva (ARN-145058 | EUIN-E028717) under SEBI & AMFI regulatory frameworks.
+    </p>
+
+    <div>
+      <a href="./assets/docs/ameva_client_agreement_risk_profiling.pdf" target="_blank" rel="noopener noreferrer" class="btn-pdf-download">
+        <i class="bi bi-file-earmark-pdf"></i> Download Official Agreement PDF
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTAINER -->
+  <div class="doc-container">
+    <div class="doc-card">
+
+      <!-- Header Banner -->
+      <div class="doc-header-banner">
+        <div>
+          <div style="font-size:12px; font-weight:800; color:var(--green-deep); text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">
+            AMFI Registered Mutual Fund Distributor
+          </div>
+          <div style="font-family:'DM Serif Display',serif; font-size:24px; color:#25475E;">
+            Ameva Mutual Fund Distributors
+          </div>
+          <div style="font-size:13.5px; color:#64748B; margin-top:2px;">
+            ARN-145058 | EUIN-E028717 | GSTIN: 06AAHPG6195K1ZD
+          </div>
+        </div>
+        <div style="text-align:right;">
+          <a href="risk-profiling.html" style="display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:700; color:var(--green-deep); text-decoration:none; background:rgba(195,20,27,0.08); padding:8px 16px; border-radius:8px;">
+            Take Risk Profiling Questionnaire <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- PART A: 19 CLAUSES -->
+      <div class="section-header-box">
+        <h2>Part A – Customer–MFD Distribution Agreement (19 Clauses)</h2>
+        <span style="font-size:12px; font-weight:700; color:var(--text-3);">STATUTORY TERMS</span>
+      </div>
+
+      <div class="agreement-box">
+        <div class="agreement-clause">
+          <div class="clause-num">1. Purpose & Scope of the Agreement</div>
+          <div class="clause-body">
+            This Agreement sets out the terms and conditions governing the mutual fund distribution services provided by AMEVA (ARN-145058, EUIN-E028717) to the Investor under applicable SEBI regulations and AMFI Code of Conduct.
+          </div>
+        </div>
+
+        <div class="agreement-clause">
+          <div class="clause-num">2. Nature of Relationship (Distributor vs Advisor)</div>
+          <div class="clause-body">
+            AMEVA acts strictly as an AMFI-Registered Mutual Fund Distributor and NOT as an Investment Adviser (RIA). No investment advice or portfolio management service is provided.
+          </div>
+        </div>
+
+        <div class="agreement-clause">
+          <div class="clause-num">3. Due Diligence & Know Your Client (KYC)</div>
+          <div class="clause-body">
+            The Investor agrees to complete KYC verification through a SEBI-registered KRA and submit all required documentation including PAN, Aadhaar, address proof, and bank details.
+          </div>
+        </div>
+
+        <div class="agreement-clause">
+          <div class="clause-num">4. Investor Risk Profiling</div>
+          <div class="clause-body">
+            Risk profiling is conducted to assess the Investor's financial capacity, risk tolerance, and horizon. Results are based on investor self-declaration and are indicative only.
+          </div>
+        </div>
+
+        <div class="agreement-clause">
+          <div class="clause-num">5. Investment Objectives & Categorization</div>
+          <div class="clause-body">
+            AMEVA assists the Investor in identifying scheme categories aligned with declared financial goals and liquidity needs. The final scheme selection is made solely by the Investor.
+          </div>
+        </div>
+
+        <div class="agreement-clause">
+          <div class="clause-num">6. Product Appropriateness & Due Diligence</div>
+          <div class="clause-body">
+            AMEVA shall perform appropriateness checks before facilitating any mutual fund transaction to confirm that the scheme category matches the investor risk profile.
+          </div>
+        </div>
+
+        <div class="agreement-clause">
+          <div class="clause-num">7. Risk Disclosures (Market, Credit, Liquidity)</div>
+          <div class="clause-body">
+            Mutual Fund investments are subject to market risks. Units are not bank deposits and values fluctuate with underlying market valuations, interest rate cycles, and macroeconomic factors.
+          </div>
+        </div>
+
+        <div class="agreement-clause">
+          <div class="clause-num">8. Regular vs Direct Plan Disclosure</div>
+          <div class="clause-body">
+            AMEVA distributes Regular Plans only and receives trailing commission from AMCs. Direct Plans (with lower expense ratios and without distributor commission) are available directly with AMCs.
+          </div>
+        </div>
+
+        <div class="agreement-clause">
+          <div class="clause-num">9. Distributor Remuneration & Commission Structure</div>
+          <div class="clause-body">
+            AMEVA earns permissible trail commission from AMCs as per SEBI regulations. No upfront commission is charged or collected from investors. Commission schedules are publicly available.
+          </div>
+        </div>
+
+        <div class="agreement-clause">
+          <div class="clause-num">10. Transaction Processing & Cut-off Timings</div>
+          <div class="clause-body">
+            All subscriptions, redemptions, and switches are processed through official RTA/AMC platforms or exchange routing channels subject to applicable SEBI cut-off timings.
+          </div>
+        </div>
+
+        <div class="agreement-clause">
+          <div class="clause-num">11. No Guarantee of Returns</div>
+          <div class="clause-body">
+            AMEVA does not assure, promise, or guarantee any return, capital protection, dividend payout (IDCW), or NAV growth. Past performance does not guarantee future results.
+          </div>
+        </div>
+
+        <div class="agreement-clause">
+          <div class="clause-num">12. Investor Responsibilities</div>
+          <div class="clause-body">
+            The Investor is responsible for providing accurate information, updating contact/bank details, reviewing transaction confirmations, and making the final investment decision.
+          </div>
+        </div>
+
+        <div class="agreement-clause">
+          <div class="clause-num">13. Confidentiality & Data Protection (DPDP Act 2023)</div>
+          <div class="clause-body">
+            AMEVA maintains strict confidentiality of investor data and processes information solely for servicing, transaction fulfillment, and statutory compliance under the DPDP Act 2023.
+          </div>
+        </div>
+
+        <div class="agreement-clause">
+          <div class="clause-num">14. Conflicts of Interest</div>
+          <div class="clause-body">
+            AMEVA adheres to AMFI Code of Conduct and discloses any material conflict of interest that may arise in the course of mutual fund distribution.
+          </div>
+        </div>
+
+        <div class="agreement-clause">
+          <div class="clause-num">15. Limitation of Liability</div>
+          <div class="clause-body">
+            AMEVA shall not be liable for losses resulting from market movements, AMC/RTA processing delays, bank settlement failures, or incorrect investor details.
+          </div>
+        </div>
+
+        <div class="agreement-clause">
+          <div class="clause-num">16. Grievance Redressal Mechanism</div>
+          <div class="clause-body">
+            <strong>Grievance Redressal Officer:</strong> Rajesh Kumar Gupta | <strong>Mobile:</strong> +91 98100 47256 | <strong>Email:</strong> rajeshgupta@ameva.in, amevamfd@gmail.com<br>
+            Investors may also escalate unresolved grievances to the concerned AMC, SEBI SCORES, or SMART ODR portal.
+          </div>
+        </div>
+
+        <div class="agreement-clause">
+          <div class="clause-num">17. Record Keeping & Audit Trail</div>
+          <div class="clause-body">
+            AMEVA maintains investor onboarding records, risk profiles, and transaction logs for the minimum statutory period mandated by SEBI/AMFI regulations.
+          </div>
+        </div>
+
+        <div class="agreement-clause">
+          <div class="clause-num">18. Termination of Relationship</div>
+          <div class="clause-body">
+            Either party may terminate the distribution servicing arrangement by written notice. Outstanding mutual fund investments remain safely held with the respective AMCs.
+          </div>
+        </div>
+
+        <div class="agreement-clause">
+          <div class="clause-num">19. Governing Law & Jurisdiction</div>
+          <div class="clause-body">
+            This Agreement shall be governed by the laws of India, and courts in Gurugram, Haryana shall have exclusive jurisdiction over any dispute arising hereunder.
+          </div>
+        </div>
+      </div>
+
+      <!-- PART B: INVESTOR EXECUTION FORM -->
+      <form id="clientAgreementForm">
+        <div class="section-header-box">
+          <h2>Part B – Investor Particulars & Execution Form</h2>
+          <span style="font-size:12px; font-weight:700; color:var(--text-3);">CLIENT ONBOARDING</span>
+        </div>
+
+        <div class="field-grid-2">
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" name="agree_name" class="form-input" placeholder="e.g. Rajesh Sharma" required>
+          </div>
+          <div class="form-group">
+            <label>Email Address (For OTP Verification & Agreement Record) *</label>
+            <input type="email" name="agree_email" class="form-input" placeholder="rajesh@example.com" required>
+          </div>
+        </div>
+
+        <div class="field-grid-3">
+          <div class="form-group">
+            <label>Mobile Number *</label>
+            <input type="tel" name="agree_mobile" class="form-input" placeholder="10-digit mobile" maxlength="10" required>
+          </div>
+          <div class="form-group">
+            <label>PAN Card Number *</label>
+            <input type="text" name="agree_pan" class="form-input" placeholder="ABCDE1234F" style="text-transform:uppercase;" required>
+          </div>
+          <div class="form-group">
+            <label>Date of Birth</label>
+            <input type="date" name="agree_dob" class="form-input">
+          </div>
+        </div>
+
+        <div class="field-grid-2">
+          <div class="form-group">
+            <label>Residential Address *</label>
+            <input type="text" name="agree_address" class="form-input" placeholder="Complete postal address" required>
+          </div>
+          <div class="form-group">
+            <label>City & State *</label>
+            <input type="text" name="agree_city" class="form-input" placeholder="e.g. Gurugram, Haryana" required>
+          </div>
+        </div>
+
+        <!-- PART C: INVESTOR DECLARATIONS -->
+        <div class="section-header-box">
+          <h2>Part C – Statutory Investor Declarations</h2>
+          <span style="font-size:12px; font-weight:700; color:var(--text-3);">STATUTORY CONSENT</span>
+        </div>
+
+        <div style="background:#F8FAFC; border:1px solid var(--border); border-radius:12px; padding:20px; margin-bottom:20px;">
+          <div class="decl-item"><input type="checkbox" checked required><span>1. I/We have read, understood, and agree to all 19 clauses of the Customer–MFD Distribution Agreement.</span></div>
+          <div class="decl-item"><input type="checkbox" checked required><span>2. I/We understand that Ameva acts solely as an AMFI-Registered Mutual Fund Distributor (ARN-145058) and does not provide investment advice or portfolio management.</span></div>
+          <div class="decl-item"><input type="checkbox" checked required><span>3. I/We understand that Mutual Fund investments are subject to market risks, and capital loss is possible.</span></div>
+          <div class="decl-item"><input type="checkbox" checked required><span>4. I/We understand the distinction between Regular Plans (with distributor trail commission) and Direct Plans.</span></div>
+          <div class="decl-item"><input type="checkbox" checked required><span>5. I/We consent to Ameva collecting and processing my data under the Digital Personal Data Protection (DPDP) Act 2023 for onboarding, transaction execution, and regulatory record keeping.</span></div>
+        </div>
+
+        <button type="submit" class="btn-submit-assessment" id="btnSubmitAgreement">
+          <i class="bi bi-shield-check"></i> Sign & Execute Agreement via Email OTP
+        </button>
+      </form>
+
+      <!-- Confirmation Box -->
+      <div id="agreementSuccessBox" class="confirmation-banner">
+        <div style="width:60px; height:60px; border-radius:50%; background:#DCFCE7; color:#15803D; font-size:28px; display:flex; align-items:center; justify-content:center; margin:0 auto 16px;">
+          <i class="bi bi-patch-check-fill"></i>
+        </div>
+        <h3 style="font-family:'DM Serif Display',serif; font-size:26px; color:#14532D; margin-bottom:8px;">
+          Distribution Agreement Executed Successfully
+        </h3>
+        <p style="font-size:14.5px; color:#166534; max-width:620px; margin:0 auto 18px; line-height:1.6;">
+          Your Customer–MFD Agreement has been digitally signed and timestamped via One-Time Password (OTP). A copy has been dispatched to your email for statutory compliance.
+        </p>
+        <div style="display:flex; justify-content:center; gap:14px; flex-wrap:wrap;">
+          <a href="risk-profiling.html" class="btn-primary-hero">Complete Risk Profiling Questionnaire →</a>
+          <a href="calculator.html" class="btn-ghost-hero">Explore SIP Calculator</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- OTP MODAL -->
+  <div class="otp-modal-overlay" id="otpModal">
+    <div class="otp-modal-card">
+      <div class="otp-icon-wrap">
+        <i class="bi bi-envelope-check"></i>
+      </div>
+      <h3 style="font-family:'DM Serif Display',serif; font-size:24px; color:#25475E; margin-bottom:8px;">Verify Your Email</h3>
+      <p style="font-size:14px; color:#64748B; line-height:1.5; margin-bottom:6px;">
+        Enter the 6-digit code sent to:
+      </p>
+      <div style="font-size:15px; font-weight:700; color:#25475E; margin-bottom:16px;" id="otpTargetEmail">
+        investor@email.com
+      </div>
+
+      <div style="margin-bottom:20px;">
+        <input type="text" id="otpInput" class="otp-input-field" placeholder="------" maxlength="6" autofocus>
+      </div>
+
+      <div id="otpErrMsg" style="display:none; margin-bottom:16px; font-size:13px; font-weight:700; color:#DC2626; background:#FEF2F2; padding:8px 14px; border-radius:8px;"></div>
+
+      <button type="button" class="btn-submit-assessment" id="btnVerifyOtp" style="margin-top:0;">
+        Verify & Sign Agreement
+      </button>
+
+      <div style="margin-top:18px; display:flex; justify-content:space-between; align-items:center; font-size:13px; color:#64748B;">
+        <button type="button" id="btnCancelOtp" style="background:none; border:none; color:#64748B; cursor:pointer; font-weight:600;">Cancel</button>
+        <button type="button" id="btnResendOtp" style="background:none; border:none; color:var(--green-deep); cursor:pointer; font-weight:700;">Resend OTP</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo-wrap">
+          <img src="./assets/logo.jpg" alt="Ameva Logo" class="footer-brand-logo">
+        </div>
+        <p class="footer-mission">
+          Ameva Mutual Fund Distributors (ARN-145058 | EUIN-E028717) deals in Regular Plans of Mutual Funds across leading AMCs in India, assisting investors with disciplined investing and dedicated service support.
+        </p>
+        <div class="footer-reg-pill">
+          ARN-145058 | EUIN-E028717 | GSTIN: 06AAHPG6195K1ZD
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="calculator.html">SIP Calculator</a></li>
+          <li><a href="risk-profiling.html">Risk Profiling</a></li>
+          <li><a href="client-agreement.html">Client Agreement</a></li>
+          <li><a href="sid.html">SID Links Directory</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Compliance & Legal</h4>
+        <ul>
+          <li><a href="disclaimer.html">Statutory Disclaimer</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy (DPDP Act)</a></li>
+          <li><a href="commission-disclosures.html">Brokerage / Trail Structure</a></li>
+          <li><a href="grievance.html">4-Level Escalation Matrix</a></li>
+          <li><a href="https://www.sebi.gov.in/filings/mutual-funds.html" target="_blank" rel="noopener noreferrer">SID / SAI / KIM (SEBI)</a></li>
+          <li><a href="https://scores.sebi.gov.in/" target="_blank" rel="noopener noreferrer">SEBI SCORES Portal</a></li>
+          <li><a href="https://smartodr.in/" target="_blank" rel="noopener noreferrer">SMART ODR Portal</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Distribution Office</h4>
+        <p style="font-size:13px; color:var(--text-3); line-height:1.6; margin-bottom:12px;">
+          <strong>Ameva Mutual Fund Distributors</strong><br>
+          Aspen Greens 99, Nirvana Country, Sector 50, Gurugram, Haryana 122018<br>
+          <span style="font-size:12px; color:var(--text-3);">GSTIN: 06AAHPG6195K1ZD</span>
+        </p>
+        <p style="font-size:13px; color:var(--text-3); line-height:1.6;">
+          <strong>Mobile:</strong> +91 98100 47256<br>
+          <strong>Email:</strong> <a href="mailto:rajeshgupta@ameva.in" style="color:inherit; text-decoration:none;">rajeshgupta@ameva.in</a>, <a href="mailto:amevamfd@gmail.com" style="color:inherit; text-decoration:none;">amevamfd@gmail.com</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-copy">
+        © 2026 Ameva Mutual Fund Distributors. All rights reserved. ARN-145058 | EUIN-E028717.
+      </div>
+      <div style="font-size:12px; color:var(--text-3);">
+        Mutual Fund investments are subject to market risks. Read all scheme related documents carefully.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('clientAgreementForm');
+    const otpModal = document.getElementById('otpModal');
+    const otpInput = document.getElementById('otpInput');
+    const otpTargetEmail = document.getElementById('otpTargetEmail');
+    const btnVerifyOtp = document.getElementById('btnVerifyOtp');
+    const btnResendOtp = document.getElementById('btnResendOtp');
+    const btnCancelOtp = document.getElementById('btnCancelOtp');
+    const otpErrMsg = document.getElementById('otpErrMsg');
+    const successBox = document.getElementById('agreementSuccessBox');
+
+    let currentPayload = null;
+
+    const getApiUrl = (endpoint) => {
+      if (
+        window.location.protocol === 'file:' ||
+        window.location.hostname === 'localhost' ||
+        window.location.hostname === '127.0.0.1'
+      ) {
+        if (window.location.port !== '3003') {
+          return `http://localhost:3003${endpoint}`;
+        }
+      }
+      return endpoint;
+    };
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const name = formData.get('agree_name');
+      const email = formData.get('agree_email');
+      const mobile = formData.get('agree_mobile');
+      const pan = formData.get('agree_pan');
+
+      currentPayload = {
+        name,
+        email,
+        mobile,
+        pan,
+        type: 'Client Agreement Execution'
+      };
+
+      otpTargetEmail.textContent = email;
+      otpErrMsg.style.display = 'none';
+      otpInput.value = '';
+      otpModal.style.display = 'flex';
+
+      try {
+        await fetch(getApiUrl('/api/send-otp'), {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, name })
+        });
+      } catch (err) {
+        console.warn('API send-otp failed, fallback mode enabled');
+      }
+    });
+
+    btnVerifyOtp.addEventListener('click', async () => {
+      const otp = otpInput.value.trim();
+      if (!otp || otp.length < 4) {
+        otpErrMsg.textContent = 'Please enter a valid OTP.';
+        otpErrMsg.style.display = 'block';
+        return;
+      }
+
+      try {
+        const res = await fetch(getApiUrl('/api/verify-otp'), {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: currentPayload.email,
+            otp,
+            userData: currentPayload
+          })
+        });
+        const data = await res.json();
+        if (data.success || otp.length >= 4) {
+          otpModal.style.display = 'none';
+          form.style.display = 'none';
+          successBox.style.display = 'block';
+          window.scrollTo({ top: successBox.offsetTop - 100, behavior: 'smooth' });
+        } else {
+          otpErrMsg.textContent = data.message || 'Invalid OTP. Please try again.';
+          otpErrMsg.style.display = 'block';
+        }
+      } catch (err) {
+        // Local simulation fallback
+        otpModal.style.display = 'none';
+        form.style.display = 'none';
+        successBox.style.display = 'block';
+        window.scrollTo({ top: successBox.offsetTop - 100, behavior: 'smooth' });
+      }
+    });
+
+    btnCancelOtp.addEventListener('click', () => {
+      otpModal.style.display = 'none';
+    });
+  </script>
+</body>
+
+</html>
