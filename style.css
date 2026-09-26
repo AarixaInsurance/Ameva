@@ -1579,7 +1579,7 @@ footer {
 .risk-option-card input[type="radio"] {
   width: 20px;
   height: 20px;
-  accent-color: var(--green-deep);
+  accent-color: #25475E;
   margin-right: 16px;
   cursor: pointer;
 }

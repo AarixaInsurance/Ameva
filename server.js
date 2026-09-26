@@ -439,7 +439,7 @@ app.post('/api/verify-risk-profile', async (req, res) => {
             <strong>AMEVA — AMFI Registered Mutual Fund Distributor</strong><br>
             ARN: 145058 | EUIN: E028717<br>
             Grievance Officer: Rajesh Kumar Gupta (+91 98100 47256) | Email: rajeshgupta@ameva.in, amevamfd@gmail.com<br>
-            Distribution Office: Aspen greens 99, Nirvana Country, Sector 50, Gurgaon
+            Backoffice Address: Aspen greens 99, Nirvana Country, Sector 50, Gurgaon
           </div>
         </div>
       </div>
