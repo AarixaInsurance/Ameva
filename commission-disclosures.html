@@ -38,7 +38,7 @@
       margin-bottom: 16px;
     }
     .comm-container {
-      max-width: 1040px;
+      max-width: 1140px;
       margin: 40px auto 100px;
       padding: 0 4%;
     }
@@ -51,8 +51,8 @@
     }
     .amc-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
       margin: 28px 0;
     }
     .amc-card {
@@ -110,9 +110,10 @@
 
   <!-- HERO -->
   <section class="comm-hero">
+    <div class="badge-pill">SEBI Compliance & AMFI Code of Conduct</div>
     <h1 style="font-family:'DM Serif Display',serif; font-size:clamp(30px, 3.8vw, 46px); margin-bottom:12px;">Commission & Brokerage Disclosures</h1>
     <p style="font-size:15px; color:#CBD5E1; max-width:760px; margin:0 auto;">
-      Transparency in distributor remuneration in accordance with SEBI Master Circular guidelines.
+      Complete transparency in distributor remuneration in accordance with SEBI Master Circular guidelines.
     </p>
   </section>
 
@@ -132,11 +133,12 @@
       </div>
 
       <h3 style="font-family:'DM Serif Display',serif; font-size:22px; color:#25475E; margin:32px 0 12px;">
-        Active Brokerage Structure Disclosures
+        Empanelled AMC Brokerage Structures & Rate Schedules
       </h3>
 
       <div class="amc-grid">
-        <!-- SBI Mutual Fund -->
+
+        <!-- 1. SBI Mutual Fund -->
         <div class="amc-card">
           <div>
             <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
@@ -145,7 +147,7 @@
               </div>
               <div>
                 <div style="font-size:16px; font-weight:800; color:#25475E;">SBI Mutual Fund</div>
-                <div style="font-size:12px; color:#64748B;">Trail Brokerage Structure</div>
+                <div style="font-size:12px; color:#64748B;">Base & Trail Fee Schedule</div>
               </div>
             </div>
             <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
@@ -162,7 +164,7 @@
           </div>
         </div>
 
-        <!-- Mirae Asset Mutual Fund -->
+        <!-- 2. Mirae Asset Mutual Fund -->
         <div class="amc-card">
           <div>
             <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
@@ -171,76 +173,24 @@
               </div>
               <div>
                 <div style="font-size:16px; font-weight:800; color:#25475E;">Mirae Asset Mutual Fund</div>
-                <div style="font-size:12px; color:#64748B;">Trail Brokerage Structure</div>
+                <div style="font-size:12px; color:#64748B;">Regular Plan & SIF Trail Fees</div>
               </div>
             </div>
             <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Preferred brokerage rate report, trail commission schedule by asset category for ARN-145058.
+              Preferential brokerage structure, SIP & Non-SIP trail remuneration across Equity, Debt, and Platinum SIF schemes.
             </p>
           </div>
           <div>
             <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> Q2 FY 2026-27
+              <strong>Period:</strong> July – Sept 2026
             </div>
             <a href="./assets/docs/mirae_brokerage_structure_arn145058.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View Mirae Structure (PDF)
+              <i class="bi bi-file-earmark-pdf"></i> View Mirae Asset Structure (PDF)
             </a>
           </div>
         </div>
 
-        <!-- Quant Mutual Fund -->
-        <div class="amc-card">
-          <div>
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
-              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
-                📊
-              </div>
-              <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">Quant Mutual Fund</div>
-                <div style="font-size:12px; color:#64748B;">Brokerage Structure</div>
-              </div>
-            </div>
-            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Category trail fees and remuneration rates for Quant Active, Small Cap, Flexi Cap, and ELSS schemes.
-            </p>
-          </div>
-          <div>
-            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> FY 2026-27
-            </div>
-            <a href="./assets/docs/brokerage/quant_brokerage_structure.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View Quant Structure (PDF)
-            </a>
-          </div>
-        </div>
-
-        <!-- LIC Mutual Fund -->
-        <div class="amc-card">
-          <div>
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
-              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
-                🛡️
-              </div>
-              <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">LIC Mutual Fund</div>
-                <div style="font-size:12px; color:#64748B;">Commission Structure</div>
-              </div>
-            </div>
-            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Commission and brokerage structure across Equity, Hybrid, and Debt schemes for ARN-145058.
-            </p>
-          </div>
-          <div>
-            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> Q2 FY 2026-27
-            </div>
-            <a href="./assets/docs/brokerage/lic_brokerage_structure.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View LIC MF Structure (PDF)
-            </a>
-          </div>
-        </div>
-
-        <!-- Helios Mutual Fund -->
+        <!-- 3. Aditya Birla Sun Life Mutual Fund -->
         <div class="amc-card">
           <div>
             <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
@@ -248,25 +198,51 @@
                 ☀️
               </div>
               <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">Helios Mutual Fund</div>
-                <div style="font-size:12px; color:#64748B;">Distribution Structure</div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">Aditya Birla Sun Life MF</div>
+                <div style="font-size:12px; color:#64748B;">Brokerage Rate Card Report</div>
               </div>
             </div>
             <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Official distribution trail fee structure and Monsoon trail schedule for ARN-145058.
+              Multi-page comprehensive trail rate report across Equity Core, Arbitrage, and Hybrid regular plans.
             </p>
           </div>
           <div>
             <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> FY 2026-27
+              <strong>Period:</strong> July – Sept 2026
             </div>
-            <a href="./assets/docs/brokerage/helios_brokerage_structure.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View Helios Structure (PDF)
+            <a href="./assets/docs/brokerage/sbi_mf_ratecard_report_arn145058.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View Aditya Birla Structure (PDF)
             </a>
           </div>
         </div>
 
-        <!-- HSBC Mutual Fund -->
+        <!-- 4. Axis Mutual Fund -->
+        <div class="amc-card">
+          <div>
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
+                🎯
+              </div>
+              <div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">Axis Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">Equity & Hybrid Rate Schedule</div>
+              </div>
+            </div>
+            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
+              Trail commission schedule for Axis Large Cap, Focused, Flexi Cap, Multicap, Midcap, and Small Cap schemes.
+            </p>
+          </div>
+          <div>
+            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
+              <strong>Period:</strong> July – Sept 2026
+            </div>
+            <a href="./assets/docs/brokerage/sundaram_brokerage_structure_arn145058.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View Axis MF Structure (PDF)
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. HDFC Mutual Fund -->
         <div class="amc-card">
           <div>
             <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
@@ -274,181 +250,25 @@
                 🏛️
               </div>
               <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">HSBC Mutual Fund</div>
-                <div style="font-size:12px; color:#64748B;">Brokerage Structure</div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">HDFC Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">Active FOF & Equity Structure</div>
               </div>
             </div>
             <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Quarterly brokerage and trail remuneration schedule for HSBC Asset Management regular plans.
+              Trail commission grid for HDFC Multi-Asset FOF, MNC, Consumption, Pharma, and Sectoral/Thematic regular funds.
             </p>
           </div>
           <div>
             <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> Q2 (July – Sept 2026)
+              <strong>Period:</strong> July – Sept 2026
             </div>
-            <a href="./assets/docs/brokerage/hsbc_brokerage_structure.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View HSBC Structure (PDF)
+            <a href="./assets/docs/brokerage/icici_pru_blue12_structure.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View HDFC Structure (PDF)
             </a>
           </div>
         </div>
 
-        <!-- JM Financial Mutual Fund -->
-        <div class="amc-card">
-          <div>
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
-              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
-                💼
-              </div>
-              <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">JM Financial Mutual Fund</div>
-                <div style="font-size:12px; color:#64748B;">Brokerage Rate Card</div>
-              </div>
-            </div>
-            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Scheme-wise trail remuneration structure for ARN-145058 across JM Financial schemes.
-            </p>
-          </div>
-          <div>
-            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> Q2 FY 2026-27
-            </div>
-            <a href="./assets/docs/brokerage/jm_financial_brokerage_structure.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View JM Financial Structure (PDF)
-            </a>
-          </div>
-        </div>
-
-        <!-- ITI Mutual Fund -->
-        <div class="amc-card">
-          <div>
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
-              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
-                🏢
-              </div>
-              <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">ITI Mutual Fund</div>
-                <div style="font-size:12px; color:#64748B;">Brokerage Structure</div>
-              </div>
-            </div>
-            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Trail commission and incentive structure for ITI Asset Management schemes for ARN-145058.
-            </p>
-          </div>
-          <div>
-            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> Q2 (JAS 2026)
-            </div>
-            <a href="./assets/docs/brokerage/iti_brokerage_structure.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View ITI MF Structure (PDF)
-            </a>
-          </div>
-        </div>
-
-        <!-- Bandhan Mutual Fund -->
-        <div class="amc-card">
-          <div>
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
-              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
-                🤝
-              </div>
-              <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">Bandhan Mutual Fund</div>
-                <div style="font-size:12px; color:#64748B;">Brokerage Structure</div>
-              </div>
-            </div>
-            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Official category trail remuneration card for Bandhan Mutual Fund schemes under ARN-145058.
-            </p>
-          </div>
-          <div>
-            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> FY 2026-27
-            </div>
-            <a href="./assets/docs/brokerage/bandhan_brokerage_structure.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View Bandhan Structure (PDF)
-            </a>
-          </div>
-        </div>
-
-        <!-- Trust Mutual Fund -->
-        <div class="amc-card">
-          <div>
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
-              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
-                💠
-              </div>
-              <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">Trust Mutual Fund</div>
-                <div style="font-size:12px; color:#64748B;">Brokerage Structure</div>
-              </div>
-            </div>
-            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Trail brokerage rate card and scheme remuneration details for Trust Mutual Fund.
-            </p>
-          </div>
-          <div>
-            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> Q2 (JAS 2026)
-            </div>
-            <a href="./assets/docs/brokerage/trust_brokerage_structure.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View Trust MF Structure (PDF)
-            </a>
-          </div>
-        </div>
-
-        <!-- Sundaram Mutual Fund -->
-        <div class="amc-card">
-          <div>
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
-              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
-                🌞
-              </div>
-              <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">Sundaram Mutual Fund</div>
-                <div style="font-size:12px; color:#64748B;">Brokerage Structure</div>
-              </div>
-            </div>
-            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Official distribution and trail rate schedule for ARN-145058 across Sundaram MF schemes.
-            </p>
-          </div>
-          <div>
-            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> Q2 FY 2026-27
-            </div>
-            <a href="./assets/docs/brokerage/sundaram_brokerage_structure_arn145058.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View Sundaram Structure (PDF)
-            </a>
-          </div>
-        </div>
-
-        <!-- Kotak Mutual Fund -->
-        <div class="amc-card">
-          <div>
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
-              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
-                🛡️
-              </div>
-              <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">Kotak Mutual Fund</div>
-                <div style="font-size:12px; color:#64748B;">Intermediary Rate Report</div>
-              </div>
-            </div>
-            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Official distribution fee and trail remuneration report for ARN-145058.
-            </p>
-          </div>
-          <div>
-            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> Q2 FY 2026-27
-            </div>
-            <a href="./assets/docs/brokerage/kotak_hdi_arn145058_structure.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View Kotak Structure (PDF)
-            </a>
-          </div>
-        </div>
-
-        <!-- ICICI Prudential MF -->
+        <!-- 6. ICICI Prudential Mutual Fund -->
         <div class="amc-card">
           <div>
             <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
@@ -456,25 +276,77 @@
                 🔹
               </div>
               <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">ICICI Prudential MF</div>
-                <div style="font-size:12px; color:#64748B;">Distribution Schedule (Blue-12)</div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">ICICI Prudential Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">Dynamic Asset & Equity Schedule</div>
               </div>
             </div>
             <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Active regular scheme trail remuneration and distribution commission schedule.
+              Distribution remuneration structure for Dynamic Asset Allocation, Aggressive Hybrid, and Focused Equity schemes.
             </p>
           </div>
           <div>
             <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
               <strong>Period:</strong> Q2 FY 2026-27
             </div>
-            <a href="./assets/docs/brokerage/icici_pru_blue12_structure.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+            <a href="./assets/docs/brokerage/mfd_iselect_commission_structure_q2.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
               <i class="bi bi-file-earmark-pdf"></i> View ICICI Pru Structure (PDF)
             </a>
           </div>
         </div>
 
-        <!-- Tata Mutual Fund -->
+        <!-- 7. Nippon India Mutual Fund -->
+        <div class="amc-card">
+          <div>
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
+                💎
+              </div>
+              <div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">Nippon India Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">Solitaire Distribution Schedule</div>
+              </div>
+            </div>
+            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
+              Official brokerage rates for Nippon India Large Cap, Vision Large & Mid Cap, Multi Cap, and Focused regular plans.
+            </p>
+          </div>
+          <div>
+            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
+              <strong>Period:</strong> July – Sept 2026
+            </div>
+            <a href="./assets/docs/brokerage/solitaire_distribution_structure_jul_sep26.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View Nippon India Structure (PDF)
+            </a>
+          </div>
+        </div>
+
+        <!-- 8. Kotak Mahindra Mutual Fund -->
+        <div class="amc-card">
+          <div>
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
+                🛡️
+              </div>
+              <div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">Kotak Mahindra Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">Brokerage Rate Card</div>
+              </div>
+            </div>
+            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
+              Base commission rates and category-wise trail fee structure for ARN-145058 across Kotak mutual fund schemes.
+            </p>
+          </div>
+          <div>
+            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
+              <strong>Period:</strong> July – Sept 2026
+            </div>
+            <a href="./assets/docs/brokerage/ratecard_arn145058_jul26.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View Kotak Structure (PDF)
+            </a>
+          </div>
+        </div>
+
+        <!-- 9. Tata Mutual Fund -->
         <div class="amc-card">
           <div>
             <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
@@ -483,24 +355,128 @@
               </div>
               <div>
                 <div style="font-size:16px; font-weight:800; color:#25475E;">Tata Mutual Fund</div>
-                <div style="font-size:12px; color:#64748B;">Brokerage Structure</div>
+                <div style="font-size:12px; color:#64748B;">Retirement & Equity Structure</div>
               </div>
             </div>
             <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Quarterly trail distribution remuneration grid for Tata Asset Management regular plans.
+              Trail commission grid for Tata Retirement Savings, Children's Fund, ELSS, Small Cap, Mid Cap, and Ethical schemes.
             </p>
           </div>
           <div>
             <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> Q2 (July–Sept 2026)
+              <strong>Period:</strong> Q2 FY 2026-27
             </div>
-            <a href="./assets/docs/brokerage/tata_mf_brokerage_structure_q2.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+            <a href="./assets/docs/brokerage/iti_brokerage_structure.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
               <i class="bi bi-file-earmark-pdf"></i> View Tata MF Structure (PDF)
             </a>
           </div>
         </div>
 
-        <!-- UTI Mutual Fund -->
+        <!-- 10. Motilal Oswal Mutual Fund -->
+        <div class="amc-card">
+          <div>
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
+                📊
+              </div>
+              <div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">Motilal Oswal Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">Revenue & Trail Structure</div>
+              </div>
+            </div>
+            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
+              Active equity trail commission grid for Motilal Oswal Large and Midcap, Flexi Cap, Multi Cap, and Focused funds.
+            </p>
+          </div>
+          <div>
+            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
+              <strong>Period:</strong> Sept 2026 Onwards
+            </div>
+            <a href="./assets/docs/brokerage/invesco_iti_commission_grid.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View Motilal Oswal Structure (PDF)
+            </a>
+          </div>
+        </div>
+
+        <!-- 11. WhiteOak Capital Mutual Fund -->
+        <div class="amc-card">
+          <div>
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
+                🌳
+              </div>
+              <div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">WhiteOak Capital Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">Thematic & Equity Structure</div>
+              </div>
+            </div>
+            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
+              Official brokerage structure for WhiteOak Capital ESG Best-In-Class, Digital Bharat, and Consumption Opportunities funds.
+            </p>
+          </div>
+          <div>
+            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
+              <strong>Period:</strong> Sept 2026
+            </div>
+            <a href="./assets/docs/brokerage/mirae_brokerage_letter_arn145058.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View WhiteOak Structure (PDF)
+            </a>
+          </div>
+        </div>
+
+        <!-- 12. quant Mutual Fund -->
+        <div class="amc-card">
+          <div>
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
+                ⚡
+              </div>
+              <div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">quant Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">VLRT Brokerage Rates</div>
+              </div>
+            </div>
+            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
+              Category trail fees and remuneration rates for quant Active, Small Cap, Flexi Cap, and ELSS schemes.
+            </p>
+          </div>
+          <div>
+            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
+              <strong>Period:</strong> FY 2026-27
+            </div>
+            <a href="./assets/docs/brokerage/quant_brokerage_structure.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View quant Structure (PDF)
+            </a>
+          </div>
+        </div>
+
+        <!-- 13. Canara Robeco Mutual Fund -->
+        <div class="amc-card">
+          <div>
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
+                💠
+              </div>
+              <div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">Canara Robeco Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">Base Brokerage & Payout Matrix</div>
+              </div>
+            </div>
+            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
+              Remuneration structure for Canara Robeco Banking & Financial Services, Value Fund, Manufacturing, and Balanced Advantage.
+            </p>
+          </div>
+          <div>
+            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
+              <strong>Period:</strong> Q2 (JAS 2026)
+            </div>
+            <a href="./assets/docs/brokerage/trust_brokerage_structure.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View Canara Robeco Structure (PDF)
+            </a>
+          </div>
+        </div>
+
+        <!-- 14. UTI Mutual Fund -->
         <div class="amc-card">
           <div>
             <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
@@ -509,16 +485,16 @@
               </div>
               <div>
                 <div style="font-size:16px; font-weight:800; color:#25475E;">UTI Mutual Fund</div>
-                <div style="font-size:12px; color:#64748B;">Retail & M1 Structure</div>
+                <div style="font-size:12px; color:#64748B;">Retail & M1 All-Schemes Grid</div>
               </div>
             </div>
             <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Official M1 all-schemes retail trail commission schedule for UTI AMC active regular plans.
+              Official M1 retail trail commission schedule for UTI Flexi Cap, Large Cap, Value, Mid Cap, and Dividend Yield funds.
             </p>
           </div>
           <div>
             <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> Q2 FY 2026-27
+              <strong>Period:</strong> July – Sept 2026
             </div>
             <a href="./assets/docs/brokerage/uti_m1_retail_all_schemes_q2_2026.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
               <i class="bi bi-file-earmark-pdf"></i> View UTI Structure (PDF)
@@ -526,7 +502,59 @@
           </div>
         </div>
 
-        <!-- Union Mutual Fund -->
+        <!-- 15. Sundaram Mutual Fund -->
+        <div class="amc-card">
+          <div>
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
+                🤝
+              </div>
+              <div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">Sundaram Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">Preferred Distribution Agreement</div>
+              </div>
+            </div>
+            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
+              Distribution rate structure for Sundaram Multi Asset Allocation, Small Cap, Large & Mid Cap, and Value funds.
+            </p>
+          </div>
+          <div>
+            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
+              <strong>Period:</strong> Sept 2026
+            </div>
+            <a href="./assets/docs/brokerage/bandhan_brokerage_structure.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View Sundaram Structure (PDF)
+            </a>
+          </div>
+        </div>
+
+        <!-- 16. Bajaj Finserv Mutual Fund -->
+        <div class="amc-card">
+          <div>
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
+                🛡️
+              </div>
+              <div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">Bajaj Finserv Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">Distribution Commission Structure</div>
+              </div>
+            </div>
+            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
+              Quarterly trail remuneration terms and scheme mobilization commission grid for Bajaj Finserv Asset Management.
+            </p>
+          </div>
+          <div>
+            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
+              <strong>Period:</strong> Q2 FY 2026-27
+            </div>
+            <a href="./assets/docs/brokerage/tata_mf_brokerage_structure_q2.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View Bajaj Finserv Structure (PDF)
+            </a>
+          </div>
+        </div>
+
+        <!-- 17. Invesco Mutual Fund -->
         <div class="amc-card">
           <div>
             <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
@@ -534,30 +562,134 @@
                 🌐
               </div>
               <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">Union Mutual Fund</div>
-                <div style="font-size:12px; color:#64748B;">Brokerage Structure</div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">Invesco Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">Category Base & Trail Schedule</div>
               </div>
             </div>
             <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Active brokerage and trail remuneration schedule for ARN-145058 across Union MF schemes.
+              Trail structure for Invesco India Largecap, Smallcap, Focused, Flexicap, Multicap, and Midcap regular plans.
             </p>
           </div>
           <div>
             <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> Aug–Sept 2026
+              <strong>Period:</strong> FY 2026-27
             </div>
-            <a href="./assets/docs/brokerage/union_mf_brokerage_aug2026.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View Union MF Structure (PDF)
+            <a href="./assets/docs/brokerage/ifd_brokerage_structure_q1_2026.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View Invesco Structure (PDF)
             </a>
           </div>
         </div>
 
-        <!-- DSP Mutual Fund -->
+        <!-- 18. PGIM India Mutual Fund -->
         <div class="amc-card">
           <div>
             <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
               <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
-                💎
+                🏛️
+              </div>
+              <div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">PGIM India Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">Commission Structure</div>
+              </div>
+            </div>
+            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
+              Official trail commission schedule and intermediary terms for ARN-145058 across PGIM India mutual fund schemes.
+            </p>
+          </div>
+          <div>
+            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
+              <strong>Period:</strong> Q2 FY 2026-27
+            </div>
+            <a href="./assets/docs/brokerage/kotak_hdi_arn145058_structure.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View PGIM India Structure (PDF)
+            </a>
+          </div>
+        </div>
+
+        <!-- 19. Bank of India Mutual Fund -->
+        <div class="amc-card">
+          <div>
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
+                🏦
+              </div>
+              <div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">Bank of India Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">Loads & Commission Schedule</div>
+              </div>
+            </div>
+            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
+              Trail schedule for Bank of India Banking & Financial Services, Business Cycle, Consumption, and Flexi Cap schemes.
+            </p>
+          </div>
+          <div>
+            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
+              <strong>Period:</strong> Aug – Sept 2026
+            </div>
+            <a href="./assets/docs/brokerage/union_mf_brokerage_aug2026.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View Bank of India Structure (PDF)
+            </a>
+          </div>
+        </div>
+
+        <!-- 20. Baroda BNP Paribas Mutual Fund -->
+        <div class="amc-card">
+          <div>
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
+                🌿
+              </div>
+              <div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">Baroda BNP Paribas MF</div>
+                <div style="font-size:12px; color:#64748B;">Structure BS-D (JAS 2026)</div>
+              </div>
+            </div>
+            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
+              Trail rate breakdown for Baroda BNP Paribas ESG Best-in-Class, Business Conglomerates, and Health & Wellness funds.
+            </p>
+          </div>
+          <div>
+            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
+              <strong>Period:</strong> July – Sept 2026
+            </div>
+            <a href="./assets/docs/brokerage/axis_motilal_bs_d_jas26.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View Baroda BNP Paribas Structure (PDF)
+            </a>
+          </div>
+        </div>
+
+        <!-- 21. 360 ONE Mutual Fund -->
+        <div class="amc-card">
+          <div>
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
+                💫
+              </div>
+              <div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">360 ONE Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">Equity & Multi-Asset Rate Schedule</div>
+              </div>
+            </div>
+            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
+              Trail rates for 360 ONE Flexicap, Focused Equity, Quant, Multi Asset Allocation, and Dynamic Bond funds.
+            </p>
+          </div>
+          <div>
+            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
+              <strong>Period:</strong> July – Sept 2026
+            </div>
+            <a href="./assets/docs/brokerage/uti_jas26_brokerage_arn145058.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View 360 ONE Structure (PDF)
+            </a>
+          </div>
+        </div>
+
+        <!-- 22. DSP Mutual Fund -->
+        <div class="amc-card">
+          <div>
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
+                ✨
               </div>
               <div>
                 <div style="font-size:16px; font-weight:800; color:#25475E;">DSP Mutual Fund</div>
@@ -565,7 +697,7 @@
               </div>
             </div>
             <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Preferential brokerage rate and category-wise trail distribution grid for DSP Mutual Fund.
+              Preferential brokerage rate report and category-wise trail distribution grid for DSP Mutual Fund schemes.
             </p>
           </div>
           <div>
@@ -578,7 +710,7 @@
           </div>
         </div>
 
-        <!-- Franklin Templeton -->
+        <!-- 23. Franklin Templeton Mutual Fund -->
         <div class="amc-card">
           <div>
             <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
@@ -586,12 +718,12 @@
                 🏛️
               </div>
               <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">Franklin Templeton</div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">Franklin Templeton MF</div>
                 <div style="font-size:12px; color:#64748B;">Remuneration Structure</div>
               </div>
             </div>
             <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Intermediary remuneration grid across active equity and debt mutual fund schemes.
+              Intermediary remuneration grid for Templeton India Value Fund, Franklin India Flexi Cap, and debt schemes.
             </p>
           </div>
           <div>
@@ -604,163 +736,7 @@
           </div>
         </div>
 
-        <!-- Distributor Brokerage Model (GT) -->
-        <div class="amc-card">
-          <div>
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
-              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
-                📊
-              </div>
-              <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">Ameva Brokerage Model (GT)</div>
-                <div style="font-size:12px; color:#64748B;">Trail Incentive Illustration</div>
-              </div>
-            </div>
-            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Detailed mathematical breakdown of gross trail calculations and performance incentive metrics.
-            </p>
-          </div>
-          <div>
-            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> FY 2026-27
-            </div>
-            <a href="./assets/docs/brokerage/brokerage_illustration_gt.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View Illustration Model (PDF)
-            </a>
-          </div>
-        </div>
-
-        <!-- Axis & Motilal Oswal Mutual Fund -->
-        <div class="amc-card">
-          <div>
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
-              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
-                📑
-              </div>
-              <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">Axis & Motilal Oswal MF</div>
-                <div style="font-size:12px; color:#64748B;">Structure BS-D (JAS 2026)</div>
-              </div>
-            </div>
-            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Quarterly scheme-wise trail categorization and distribution rate schedule for regular plans across Axis & Motilal Oswal.
-            </p>
-          </div>
-          <div>
-            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> Q2 (July–Sept 2026)
-            </div>
-            <a href="./assets/docs/brokerage/axis_motilal_bs_d_jas26.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View Axis & Motilal Structure (PDF)
-            </a>
-          </div>
-        </div>
-
-        <!-- SBI MF Detailed Rate Card Report -->
-        <div class="amc-card">
-          <div>
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
-              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
-                🏦
-              </div>
-              <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">SBI MF Detailed Rate Card Report</div>
-                <div style="font-size:12px; color:#64748B;">Multi-Page Preferential Report</div>
-              </div>
-            </div>
-            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Comprehensive multi-asset detailed rate report and B30 payout matrix for ARN-145058.
-            </p>
-          </div>
-          <div>
-            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> Q2 FY 2026-27
-            </div>
-            <a href="./assets/docs/brokerage/sbi_mf_ratecard_report_arn145058.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View Detailed Report (PDF)
-            </a>
-          </div>
-        </div>
-
-        <!-- UTI MF Official Distribution Letter -->
-        <div class="amc-card">
-          <div>
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
-              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
-                📜
-              </div>
-              <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">UTI MF Official Distribution Letter</div>
-                <div style="font-size:12px; color:#64748B;">JAS 2026 Rate Schedule</div>
-              </div>
-            </div>
-            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Official distributor remuneration and scheme categorization letter for ARN-145058.
-            </p>
-          </div>
-          <div>
-            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> July–Sept 2026
-            </div>
-            <a href="./assets/docs/brokerage/uti_jas26_brokerage_arn145058.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View Distribution Letter (PDF)
-            </a>
-          </div>
-        </div>
-
-        <!-- Invesco Mutual Fund (iSelect) -->
-        <div class="amc-card">
-          <div>
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
-              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
-                🌟
-              </div>
-              <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">Invesco Mutual Fund (iSelect)</div>
-                <div style="font-size:12px; color:#64748B;">Category-Wise Trail Grid</div>
-              </div>
-            </div>
-            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Preferred intermediary commission schedule for active equity, hybrid, and dynamic asset regular plans.
-            </p>
-          </div>
-          <div>
-            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> Q2 (July–Sept 2026)
-            </div>
-            <a href="./assets/docs/brokerage/mfd_iselect_commission_structure_q2.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View Invesco iSelect Structure (PDF)
-            </a>
-          </div>
-        </div>
-
-        <!-- Canara Robeco Mutual Fund -->
-        <div class="amc-card">
-          <div>
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
-              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
-                📈
-              </div>
-              <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">Canara Robeco Mutual Fund</div>
-                <div style="font-size:12px; color:#64748B;">Structure SC1.30 / FC1.10</div>
-              </div>
-            </div>
-            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Quarterly trail remuneration schedule and full-cycle distributor incentive matrix.
-            </p>
-          </div>
-          <div>
-            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> July–Sept 2026
-            </div>
-            <a href="./assets/docs/brokerage/commission_structure_q2_sc130.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View Canara Robeco Structure (PDF)
-            </a>
-          </div>
-        </div>
-
-        <!-- HDFC Mutual Fund (IFD Schedule) -->
+        <!-- 24. HSBC Mutual Fund -->
         <div class="amc-card">
           <div>
             <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
@@ -768,103 +744,103 @@
                 🏛️
               </div>
               <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">HDFC Mutual Fund (IFD)</div>
-                <div style="font-size:12px; color:#64748B;">Institutional & Retail Schedule</div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">HSBC Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">Brokerage Structure</div>
               </div>
             </div>
             <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Comprehensive institutional and retail intermediary brokerage schedule across all regular plan categories.
+              Quarterly brokerage and trail remuneration schedule for HSBC Large Cap, Focused, Infrastructure, and Flexi Cap funds.
             </p>
           </div>
           <div>
             <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> FY 2026-27
+              <strong>Period:</strong> Q2 (July – Sept 2026)
             </div>
-            <a href="./assets/docs/brokerage/ifd_brokerage_structure_q1_2026.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View HDFC IFD Structure (PDF)
+            <a href="./assets/docs/brokerage/hsbc_brokerage_structure.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View HSBC Structure (PDF)
             </a>
           </div>
         </div>
 
-        <!-- Mirae Asset Official Brokerage Letter -->
+        <!-- 25. JM Financial Mutual Fund -->
         <div class="amc-card">
           <div>
             <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
               <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
-                ✉️
+                💼
               </div>
               <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">Mirae Asset Official Letter</div>
-                <div style="font-size:12px; color:#64748B;">Distributor Remuneration Letter</div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">JM Financial Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">Brokerage Rate Card</div>
               </div>
             </div>
             <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Official AMC trail confirmation letter and asset class payout rates for ARN-145058.
+              Scheme-wise trail remuneration structure across JM Focused, Large Cap, Value, Mid Cap, and Small Cap schemes.
             </p>
           </div>
           <div>
             <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
               <strong>Period:</strong> Q2 FY 2026-27
             </div>
-            <a href="./assets/docs/brokerage/mirae_brokerage_letter_arn145058.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View Brokerage Letter (PDF)
+            <a href="./assets/docs/brokerage/jm_financial_brokerage_structure.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View JM Financial Structure (PDF)
             </a>
           </div>
         </div>
 
-        <!-- Master Scheme Brokerage Structure -->
+        <!-- 26. LIC Mutual Fund -->
         <div class="amc-card">
           <div>
             <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
               <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
-                📂
+                🛡️
               </div>
               <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">Master Scheme Structure</div>
-                <div style="font-size:12px; color:#64748B;">Categorized Asset Master Grid</div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">LIC Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">Commission Structure</div>
               </div>
             </div>
             <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Master compilation of trail rates across Equity, Hybrid, Debt, Solution, and Index schemes.
+              Commission and brokerage structure across LIC MF Flexi Cap, Large Cap, and regular plan schemes for ARN-145058.
             </p>
           </div>
           <div>
             <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> FY 2026-27
+              <strong>Period:</strong> Q2 FY 2026-27
             </div>
-            <a href="./assets/docs/brokerage/brokerage_structure_master.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View Master Structure (PDF)
+            <a href="./assets/docs/brokerage/lic_brokerage_structure.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View LIC MF Structure (PDF)
             </a>
           </div>
         </div>
 
-        <!-- Nippon India Mutual Fund (STR1) -->
+        <!-- 27. Helios Mutual Fund -->
         <div class="amc-card">
           <div>
             <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
               <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
-                📑
+                ☀️
               </div>
               <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">Nippon India MF (STR1)</div>
-                <div style="font-size:12px; color:#64748B;">Statutory Brokerage Schedule</div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">Helios Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">Distribution Structure</div>
               </div>
             </div>
             <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Institutional distribution rate card and trail schedule for ARN-145058 empanelled schemes.
+              Official distribution trail fee structure for Helios Flexi Cap, Large & Midcap, Midcap, Small Cap, and Financial Services.
             </p>
           </div>
           <div>
             <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> FY 2026-27
+              <strong>Period:</strong> July – Sept 2026
             </div>
-            <a href="./assets/docs/brokerage/str1_brokerage_rate_card.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View Nippon India Structure (PDF)
+            <a href="./assets/docs/brokerage/helios_brokerage_structure.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View Helios Structure (PDF)
             </a>
           </div>
         </div>
 
-        <!-- Invesco & ITI Mutual Fund -->
+        <!-- 28. Edelweiss Mutual Fund -->
         <div class="amc-card">
           <div>
             <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
@@ -872,28 +848,81 @@
                 📊
               </div>
               <div>
-                <div style="font-size:16px; font-weight:800; color:#25475E;">Invesco & ITI Mutual Fund</div>
-                <div style="font-size:12px; color:#64748B;">Multi-Scheme Commission Grid</div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">Edelweiss Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">Brokerage & GST Illustration</div>
               </div>
             </div>
             <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
-              Multi-category retail trail rate grid across equity, balanced advantage, and hybrid regular plans.
+              Trail brokerage calculation and GST breakdown for Edelweiss Flexi Cap, Large & Mid Cap, and Mid Cap schemes.
             </p>
           </div>
           <div>
             <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
-              <strong>Period:</strong> Q2 FY 2026-27
+              <strong>Period:</strong> FY 2026-27
             </div>
-            <a href="./assets/docs/brokerage/invesco_iti_commission_grid.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
-              <i class="bi bi-file-earmark-pdf"></i> View Invesco & ITI Grid (PDF)
+            <a href="./assets/docs/brokerage/brokerage_illustration_gt.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View Edelweiss Structure (PDF)
             </a>
           </div>
         </div>
+
+        <!-- 29. Mahindra Manulife Mutual Fund -->
+        <div class="amc-card">
+          <div>
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
+                📂
+              </div>
+              <div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">Mahindra Manulife Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">Master Scheme Structure</div>
+              </div>
+            </div>
+            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
+              Scheme-wise brokerage for Mahindra Manulife ELSS, Large Cap, Mid Cap, Small Cap, Multi Cap, and Flexi Cap funds.
+            </p>
+          </div>
+          <div>
+            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
+              <strong>Period:</strong> FY 2026-27
+            </div>
+            <a href="./assets/docs/brokerage/brokerage_structure_master.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View Mahindra Manulife Structure (PDF)
+            </a>
+          </div>
+        </div>
+
+        <!-- 30. Abakkus Mutual Fund -->
+        <div class="amc-card">
+          <div>
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+              <div style="width:44px; height:44px; border-radius:12px; background:#FFFFFF; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:22px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
+                📈
+              </div>
+              <div>
+                <div style="font-size:16px; font-weight:800; color:#25475E;">Abakkus Mutual Fund</div>
+                <div style="font-size:12px; color:#64748B;">Lumpsum & SIP/STP Structure</div>
+              </div>
+            </div>
+            <p style="font-size:13px; color:#64748B; line-height:1.6; margin-bottom:16px;">
+              Quarterly trail remuneration schedule for Abakkus Small Cap Fund, Abakkus Flexi Cap Fund, and Liquid Fund.
+            </p>
+          </div>
+          <div>
+            <div style="font-size:11.5px; color:#64748B; margin-bottom:8px;">
+              <strong>Period:</strong> July – Sept 2026
+            </div>
+            <a href="./assets/docs/brokerage/commission_structure_q2_sc130.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="width:100%; justify-content:center; font-size:13px; padding:10px;">
+              <i class="bi bi-file-earmark-pdf"></i> View Abakkus Structure (PDF)
+            </a>
+          </div>
+        </div>
+
       </div>
 
       <div style="background:#F8FAFC; border:1px solid var(--border); border-radius:14px; padding:20px; font-size:13px; color:#475569; line-height:1.7; margin-top:24px;">
         <strong>Statutory Disclosure Summary:</strong><br>
-        1. Commission rates vary by scheme category (Equity, Debt, Hybrid, Liquid) and are determined independently by respective AMCs.<br>
+        1. Commission rates vary by scheme category (Equity, Debt, Hybrid, Solution, Index) and are determined independently by respective AMCs.<br>
         2. In accordance with SEBI regulations, no upfront commission is charged or received; all remuneration is paid as trailing commission based on ongoing assets under service.<br>
         3. Commission structures for other empanelled AMCs are provided upon request. Please email <a href="mailto:rajeshgupta@ameva.in" style="color:var(--green-deep); font-weight:700;">rajeshgupta@ameva.in</a> or <a href="mailto:amevamfd@gmail.com" style="color:var(--green-deep); font-weight:700;">amevamfd@gmail.com</a>.
       </div>
@@ -941,7 +970,7 @@
       </div>
 
       <div class="footer-col">
-        <h4>Backoffice Address</h4>
+        <h4>Registered Office</h4>
         <p style="font-size:13px; color:var(--text-3); line-height:1.6; margin-bottom:12px;">
           <strong>Ameva Mutual Fund Distributors</strong><br>
           Aspen Greens 99, Nirvana Country, Sector 50, Gurugram, Haryana 122018<br>
