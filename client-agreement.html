@@ -164,22 +164,27 @@
       padding-left: 14px;
       border-left: 2px solid #CBD5E1;
     }
-    .bullet-grid {
+    .clean-tag-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 8px 16px;
+      gap: 10px 14px;
       margin-top: 10px;
     }
-    .bullet-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    .clean-tag-item {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 8px 12px;
       font-size: 13px;
+      font-weight: 600;
       color: #334155;
     }
-    .bullet-item i {
-      color: var(--green-deep);
-      font-size: 12px;
+    .clean-def-box {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 8px 0;
     }
     .option-grid {
       display: grid;
@@ -276,8 +281,8 @@
       transition: all 0.2s;
     }
     .form-input:focus {
-      border-color: var(--green-deep);
-      box-shadow: 0 0 0 3px rgba(195, 20, 27, 0.1);
+      border-color: #25475E;
+      box-shadow: 0 0 0 3px rgba(37, 71, 94, 0.1);
     }
     .decl-list {
       background: #F8FAFC;
@@ -303,8 +308,34 @@
       accent-color: #25475E;
       flex-shrink: 0;
     }
+    .compliance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .compliance-item {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #334155;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .compliance-item span.chk-box {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 1.5px solid #64748B;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
     .btn-submit-assessment {
-      background: linear-gradient(135deg, var(--green-deep), #A80F15);
+      background: linear-gradient(135deg, #25475E, #1B3547);
       color: #FFFFFF;
       border: none;
       padding: 16px 32px;
@@ -314,7 +345,7 @@
       font-weight: 800;
       cursor: pointer;
       width: 100%;
-      box-shadow: 0 8px 24px rgba(195, 20, 27, 0.25);
+      box-shadow: 0 8px 24px rgba(37, 71, 94, 0.25);
       transition: all 0.25s;
       margin-top: 10px;
       display: flex;
@@ -323,9 +354,9 @@
       gap: 10px;
     }
     .btn-submit-assessment:hover {
-      background: #8E0D12;
+      background: #142836;
       transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(195, 20, 27, 0.35);
+      box-shadow: 0 12px 28px rgba(37, 71, 94, 0.35);
     }
     .otp-modal-overlay {
       position: fixed;
@@ -352,8 +383,8 @@
       width: 64px;
       height: 64px;
       border-radius: 50%;
-      background: rgba(195, 20, 27, 0.1);
-      color: var(--green-deep);
+      background: rgba(37, 71, 94, 0.1);
+      color: #25475E;
       font-size: 28px;
       display: flex;
       align-items: center;
@@ -374,8 +405,8 @@
       color: #1E293B;
     }
     .otp-input-field:focus {
-      border-color: var(--green-deep);
-      box-shadow: 0 0 0 4px rgba(195, 20, 27, 0.15);
+      border-color: #25475E;
+      box-shadow: 0 0 0 4px rgba(37, 71, 94, 0.15);
     }
     .confirmation-banner {
       display: none;
@@ -419,7 +450,7 @@
 
   <!-- HERO -->
   <section class="agree-hero-wrap">
-    <div class="badge-pill"><i class="bi bi-shield-check"></i> Statutory Documentation • Version 1.0</div>
+    <div class="badge-pill">Statutory Documentation • Version 1.0</div>
     <h1 class="agree-hero-title">Customer – Mutual Fund Distribution Agreement</h1>
     <p class="agree-hero-sub">
       Investor Risk Profiling, Due-Diligence & Product Appropriateness Form governing mutual fund distribution services provided by Ameva (ARN-145058 | EUIN-E028717) under SEBI regulations & AMFI Code of Conduct.
@@ -427,7 +458,7 @@
 
     <div>
       <a href="./assets/docs/ameva_client_agreement_risk_profiling.pdf" target="_blank" rel="noopener noreferrer" class="btn-pdf-download">
-        <i class="bi bi-file-earmark-pdf"></i> Download Official Agreement PDF (18 Pages)
+        Download Official Agreement PDF (18 Pages)
       </a>
     </div>
   </section>
@@ -439,7 +470,7 @@
       <!-- Header Banner -->
       <div class="doc-header-banner">
         <div>
-          <div style="font-size:12px; font-weight:800; color:var(--green-deep); text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">
+          <div style="font-size:12px; font-weight:800; color:#25475E; text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">
             AMFI Registered Mutual Fund Distributor
           </div>
           <div style="font-family:'DM Serif Display',serif; font-size:24px; color:#25475E;">
@@ -450,8 +481,8 @@
           </div>
         </div>
         <div style="text-align:right;">
-          <a href="risk-profiling.html" style="display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:700; color:var(--green-deep); text-decoration:none; background:rgba(195,20,27,0.08); padding:8px 16px; border-radius:8px;">
-            Standalone Risk Profiling Tool <i class="bi bi-arrow-right"></i>
+          <a href="risk-profiling.html" style="display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:700; color:#25475E; text-decoration:none; background:rgba(37,71,94,0.08); padding:8px 16px; border-radius:8px;">
+            Standalone Risk Profiling Tool →
           </a>
         </div>
       </div>
@@ -484,21 +515,21 @@
           <div class="clause-num">2. INVESTOR DUE DILIGENCE</div>
           <div class="clause-body">
             AMEVA shall obtain relevant information from the Investor for appropriate customer due diligence, including:
-            <div class="bullet-grid">
-              <div class="bullet-item"><i class="bi bi-check-circle-fill"></i> KYC information</div>
-              <div class="bullet-item"><i class="bi bi-check-circle-fill"></i> PAN & Identity Proof</div>
-              <div class="bullet-item"><i class="bi bi-check-circle-fill"></i> Bank details</div>
-              <div class="bullet-item"><i class="bi bi-check-circle-fill"></i> Financial position</div>
-              <div class="bullet-item"><i class="bi bi-check-circle-fill"></i> Income and net worth</div>
-              <div class="bullet-item"><i class="bi bi-check-circle-fill"></i> Investment objectives</div>
-              <div class="bullet-item"><i class="bi bi-check-circle-fill"></i> Investment horizon</div>
-              <div class="bullet-item"><i class="bi bi-check-circle-fill"></i> Liquidity requirements</div>
-              <div class="bullet-item"><i class="bi bi-check-circle-fill"></i> Investment experience</div>
-              <div class="bullet-item"><i class="bi bi-check-circle-fill"></i> Risk tolerance</div>
-              <div class="bullet-item"><i class="bi bi-check-circle-fill"></i> Risk capacity</div>
-              <div class="bullet-item"><i class="bi bi-check-circle-fill"></i> Existing portfolio exposure</div>
+            <div class="clean-tag-grid">
+              <div class="clean-tag-item">KYC information</div>
+              <div class="clean-tag-item">PAN & Identity Proof</div>
+              <div class="clean-tag-item">Bank details</div>
+              <div class="clean-tag-item">Financial position</div>
+              <div class="clean-tag-item">Income and net worth</div>
+              <div class="clean-tag-item">Investment objectives</div>
+              <div class="clean-tag-item">Investment horizon</div>
+              <div class="clean-tag-item">Liquidity requirements</div>
+              <div class="clean-tag-item">Investment experience</div>
+              <div class="clean-tag-item">Risk tolerance</div>
+              <div class="clean-tag-item">Risk capacity</div>
+              <div class="clean-tag-item">Existing portfolio exposure</div>
             </div>
-            <p style="margin-top:10px; font-weight:600; color:#1E293B;">The Investor undertakes to provide accurate and complete information.</p>
+            <p style="margin-top:12px; font-weight:600; color:#1E293B;">The Investor undertakes to provide accurate and complete information.</p>
           </div>
         </div>
 
@@ -507,10 +538,12 @@
           <div class="clause-num">3. INVESTOR RISK PROFILING</div>
           <div class="clause-body">
             AMEVA shall assess the Investor's risk profile by considering both:
-            <ul style="margin:8px 0 8px 20px; padding-left:0;">
-              <li><strong>Risk Capacity:</strong> The Investor's financial ability to withstand losses.</li>
-              <li><strong>Risk Tolerance:</strong> The Investor's willingness to accept fluctuations and potential losses.</li>
-            </ul>
+            <div class="clean-def-box">
+              <strong>Risk Capacity:</strong> The Investor's financial ability to withstand losses.
+            </div>
+            <div class="clean-def-box">
+              <strong>Risk Tolerance:</strong> The Investor's willingness to accept fluctuations and potential losses.
+            </div>
             The risk assessment shall consider the Investor's financial position, investment horizon, liquidity requirements, investment experience, investment objectives, and behavioural response to market volatility.
           </div>
         </div>
@@ -520,15 +553,15 @@
           <div class="clause-num">4. INVESTMENT OBJECTIVE & HORIZON</div>
           <div class="clause-body">
             The Investor's principal objective shall be recorded as one or more of the following categories:
-            <div class="bullet-grid" style="margin-bottom:12px;">
-              <div class="bullet-item"><i class="bi bi-record-circle"></i> Capital Preservation</div>
-              <div class="bullet-item"><i class="bi bi-record-circle"></i> Regular Income</div>
-              <div class="bullet-item"><i class="bi bi-record-circle"></i> Wealth Creation</div>
-              <div class="bullet-item"><i class="bi bi-record-circle"></i> Retirement Planning</div>
-              <div class="bullet-item"><i class="bi bi-record-circle"></i> Children's Education</div>
-              <div class="bullet-item"><i class="bi bi-record-circle"></i> Children's Marriage</div>
-              <div class="bullet-item"><i class="bi bi-record-circle"></i> Tax Planning (ELSS)</div>
-              <div class="bullet-item"><i class="bi bi-record-circle"></i> Long-Term Capital Appreciation</div>
+            <div class="clean-tag-grid" style="margin-bottom:12px;">
+              <div class="clean-tag-item">Capital Preservation</div>
+              <div class="clean-tag-item">Regular Income</div>
+              <div class="clean-tag-item">Wealth Creation</div>
+              <div class="clean-tag-item">Retirement Planning</div>
+              <div class="clean-tag-item">Children's Education</div>
+              <div class="clean-tag-item">Children's Marriage</div>
+              <div class="clean-tag-item">Tax Planning (ELSS)</div>
+              <div class="clean-tag-item">Long-Term Capital Appreciation</div>
             </div>
             <strong>Investment Horizon Options:</strong> &lt;1 year, 1–3 years, 3–5 years, 5–10 years, &gt;10 years.
           </div>
@@ -566,10 +599,12 @@
           <div class="clause-num">8. REGULAR PLAN AND DIRECT PLAN</div>
           <div class="clause-body">
             AMEVA has explained the broad distinction between Regular and Direct Plans:
-            <ul style="margin:8px 0 8px 20px; padding-left:0;">
-              <li><strong>Regular Plan:</strong> Distributor remuneration may be payable by the AMC/Mutual Fund in accordance with applicable regulations and arrangements.</li>
-              <li><strong>Direct Plan:</strong> Distributor commission is generally not payable where the investor invests directly with the AMC.</li>
-            </ul>
+            <div class="clean-def-box">
+              <strong>Regular Plan:</strong> Distributor remuneration may be payable by the AMC/Mutual Fund in accordance with applicable regulations and arrangements.
+            </div>
+            <div class="clean-def-box">
+              <strong>Direct Plan:</strong> Distributor commission is generally not payable where the investor invests directly with the AMC.
+            </div>
             The Investor acknowledges that the choice of plan should be considered after taking into account costs, services, and individual circumstances.
           </div>
         </div>
@@ -579,13 +614,13 @@
           <div class="clause-num">9. COMMISSION / REMUNERATION DISCLOSURE</div>
           <div class="clause-body">
             The Investor acknowledges that AMEVA may receive permissible trail commission and/or other remuneration from AMCs/Mutual Funds in relation to eligible Regular Plan investments. The Investor understands that:
-            <ol style="margin:8px 0 8px 20px; padding-left:0;">
-              <li>Remuneration may differ between schemes and product categories;</li>
-              <li>Remuneration may change from time to time;</li>
-              <li>Remuneration does not constitute a guarantee of investment performance;</li>
-              <li>Financial incentive should not be the sole basis for selecting a scheme; and</li>
-              <li>AMEVA is required to manage conflicts of interest and act in the investor's interest.</li>
-            </ol>
+            <div style="margin:8px 0; padding-left:14px; border-left:2px solid #CBD5E1; line-height:1.7;">
+              1. Remuneration may differ between schemes and product categories;<br>
+              2. Remuneration may change from time to time;<br>
+              3. Remuneration does not constitute a guarantee of investment performance;<br>
+              4. Financial incentive should not be the sole basis for selecting a scheme; and<br>
+              5. AMEVA is required to manage conflicts of interest and act in the investor's interest.
+            </div>
             The AMFI Code requires MFDs to place investor interests paramount, exercise due diligence and independent professional judgment, and appropriately disclose unavoidable conflicts.
           </div>
         </div>
@@ -706,6 +741,7 @@
             <div class="form-group">
               <label>Residential Status *</label>
               <select name="agree_res_status" class="form-input" required>
+                <option value="" disabled selected>-- Select Status --</option>
                 <option value="Resident Indian">Resident Indian</option>
                 <option value="NRI">Non-Resident Indian (NRI)</option>
                 <option value="Other">Other / PIO</option>
@@ -745,21 +781,21 @@
           <div class="clause-num">21. FINANCIAL PROFILE</div>
           
           <div style="margin-bottom:16px;">
-            <label style="font-size:12.5px; font-weight:700; color:#25475E;">Annual Income</label>
+            <label style="font-size:12.5px; font-weight:700; color:#25475E;">Annual Income *</label>
             <div class="option-grid">
-              <label class="check-card"><input type="radio" name="income_bracket" value="Below ₹5 lakh"> Below ₹5 lakh</label>
+              <label class="check-card"><input type="radio" name="income_bracket" value="Below ₹5 lakh" required> Below ₹5 lakh</label>
               <label class="check-card"><input type="radio" name="income_bracket" value="₹5–10 lakh"> ₹5–10 lakh</label>
-              <label class="check-card"><input type="radio" name="income_bracket" value="₹10–25 lakh" checked> ₹10–25 lakh</label>
+              <label class="check-card"><input type="radio" name="income_bracket" value="₹10–25 lakh"> ₹10–25 lakh</label>
               <label class="check-card"><input type="radio" name="income_bracket" value="₹25–50 lakh"> ₹25–50 lakh</label>
               <label class="check-card"><input type="radio" name="income_bracket" value="Above ₹50 lakh"> Above ₹50 lakh</label>
             </div>
           </div>
 
           <div style="margin-bottom:16px;">
-            <label style="font-size:12.5px; font-weight:700; color:#25475E;">Net Worth</label>
+            <label style="font-size:12.5px; font-weight:700; color:#25475E;">Net Worth *</label>
             <div class="option-grid">
-              <label class="check-card"><input type="radio" name="net_worth" value="Below ₹25 lakh"> Below ₹25 lakh</label>
-              <label class="check-card"><input type="radio" name="net_worth" value="₹25 lakh–₹1 crore" checked> ₹25 lakh–₹1 crore</label>
+              <label class="check-card"><input type="radio" name="net_worth" value="Below ₹25 lakh" required> Below ₹25 lakh</label>
+              <label class="check-card"><input type="radio" name="net_worth" value="₹25 lakh–₹1 crore"> ₹25 lakh–₹1 crore</label>
               <label class="check-card"><input type="radio" name="net_worth" value="₹1–3 crore"> ₹1–3 crore</label>
               <label class="check-card"><input type="radio" name="net_worth" value="₹3–5 crore"> ₹3–5 crore</label>
               <label class="check-card"><input type="radio" name="net_worth" value="Above ₹5 crore"> Above ₹5 crore</label>
@@ -768,20 +804,20 @@
 
           <div class="field-grid-2">
             <div>
-              <label style="font-size:12.5px; font-weight:700; color:#25475E;">Financial Liabilities</label>
+              <label style="font-size:12.5px; font-weight:700; color:#25475E;">Financial Liabilities *</label>
               <div class="option-grid" style="grid-template-columns:1fr 1fr;">
-                <label class="check-card"><input type="radio" name="liabilities" value="High"> High</label>
+                <label class="check-card"><input type="radio" name="liabilities" value="High" required> High</label>
                 <label class="check-card"><input type="radio" name="liabilities" value="Moderate"> Moderate</label>
-                <label class="check-card"><input type="radio" name="liabilities" value="Low" checked> Low</label>
+                <label class="check-card"><input type="radio" name="liabilities" value="Low"> Low</label>
                 <label class="check-card"><input type="radio" name="liabilities" value="Nil / insignificant"> Nil / Insignificant</label>
               </div>
             </div>
             <div>
-              <label style="font-size:12.5px; font-weight:700; color:#25475E;">Emergency Reserve</label>
+              <label style="font-size:12.5px; font-weight:700; color:#25475E;">Emergency Reserve *</label>
               <div class="option-grid" style="grid-template-columns:1fr 1fr;">
-                <label class="check-card"><input type="radio" name="emergency_fund" value="None / inadequate"> None / Inadequate</label>
+                <label class="check-card"><input type="radio" name="emergency_fund" value="None / inadequate" required> None / Inadequate</label>
                 <label class="check-card"><input type="radio" name="emergency_fund" value="<3 months"> &lt;3 months</label>
-                <label class="check-card"><input type="radio" name="emergency_fund" value="3–6 months" checked> 3–6 months</label>
+                <label class="check-card"><input type="radio" name="emergency_fund" value="3–6 months"> 3–6 months</label>
                 <label class="check-card"><input type="radio" name="emergency_fund" value=">12 months"> &gt;12 months</label>
               </div>
             </div>
@@ -794,21 +830,21 @@
           <div style="margin-bottom:14px;">
             <label style="font-size:12.5px; font-weight:700; color:#25475E;">Products previously used (Select all that apply):</label>
             <div class="option-grid">
-              <label class="check-card"><input type="checkbox" name="prev_exp" value="Bank Deposits" checked> Bank Deposits / FDs</label>
+              <label class="check-card"><input type="checkbox" name="prev_exp" value="Bank Deposits"> Bank Deposits / FDs</label>
               <label class="check-card"><input type="checkbox" name="prev_exp" value="Bonds"> Bonds / Debt Securities</label>
               <label class="check-card"><input type="checkbox" name="prev_exp" value="Debt MF"> Debt Mutual Funds</label>
-              <label class="check-card"><input type="checkbox" name="prev_exp" value="Hybrid MF" checked> Hybrid Mutual Funds</label>
-              <label class="check-card"><input type="checkbox" name="prev_exp" value="Equity MF" checked> Equity Mutual Funds</label>
+              <label class="check-card"><input type="checkbox" name="prev_exp" value="Hybrid MF"> Hybrid Mutual Funds</label>
+              <label class="check-card"><input type="checkbox" name="prev_exp" value="Equity MF"> Equity Mutual Funds</label>
               <label class="check-card"><input type="checkbox" name="prev_exp" value="Direct Equity"> Direct Equity</label>
               <label class="check-card"><input type="checkbox" name="prev_exp" value="ETFs"> ETFs / Index Funds</label>
               <label class="check-card"><input type="checkbox" name="prev_exp" value="PMS / AIF"> PMS / AIF / Other</label>
             </div>
           </div>
           <div>
-            <label style="font-size:12.5px; font-weight:700; color:#25475E;">Level of Investment Knowledge:</label>
+            <label style="font-size:12.5px; font-weight:700; color:#25475E;">Level of Investment Knowledge *</label>
             <div class="option-grid">
-              <label class="check-card"><input type="radio" name="knowledge_level" value="Basic"> Basic</label>
-              <label class="check-card"><input type="radio" name="knowledge_level" value="Moderate" checked> Moderate</label>
+              <label class="check-card"><input type="radio" name="knowledge_level" value="Basic" required> Basic</label>
+              <label class="check-card"><input type="radio" name="knowledge_level" value="Moderate"> Moderate</label>
               <label class="check-card"><input type="radio" name="knowledge_level" value="Good"> Good</label>
               <label class="check-card"><input type="radio" name="knowledge_level" value="Extensive"> Extensive</label>
             </div>
@@ -820,44 +856,44 @@
           <div class="clause-num">23. RISK TOLERANCE</div>
           
           <div style="margin-bottom:16px;">
-            <div style="font-size:13px; font-weight:700; color:#1E293B; margin-bottom:6px;">Q1. If ₹10 lakh invested falls temporarily to ₹8 lakh:</div>
+            <div style="font-size:13px; font-weight:700; color:#1E293B; margin-bottom:6px;">Q1. If ₹10 lakh invested falls temporarily to ₹8 lakh: *</div>
             <div class="option-grid">
-              <label class="check-card"><input type="radio" name="rt_q1" value="Sell immediately"> Sell immediately</label>
+              <label class="check-card"><input type="radio" name="rt_q1" value="Sell immediately" required> Sell immediately</label>
               <label class="check-card"><input type="radio" name="rt_q1" value="Sell substantial portion"> Sell substantial portion</label>
-              <label class="check-card"><input type="radio" name="rt_q1" value="Wait and monitor" checked> Wait and monitor</label>
+              <label class="check-card"><input type="radio" name="rt_q1" value="Wait and monitor"> Wait and monitor</label>
               <label class="check-card"><input type="radio" name="rt_q1" value="Remain invested"> Remain invested</label>
               <label class="check-card"><input type="radio" name="rt_q1" value="Consider investing more"> Consider investing more</label>
             </div>
           </div>
 
           <div style="margin-bottom:16px;">
-            <div style="font-size:13px; font-weight:700; color:#1E293B; margin-bottom:6px;">Q2. Maximum temporary decline reasonably tolerable:</div>
+            <div style="font-size:13px; font-weight:700; color:#1E293B; margin-bottom:6px;">Q2. Maximum temporary decline reasonably tolerable: *</div>
             <div class="option-grid">
-              <label class="check-card"><input type="radio" name="rt_q2" value="<5%"> &lt;5%</label>
+              <label class="check-card"><input type="radio" name="rt_q2" value="<5%" required> &lt;5%</label>
               <label class="check-card"><input type="radio" name="rt_q2" value="5–10%"> 5–10%</label>
-              <label class="check-card"><input type="radio" name="rt_q2" value="10–20%" checked> 10–20%</label>
+              <label class="check-card"><input type="radio" name="rt_q2" value="10–20%"> 10–20%</label>
               <label class="check-card"><input type="radio" name="rt_q2" value="20–30%"> 20–30%</label>
               <label class="check-card"><input type="radio" name="rt_q2" value=">30%"> &gt;30%</label>
             </div>
           </div>
 
           <div style="margin-bottom:16px;">
-            <div style="font-size:13px; font-weight:700; color:#1E293B; margin-bottom:6px;">Q3. If equity markets remain volatile for 12–18 months:</div>
+            <div style="font-size:13px; font-weight:700; color:#1E293B; margin-bottom:6px;">Q3. If equity markets remain volatile for 12–18 months: *</div>
             <div class="option-grid">
-              <label class="check-card"><input type="radio" name="rt_q3" value="Exit"> Exit</label>
+              <label class="check-card"><input type="radio" name="rt_q3" value="Exit" required> Exit</label>
               <label class="check-card"><input type="radio" name="rt_q3" value="Reduce substantially"> Reduce substantially</label>
               <label class="check-card"><input type="radio" name="rt_q3" value="Wait"> Wait</label>
-              <label class="check-card"><input type="radio" name="rt_q3" value="Continue investment plan" checked> Continue investment plan</label>
+              <label class="check-card"><input type="radio" name="rt_q3" value="Continue investment plan"> Continue investment plan</label>
               <label class="check-card"><input type="radio" name="rt_q3" value="Consider increasing investment"> Consider increasing investment</label>
             </div>
           </div>
 
           <div>
-            <div style="font-size:13px; font-weight:700; color:#1E293B; margin-bottom:6px;">Q4. Which statement best describes you?</div>
+            <div style="font-size:13px; font-weight:700; color:#1E293B; margin-bottom:6px;">Q4. Which statement best describes you? *</div>
             <div class="option-grid" style="grid-template-columns:1fr;">
-              <label class="check-card"><input type="radio" name="rt_q4" value="Capital preservation is paramount"> Capital preservation is paramount</label>
+              <label class="check-card"><input type="radio" name="rt_q4" value="Capital preservation is paramount" required> Capital preservation is paramount</label>
               <label class="check-card"><input type="radio" name="rt_q4" value="I prefer low volatility"> I prefer low volatility</label>
-              <label class="check-card"><input type="radio" name="rt_q4" value="I accept moderate volatility" checked> I accept moderate volatility</label>
+              <label class="check-card"><input type="radio" name="rt_q4" value="I accept moderate volatility"> I accept moderate volatility</label>
               <label class="check-card"><input type="radio" name="rt_q4" value="I accept significant volatility for long-term growth"> I accept significant volatility for long-term growth</label>
               <label class="check-card"><input type="radio" name="rt_q4" value="I accept high volatility for higher long-term potential returns"> I accept high volatility for higher long-term potential returns</label>
             </div>
@@ -869,34 +905,34 @@
           <div class="clause-num">24. FINANCIAL CAPACITY</div>
           
           <div style="margin-bottom:16px;">
-            <div style="font-size:13px; font-weight:700; color:#1E293B; margin-bottom:6px;">Importance of preserving capital:</div>
+            <div style="font-size:13px; font-weight:700; color:#1E293B; margin-bottom:6px;">Importance of preserving capital: *</div>
             <div class="option-grid">
-              <label class="check-card"><input type="radio" name="fc_preservation" value="Extremely important"> Extremely important</label>
+              <label class="check-card"><input type="radio" name="fc_preservation" value="Extremely important" required> Extremely important</label>
               <label class="check-card"><input type="radio" name="fc_preservation" value="Very important"> Very important</label>
-              <label class="check-card"><input type="radio" name="fc_preservation" value="Moderately important" checked> Moderately important</label>
+              <label class="check-card"><input type="radio" name="fc_preservation" value="Moderately important"> Moderately important</label>
               <label class="check-card"><input type="radio" name="fc_preservation" value="Less important"> Less important</label>
               <label class="check-card"><input type="radio" name="fc_preservation" value="Long-term growth more important"> Long-term growth more important</label>
             </div>
           </div>
 
           <div style="margin-bottom:16px;">
-            <div style="font-size:13px; font-weight:700; color:#1E293B; margin-bottom:6px;">Investment as % of total financial assets:</div>
+            <div style="font-size:13px; font-weight:700; color:#1E293B; margin-bottom:6px;">Investment as % of total financial assets: *</div>
             <div class="option-grid">
-              <label class="check-card"><input type="radio" name="fc_pct_assets" value=">75%"> &gt;75%</label>
+              <label class="check-card"><input type="radio" name="fc_pct_assets" value=">75%" required> &gt;75%</label>
               <label class="check-card"><input type="radio" name="fc_pct_assets" value="50–75%"> 50–75%</label>
-              <label class="check-card"><input type="radio" name="fc_pct_assets" value="25–50%" checked> 25–50%</label>
+              <label class="check-card"><input type="radio" name="fc_pct_assets" value="25–50%"> 25–50%</label>
               <label class="check-card"><input type="radio" name="fc_pct_assets" value="10–25%"> 10–25%</label>
               <label class="check-card"><input type="radio" name="fc_pct_assets" value="<10%"> &lt;10%</label>
             </div>
           </div>
 
           <div>
-            <div style="font-size:13px; font-weight:700; color:#1E293B; margin-bottom:6px;">When will funds be required? (Horizon):</div>
+            <div style="font-size:13px; font-weight:700; color:#1E293B; margin-bottom:6px;">When will funds be required? (Horizon): *</div>
             <div class="option-grid">
-              <label class="check-card"><input type="radio" name="fc_horizon" value="<1 year"> &lt;1 year</label>
+              <label class="check-card"><input type="radio" name="fc_horizon" value="<1 year" required> &lt;1 year</label>
               <label class="check-card"><input type="radio" name="fc_horizon" value="1–3 years"> 1–3 years</label>
               <label class="check-card"><input type="radio" name="fc_horizon" value="3–5 years"> 3–5 years</label>
-              <label class="check-card"><input type="radio" name="fc_horizon" value="5–10 years" checked> 5–10 years</label>
+              <label class="check-card"><input type="radio" name="fc_horizon" value="5–10 years"> 5–10 years</label>
               <label class="check-card"><input type="radio" name="fc_horizon" value=">10 years"> &gt;10 years</label>
             </div>
           </div>
@@ -904,41 +940,41 @@
 
         <!-- 25. Risk Assessment (Clause 25) -->
         <div class="agreement-box" style="border:2px solid #25475E;">
-          <div class="clause-num" style="font-size:15px; color:#1E3A5F;"><i class="bi bi-award-fill"></i> 25. RISK ASSESSMENT</div>
+          <div class="clause-num" style="font-size:15px; color:#1E3A5F;">25. RISK ASSESSMENT</div>
           
           <div class="field-grid-3" style="margin-bottom:16px;">
             <div>
-              <label style="font-size:12px; font-weight:700; color:#25475E;">Risk Capacity</label>
+              <label style="font-size:12px; font-weight:700; color:#25475E;">Risk Capacity *</label>
               <div class="option-grid" style="grid-template-columns:1fr;">
-                <label class="check-card"><input type="radio" name="clause25_capacity" value="Low"> Low</label>
-                <label class="check-card"><input type="radio" name="clause25_capacity" value="Moderate" checked> Moderate</label>
+                <label class="check-card"><input type="radio" name="clause25_capacity" value="Low" required> Low</label>
+                <label class="check-card"><input type="radio" name="clause25_capacity" value="Moderate"> Moderate</label>
                 <label class="check-card"><input type="radio" name="clause25_capacity" value="High"> High</label>
               </div>
             </div>
             <div>
-              <label style="font-size:12px; font-weight:700; color:#25475E;">Risk Tolerance</label>
+              <label style="font-size:12px; font-weight:700; color:#25475E;">Risk Tolerance *</label>
               <div class="option-grid" style="grid-template-columns:1fr;">
-                <label class="check-card"><input type="radio" name="clause25_tolerance" value="Low"> Low</label>
-                <label class="check-card"><input type="radio" name="clause25_tolerance" value="Moderate" checked> Moderate</label>
+                <label class="check-card"><input type="radio" name="clause25_tolerance" value="Low" required> Low</label>
+                <label class="check-card"><input type="radio" name="clause25_tolerance" value="Moderate"> Moderate</label>
                 <label class="check-card"><input type="radio" name="clause25_tolerance" value="High"> High</label>
               </div>
             </div>
             <div>
-              <label style="font-size:12px; font-weight:700; color:#25475E;">Investment Horizon</label>
+              <label style="font-size:12px; font-weight:700; color:#25475E;">Investment Horizon *</label>
               <div class="option-grid" style="grid-template-columns:1fr;">
-                <label class="check-card"><input type="radio" name="clause25_horizon" value="Short"> Short (&lt;3 Yrs)</label>
-                <label class="check-card"><input type="radio" name="clause25_horizon" value="Medium" checked> Medium (3–5 Yrs)</label>
+                <label class="check-card"><input type="radio" name="clause25_horizon" value="Short" required> Short (&lt;3 Yrs)</label>
+                <label class="check-card"><input type="radio" name="clause25_horizon" value="Medium"> Medium (3–5 Yrs)</label>
                 <label class="check-card"><input type="radio" name="clause25_horizon" value="Long"> Long (&gt;5 Yrs)</label>
               </div>
             </div>
           </div>
 
           <div style="margin-bottom:16px;">
-            <label style="font-size:12.5px; font-weight:800; color:#25475E; text-transform:uppercase;">Final Risk Profile</label>
+            <label style="font-size:12.5px; font-weight:800; color:#25475E; text-transform:uppercase;">Final Risk Profile *</label>
             <div class="option-grid">
-              <label class="check-card"><input type="radio" name="clause25_final_profile" value="CONSERVATIVE"> CONSERVATIVE</label>
+              <label class="check-card"><input type="radio" name="clause25_final_profile" value="CONSERVATIVE" required> CONSERVATIVE</label>
               <label class="check-card"><input type="radio" name="clause25_final_profile" value="MODERATELY CONSERVATIVE"> MODERATELY CONSERVATIVE</label>
-              <label class="check-card"><input type="radio" name="clause25_final_profile" value="MODERATE" checked> MODERATE</label>
+              <label class="check-card"><input type="radio" name="clause25_final_profile" value="MODERATE"> MODERATE</label>
               <label class="check-card"><input type="radio" name="clause25_final_profile" value="MODERATELY AGGRESSIVE"> MODERATELY AGGRESSIVE</label>
               <label class="check-card"><input type="radio" name="clause25_final_profile" value="AGGRESSIVE"> AGGRESSIVE</label>
             </div>
@@ -946,7 +982,7 @@
 
           <div class="form-group">
             <label>AMEVA Assessment Remarks</label>
-            <input type="text" name="clause25_remarks" class="form-input" placeholder="e.g. Profile assessed based on moderate horizon and steady income capacity. Regular Plan mutual fund distribution suitable." value="Profile assessed based on moderate horizon and steady income capacity. Regular Plan mutual fund distribution suitable.">
+            <input type="text" name="clause25_remarks" class="form-input" placeholder="e.g. Profile assessed based on investment horizon and financial capacity. Regular Plan mutual fund distribution suitable.">
           </div>
         </div>
 
@@ -1005,9 +1041,9 @@
           </table>
 
           <div style="margin-top:14px;">
-            <label style="font-size:12.5px; font-weight:700; color:#25475E;">Conclusion:</label>
+            <label style="font-size:12.5px; font-weight:700; color:#25475E;">Conclusion: *</label>
             <div class="option-grid">
-              <label class="check-card"><input type="radio" name="appropriateness_conclusion" value="Broadly appropriate" checked> Broadly appropriate / consistent</label>
+              <label class="check-card"><input type="radio" name="appropriateness_conclusion" value="Broadly appropriate" required> Broadly appropriate / consistent</label>
               <label class="check-card"><input type="radio" name="appropriateness_conclusion" value="Further clarification required"> Further clarification required</label>
               <label class="check-card"><input type="radio" name="appropriateness_conclusion" value="Not considered appropriate"> Not considered appropriate</label>
             </div>
@@ -1025,40 +1061,52 @@
             The Investor confirms that the following statutory items have been explained and made available where relevant:
           </p>
           <div class="option-grid">
-            <label class="check-card"><input type="checkbox" checked required> Scheme Riskometer</label>
-            <label class="check-card"><input type="checkbox" checked required> Market Risk</label>
-            <label class="check-card"><input type="checkbox" checked required> Credit Risk</label>
-            <label class="check-card"><input type="checkbox" checked required> Interest Rate Risk</label>
-            <label class="check-card"><input type="checkbox" checked required> Liquidity Risk</label>
-            <label class="check-card"><input type="checkbox" checked required> Concentration Risk</label>
-            <label class="check-card"><input type="checkbox" checked required> Exit Load Structure</label>
-            <label class="check-card"><input type="checkbox" checked required> Tax Implications</label>
-            <label class="check-card"><input type="checkbox" checked required> Scheme-Specific Risks</label>
-            <label class="check-card"><input type="checkbox" checked required> Regular vs Direct Plan</label>
-            <label class="check-card"><input type="checkbox" checked required> Distributor Remuneration</label>
+            <label class="check-card"><input type="checkbox" name="ack_riskometer" required> Scheme Riskometer</label>
+            <label class="check-card"><input type="checkbox" name="ack_market" required> Market Risk</label>
+            <label class="check-card"><input type="checkbox" name="ack_credit" required> Credit Risk</label>
+            <label class="check-card"><input type="checkbox" name="ack_interest" required> Interest Rate Risk</label>
+            <label class="check-card"><input type="checkbox" name="ack_liquidity" required> Liquidity Risk</label>
+            <label class="check-card"><input type="checkbox" name="ack_concentration" required> Concentration Risk</label>
+            <label class="check-card"><input type="checkbox" name="ack_exitload" required> Exit Load Structure</label>
+            <label class="check-card"><input type="checkbox" name="ack_tax" required> Tax Implications</label>
+            <label class="check-card"><input type="checkbox" name="ack_scheme" required> Scheme-Specific Risks</label>
+            <label class="check-card"><input type="checkbox" name="ack_reg_dir" required> Regular vs Direct Plan</label>
+            <label class="check-card"><input type="checkbox" name="ack_commission" required> Distributor Remuneration</label>
           </div>
         </div>
 
         <!-- ================= PART E ================= -->
         <div class="part-divider-banner">
           <h2>Part E – Investor Declaration</h2>
-          <span class="part-badge">13 Statutory Items</span>
+          <span class="part-badge">Statutory Consent</span>
         </div>
 
-        <div class="decl-list">
-          <div class="decl-item"><input type="checkbox" checked required><span><strong>1.</strong> The information provided by me/us is true, correct, and complete in all respects.</span></div>
-          <div class="decl-item"><input type="checkbox" checked required><span><strong>2.</strong> I/We have disclosed my/our financial circumstances and investment objectives accurately.</span></div>
-          <div class="decl-item"><input type="checkbox" checked required><span><strong>3.</strong> I/We understand that the risk profile is based on information self-declared by me/us.</span></div>
-          <div class="decl-item"><input type="checkbox" checked required><span><strong>4.</strong> I/We understand that mutual fund investments are subject to market risks.</span></div>
-          <div class="decl-item"><input type="checkbox" checked required><span><strong>5.</strong> I/We understand that investment value can fluctuate and capital loss is possible.</span></div>
-          <div class="decl-item"><input type="checkbox" checked required><span><strong>6.</strong> I/We understand that past performance does not guarantee future performance.</span></div>
-          <div class="decl-item"><input type="checkbox" checked required><span><strong>7.</strong> I/We have been informed of the material risks relevant to my/our investment.</span></div>
-          <div class="decl-item"><input type="checkbox" checked required><span><strong>8.</strong> I/We understand the difference between Regular and Direct Plans.</span></div>
-          <div class="decl-item"><input type="checkbox" checked required><span><strong>9.</strong> I/We understand that AMEVA may receive permissible distributor remuneration from AMCs.</span></div>
-          <div class="decl-item"><input type="checkbox" checked required><span><strong>10.</strong> I/We understand that AMEVA does not guarantee investment returns or capital safety.</span></div>
-          <div class="decl-item"><input type="checkbox" checked required><span><strong>11.</strong> I/We have been given an opportunity to ask questions and seek clarification.</span></div>
-          <div class="decl-item"><input type="checkbox" checked required><span><strong>12.</strong> I/We agree to inform AMEVA of material changes in my/our financial circumstances or risk tolerance.</span></div>
-          <div class="decl-item"><input type="checkbox" checked required><span><strong>13.</strong> I/We understand that the final investment decision remains solely with me/us.</span></div>
+        <div style="background:#F8FAFC; border:1.5px solid var(--border); border-radius:14px; padding:22px 24px; margin-bottom:24px;">
+          <div style="font-size:13px; color:#334155; line-height:1.75; margin-bottom:18px;">
+            <ol style="margin:0; padding-left:20px;">
+              <li style="margin-bottom:6px;">The information provided by me/us is true, correct, and complete in all respects.</li>
+              <li style="margin-bottom:6px;">I/We have disclosed my/our financial circumstances and investment objectives accurately.</li>
+              <li style="margin-bottom:6px;">I/We understand that the risk profile is based on information self-declared by me/us.</li>
+              <li style="margin-bottom:6px;">I/We understand that mutual fund investments are subject to market risks.</li>
+              <li style="margin-bottom:6px;">I/We understand that investment value can fluctuate and capital loss is possible.</li>
+              <li style="margin-bottom:6px;">I/We understand that past performance does not guarantee future performance.</li>
+              <li style="margin-bottom:6px;">I/We have been informed of the material risks relevant to my/our investment.</li>
+              <li style="margin-bottom:6px;">I/We understand the difference between Regular and Direct Plans.</li>
+              <li style="margin-bottom:6px;">I/We understand that AMEVA may receive permissible distributor remuneration from AMCs.</li>
+              <li style="margin-bottom:6px;">I/We understand that AMEVA does not guarantee investment returns or capital safety.</li>
+              <li style="margin-bottom:6px;">I/We have been given an opportunity to ask questions and seek clarification.</li>
+              <li style="margin-bottom:6px;">I/We agree to inform AMEVA of material changes in my/our financial circumstances or risk tolerance.</li>
+              <li style="margin-bottom:6px;">I/We understand that the final investment decision remains solely with me/us.</li>
+              <li style="margin-bottom:6px;">I/We consent to Ameva collecting and processing my/our personal data under the Digital Personal Data Protection (DPDP) Act 2023 for investor onboarding, risk profiling, and statutory compliance.</li>
+            </ol>
+          </div>
+
+          <div style="background:#FFFFFF; border:2px solid #25475E; border-radius:10px; padding:16px; display:flex; align-items:flex-start; gap:12px;">
+            <input type="checkbox" id="agreeDeclCombined" name="agree_decl_combined" style="margin-top:3px; width:18px; height:18px; accent-color:#25475E; cursor:pointer;" required>
+            <label for="agreeDeclCombined" style="font-size:13.5px; font-weight:700; color:#1E293B; line-height:1.5; cursor:pointer;">
+              I / We have read, understood, and accept all the above statutory declarations (Points 1 to 14) and agree to electronic execution, email delivery, and OTP verification. *
+            </label>
+          </div>
         </div>
 
         <!-- ================= PART F ================= -->
@@ -1071,15 +1119,15 @@
           <p style="font-size:13px; color:#475569; margin-bottom:12px;">
             The Investor agrees to review the risk profile annually or whenever a material change occurs across any of the following parameters:
           </p>
-          <div class="bullet-grid">
-            <div class="bullet-item"><i class="bi bi-arrow-repeat"></i> Income Level</div>
-            <div class="bullet-item"><i class="bi bi-arrow-repeat"></i> Net Worth</div>
-            <div class="bullet-item"><i class="bi bi-arrow-repeat"></i> Financial Liabilities</div>
-            <div class="bullet-item"><i class="bi bi-arrow-repeat"></i> Investment Objective</div>
-            <div class="bullet-item"><i class="bi bi-arrow-repeat"></i> Horizon Timeline</div>
-            <div class="bullet-item"><i class="bi bi-arrow-repeat"></i> Liquidity Needs</div>
-            <div class="bullet-item"><i class="bi bi-arrow-repeat"></i> Risk Tolerance</div>
-            <div class="bullet-item"><i class="bi bi-arrow-repeat"></i> Family Obligations</div>
+          <div class="clean-tag-grid">
+            <div class="clean-tag-item">Income Level</div>
+            <div class="clean-tag-item">Net Worth</div>
+            <div class="clean-tag-item">Financial Liabilities</div>
+            <div class="clean-tag-item">Investment Objective</div>
+            <div class="clean-tag-item">Horizon Timeline</div>
+            <div class="clean-tag-item">Liquidity Needs</div>
+            <div class="clean-tag-item">Risk Tolerance</div>
+            <div class="clean-tag-item">Family Obligations</div>
           </div>
         </div>
 
@@ -1092,7 +1140,7 @@
         <div class="agreement-box">
           <div style="background:#EFF6FF; border:1px solid #BFDBFE; border-radius:10px; padding:16px; margin-bottom:20px;">
             <div style="font-size:13px; font-weight:800; color:#1E3A5F; margin-bottom:4px;">
-              <i class="bi bi-person-badge"></i> AMEVA MUTUAL FUND DISTRIBUTORS CONFIRMATION
+              AMEVA MUTUAL FUND DISTRIBUTORS CONFIRMATION
             </div>
             <p style="font-size:12.5px; color:#334155; margin:0; line-height:1.5;">
               I confirm that the relevant information was obtained from the Investor and the risk profile / product appropriateness assessment has been recorded based on the information provided.<br>
@@ -1103,29 +1151,29 @@
           <div style="font-size:13px; font-weight:800; color:#25475E; margin-bottom:10px; text-transform:uppercase;">
             Internal AMEVA Compliance Checklist
           </div>
-          <div class="option-grid">
-            <label class="check-card"><input type="checkbox" checked disabled> KYC completed</label>
-            <label class="check-card"><input type="checkbox" checked disabled> PAN verified</label>
-            <label class="check-card"><input type="checkbox" checked disabled> Bank details verified</label>
-            <label class="check-card"><input type="checkbox" checked disabled> Risk profile completed</label>
-            <label class="check-card"><input type="checkbox" checked disabled> Objective recorded</label>
-            <label class="check-card"><input type="checkbox" checked disabled> Horizon recorded</label>
-            <label class="check-card"><input type="checkbox" checked disabled> Liquidity checked</label>
-            <label class="check-card"><input type="checkbox" checked disabled> Capacity assessed</label>
-            <label class="check-card"><input type="checkbox" checked disabled> Risk tolerance assessed</label>
-            <label class="check-card"><input type="checkbox" checked disabled> Riskometer checked</label>
-            <label class="check-card"><input type="checkbox" checked disabled> Product appropriateness assessed</label>
-            <label class="check-card"><input type="checkbox" checked disabled> Regular/Direct explained</label>
-            <label class="check-card"><input type="checkbox" checked disabled> Commission disclosed</label>
-            <label class="check-card"><input type="checkbox" checked disabled> Conflicts considered</label>
-            <label class="check-card"><input type="checkbox" checked disabled> Scheme risks disclosed</label>
-            <label class="check-card"><input type="checkbox" checked disabled> Declarations obtained</label>
-            <label class="check-card"><input type="checkbox" checked disabled> Review date logged</label>
+          <div class="compliance-grid">
+            <div class="compliance-item"><span class="chk-box"></span> KYC completed</div>
+            <div class="compliance-item"><span class="chk-box"></span> PAN verified</div>
+            <div class="compliance-item"><span class="chk-box"></span> Bank details verified</div>
+            <div class="compliance-item"><span class="chk-box"></span> Risk profile completed</div>
+            <div class="compliance-item"><span class="chk-box"></span> Objective recorded</div>
+            <div class="compliance-item"><span class="chk-box"></span> Horizon recorded</div>
+            <div class="compliance-item"><span class="chk-box"></span> Liquidity checked</div>
+            <div class="compliance-item"><span class="chk-box"></span> Capacity assessed</div>
+            <div class="compliance-item"><span class="chk-box"></span> Risk tolerance assessed</div>
+            <div class="compliance-item"><span class="chk-box"></span> Riskometer checked</div>
+            <div class="compliance-item"><span class="chk-box"></span> Product appropriateness assessed</div>
+            <div class="compliance-item"><span class="chk-box"></span> Regular/Direct explained</div>
+            <div class="compliance-item"><span class="chk-box"></span> Commission disclosed</div>
+            <div class="compliance-item"><span class="chk-box"></span> Conflicts considered</div>
+            <div class="compliance-item"><span class="chk-box"></span> Scheme risks disclosed</div>
+            <div class="compliance-item"><span class="chk-box"></span> Declarations obtained</div>
+            <div class="compliance-item"><span class="chk-box"></span> Review date logged</div>
           </div>
         </div>
 
         <button type="submit" class="btn-submit-assessment" id="btnSubmitAgreement">
-          <i class="bi bi-shield-check"></i> Sign & Execute Full Agreement via Email OTP
+          Sign & Execute Full Agreement via Email OTP
         </button>
       </form>
 
@@ -1175,7 +1223,7 @@
 
       <div style="margin-top:18px; display:flex; justify-content:space-between; align-items:center; font-size:13px; color:#64748B;">
         <button type="button" id="btnCancelOtp" style="background:none; border:none; color:#64748B; cursor:pointer; font-weight:600;">Cancel</button>
-        <button type="button" id="btnResendOtp" style="background:none; border:none; color:var(--green-deep); cursor:pointer; font-weight:700;">Resend OTP</button>
+        <button type="button" id="btnResendOtp" style="background:none; border:none; color:#25475E; cursor:pointer; font-weight:700;">Resend OTP</button>
       </div>
     </div>
   </div>
